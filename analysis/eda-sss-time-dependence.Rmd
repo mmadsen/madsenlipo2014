@@ -1,0 +1,52 @@
+# SAA-2, SAA-3, SAA-4, SAA-7 EDA:  SSS Time Dependency #
+
+```{r libraries, error=FALSE, message=FALSE,   echo=FALSE, cache=FALSE, warning=FALSE}
+library(dplyr)
+library(semanticaxelrod)
+library(ggplot2)
+
+load("data/saa_finalized_combined.rda")
+
+smallstate100 <- subset(saa_finalized_combined, branching_factor == 3 & depth_factor == 3 & population_size == 100 & innovation_rate == 0 & num_trait_trees != 8)
+
+
+smallstate100innov <- subset(saa_finalized_combined, branching_factor == 3 & depth_factor == 3 & population_size == 100 & innovation_rate > 0 & num_trait_trees != 8)
+
+```
+
+## Without Innovation ##
+
+The overall amount of symmetry present in converged trait graphs does not seem to be strongly related to the amount of time a model takes to converge, thus making it a good comparator across all the run (which vary in their time to convergence).
+
+```{r eda-sss-aut, results="asis", message=FALSE, warning=FALSE}
+qplot(sample_time, log(autgroupsize), data=smallstate100, geom="point") + facet_grid(learning_rate ~ num_trait_trees)
+```
+
+Nor does the relative radius (the radius fraction), except at very small NT and learning rates.  The same pattern appears for the relative density (the fraction of the original state space represented by a finalized trait forest).  In these parameterizations, there's a slight effect that larger or denser graphs are likely to be produced by simulations that "run" longer.  
+
+```{r eda-sss-radius, results="asis", message=FALSE, warning=FALSE}
+qplot(sample_time, radius_frac, data=smallstate100, geom="point") + facet_grid(learning_rate ~ num_trait_trees)
+```
+
+
+```{r eda-sss-density, results="asis", message=FALSE, warning=FALSE}
+qplot(sample_time, remaining_density, data=smallstate100, geom="point") + facet_grid(learning_rate ~ num_trait_trees)
+```
+
+## With Innovation ##
+
+```{r eda-sss-auti, results="asis", message=FALSE, warning=FALSE}
+qplot(sample_time, log(autgroupsize), data=smallstate100innov, geom="point") + facet_grid(learning_rate ~ num_trait_trees)
+```
+
+Nor does the relative radius (the radius fraction), except at very small NT and learning rates.  The same pattern appears for the relative density (the fraction of the original state space represented by a finalized trait forest).  In these parameterizations, there's a slight effect that larger or denser graphs are likely to be produced by simulations that "run" longer.  
+
+```{r eda-sss-radiusi, results="asis", message=FALSE, warning=FALSE}
+qplot(sample_time, radius_frac, data=smallstate100innov, geom="point") + facet_grid(learning_rate ~ num_trait_trees)
+```
+
+
+```{r eda-sss-densityi, results="asis", message=FALSE, warning=FALSE}
+qplot(sample_time, remaining_density, data=smallstate100innov, geom="point") + facet_grid(learning_rate ~ num_trait_trees)
+```
+

@@ -1,0 +1,109 @@
+
+\documentclass[preprint,times,authoryear,10pt]{elsarticle}
+
+%% The amssymb package provides various useful mathematical symbols
+\usepackage{amssymb,amsmath}
+
+
+%%%%%%%%%% Remove the following before submission %%%%%%%%%%%%%%%%%%
+
+\usepackage{mathspec,xltxtra,xunicode}
+%\usepackage{unicode-math}
+%\defaultfontfeatures{Scale=MatchLowercase}
+\setmainfont[Mapping=tex-text,Numbers=OldStyle]{Times New Roman}
+%\setmainfont[Ligatures=TeX,Numbers=OldStyle]{Minion Pro}
+\setsansfont[Mapping=tex-text]{ITC Legacy Sans Std Medium}
+\setmonofont{Bitstream Vera Sans Mono}
+%\setmathfont(Digits,Latin,Greek)[Script=Math,Uppercase=Italic,Lowercase=Italic]{Minion Math Semibold}
+%\setmathfont[range={\mathbfup->\mathup}]{MinionMath-Bold.otf}
+%\setmathfont[range={\mathbfit->\mathit}]{MinionMath-Bold.otf}
+%\setmathfont[range={\mathit->\mathit}]{MinionMath-Bold.otf}
+
+%%%%%%%%%% Remove the above before submission %%%%%%%%%%%%%%%%%%
+
+%% The amsthm package provides extended theorem environments
+%% \usepackage{amsthm}
+
+%% The lineno packages adds line numbers. Start line numbering with
+%% \begin{linenumbers}, end it with \end{linenumbers}. Or switch it on
+%% for the whole article with \linenumbers after \end{frontmatter}.
+\usepackage{lineno}
+\usepackage{graphicx}
+\usepackage{xspace}
+\usepackage{bm}
+\usepackage{longtable}
+\usepackage{hyphenat}
+\usepackage{lipsum}
+\usepackage{url}
+\usepackage{diss-macros}
+\usepackage[section,ruled]{algorithm}
+\usepackage{algorithmic}
+\usepackage{boxedminipage}
+\usepackage[xetex,bookmarks=true,linkcolor=blue,hyperfootnotes=false,breaklinks=true,citecolor=blue,colorlinks=true]{hyperref}
+\usepackage{sistyle}
+\SIthousandsep{,}
+
+\journal{Unnamed Journal}
+
+% Pandoc toggle for numbering sections (defaults to be off)
+$if(numbersections)$
+$else$
+\setcounter{secnumdepth}{0}
+$endif$
+
+% Pandoc header
+$for(header-includes)$
+$header-includes$
+$endfor$
+
+
+\begin{document}
+
+\begin{frontmatter}
+
+
+\title{Cultural Transmission of Structured Knowledge and Technological Complexity: Axelrod’s Model Extended}
+
+\author{Mark E. Madsen}
+\address{Department of Anthropology, Box 353100, University of Washington, Seattle WA, 98195 USA}
+\ead{mark@madsenlab.org}
+\ead[url]{http://madsenlab.org}
+
+\author{Carl P. Lipo}
+\address{Department of Anthropology and IIRMES, 1250 Bellflower Blvd, California State University at Long Beach, Long Beach CA, 90840 USA}
+\ead{Carl.Lipo@csulb.edu}
+\ead[url]{http://lipolab.org}
+
+
+\begin{abstract}
+Cultural transmission models are coming to the fore in explaining increases in the Paleolithic toolkit richness and diversity. Analyses suggest that diversity increased due to relaxation of conformism, due to the effects of demographic expansion on cultural diversity, and the effects of extinction and recolonization in metapopulations. During the Paleolithic, however, technologies increase not only in terms of diversity but also in their complexity and interdependence. As \citet{Mesoudi2008a} have shown selection broadly favors social learning that is hierarchical and structured, rather than information which is piecemeal and independent. The addition of structured information acquisition potentially explains how the complexity of technology changes along with diversity. Here, we introduce a variant of Axelrod’s model of cultural differentiation, modified such that homophily and conformism refers to the content or “semantics” of traits, instead of simply their frequencies. We examine the conditions under which structured suites of traits develop and differentiate in the model, which can represent the chains of prerequisites, “background” information, and local specializations characteristic of real technology traditions. Our results point to ways in which we can build more comprehensive explanations of the archaeological record of the Paleolithic as well as other cases of technological change.
+
+\end{abstract}
+
+\begin{keyword}
+cultural transmission \sep Axelrod model \sep structured information \sep archaeology
+\end{keyword}
+
+
+\end{frontmatter}
+
+$body$
+
+
+%% References with bibTeX database:
+
+\bibliographystyle{model2-names}
+\bibliography{$biblio-files$}
+
+
+
+
+
+
+
+
+
+\end{document}
+
+%%
+%% End of file `elsarticle-template-2-harv.tex'.

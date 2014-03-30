@@ -1,0 +1,114 @@
+%% ****** Start of file aiptemplate.tex ****** %
+%%
+%%   This file is part of the files in the distribution of AIP substyles for REVTeX4.
+%%   Version 4.1 of 9 October 2009.
+%%
+%
+% This is a template for producing documents for use with 
+% the REVTEX 4.1 document class and the AIP substyles.
+% 
+% Copy this file to another name and then work on that file.
+% That way, you always have this original template file to use.
+
+
+% To start with a one-column format easy to write and edit, start with "preprint", and then to turn it into an 
+% Arxiv or physics journal two column style, change it to "reprint".  Add and remove the \singlespacing in the body as 
+% needed for preprint mode, but it does nothing (redundant) in reprint mode.  
+\documentclass[preprint,nofootinbib,titlepage,groupedaddress,aip,author-year]{revtex4-1}
+
+\usepackage{mathptmx}
+\usepackage[T1]{fontenc}
+
+
+\usepackage{amsmath,amssymb}
+\usepackage{natbib}
+\setcitestyle{aysep={}}
+\usepackage{madsen-packages}
+\usepackage{madsen-macros}
+
+
+%%%%%%% End Package Imports %%%%%%%%%
+
+
+
+\begin{document}
+
+
+
+% Use the \preprint command to place your local institutional report number 
+% on the title page in preprint mode.
+% Multiple \preprint commands are allowed.
+%\preprint{}
+
+\title{Semantic Axelrod Outline} %Title of paper
+
+% repeat the \author .. \affiliation  etc. as needed
+% \email, \thanks, \homepage, \altaffiliation all apply to the current author.
+% Explanatory text should go in the []'s, 
+% actual e-mail address or url should go in the {}'s for \email and \homepage.
+% Please use the appropriate macro for the type of information
+
+% \affiliation command applies to all authors since the last \affiliation command. 
+% The \affiliation command should follow the other information.
+
+\author{Mark E. Madsen}
+\email[]{madsenm@uw.edu}
+\homepage[]{\url{http://madsenlab.org}}
+%\thanks{}
+%\altaffiliation{}
+\affiliation{Department of Anthropology, University of Washington, Seattle WA 98195  U.S.A.}
+
+\author{Carl P. Lipo}
+\email[]{Carl.Lipo@csulb.edu}
+\homepage[]{\url{http://lipolab.org}}
+%\thanks{}
+%\altaffiliation{}
+\affiliation{California State University at Long Beach, Long Beach CA  90840 U.S.A.}
+
+% Collaboration name, if desired (requires use of superscriptaddress option in \documentclass). 
+% \noaffiliation is required (may also be used with the \author command).
+%\collaboration{}
+%\noaffiliation
+
+\date{\today}
+
+
+% \pacs{}% insert suggested PACS numbers in braces on next line
+
+
+\maketitle %\maketitle must follow title, authors, abstract and \pacs
+
+% remove this if you want a copy for editing!!
+\singlespacing
+
+
+\section{Outline}
+
+\begin{outline}[enumerate]
+	\1 Introduction
+    \1 Cumulative Cultural Transmission in the Paleolithic
+        \2  foobar
+        \2  foobar
+    \1 Modeling the Cultural Transmission of Structured Information
+        \2 A Simple Model of Knowledge and Skill Prerequisites
+        \2 Axelrod's Model: Imitation with Homophily
+
+       	\lipsum[1]
+
+        \2 The ``Semantic'' Axelrod Model
+    \1 Results
+        \2  static results:  symmetries by rates ~ statespace
+        \2  population size effects
+        \2  innovation and noise
+\end{outline}
+
+\singlespacing
+\phantomsection
+\addcontentsline{toc}{section}{References}
+\renewcommand{\bibfont}{\small}
+\bibliographystyle{humanbio}
+\bibliography{../biblio/ct-proposal}
+
+\end{document}
+%
+% ****** End of file aiptemplate.tex ******

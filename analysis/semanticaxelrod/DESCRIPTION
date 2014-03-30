@@ -1,0 +1,8 @@
+Package: semanticaxelrod
+Title: Analysis code for the Semantic Axelrod models
+Description: Data analysis and cleaning for simulation models in the Semantic Axelrod family
+Version: 0.1
+Author: Mark E Madsen <mark@madsenlab.org> [aut, cre]
+Depends: R (>= 3.0.2)
+License: License: Apache Public License 2.0 + file LICENSE
+LazyData: true

@@ -1,0 +1,132 @@
+The copying rule from the original Axelrod model follows Algorithm \ref{alg:original-axelrod}:
+
+\begin{algorithm}[H]
+	\caption{Original Axelrod model copying rule}
+	\label{alg:original-axelrod}
+	\begin{boxedminipage}{\textwidth}
+	\begin{algorithmic}[1]
+		\REQUIRE Agents have equal length trait lists
+		\STATE { $focal \leftarrow$ GetRandomAgent()}
+		\STATE { $neighbor \leftarrow$ GetRandomNeighbor(focal)}
+		\STATE { $prob \leftarrow HammingDistance(focal, neighbor) / \left\vert{focal}\right\vert$ }
+
+		\IF {RandomUniform() $< prob$}
+			\STATE { diff $\leftarrow$ neighbor $\setminus$ focal }
+			\STATE { (feature,trait) $\leftarrow$ GetRandomChoice(diff)}
+			\STATE { SetTrait(focal, feature, trait)}
+		\ENDIF
+
+
+	\end{algorithmic}
+	\end{boxedminipage}
+\end{algorithm}
+
+where the ``Hamming distance'' between two strings is given as the number of places at which the strings differ, assuming that the same alphabet is used in both strings \citep{hamming1950error}.  
+
+The ``extensible'' and ``semantic'' versions of the Axelrod model studied here remove the notion of features and associated traits, so the algorithms for determining ``overlap'' and the probability of interaction differ.  In this implementation, we treat the traits of individuals as mathematical ``sets.''  Set-theoretic binary operations then suffice to determine whether agents can interact, and the Jaccard index or coefficient gives the correct probability of interaction.  We first rule out set equality, disjointness, and the random neighbor being a strict subset of the focal agent (in line \ref{alg:ext-first-if}).  Set operations also suffice for the addition and removal of traits from an agent's cultural repertoire.  
+
+% In addition, we allow the trait set to grow instead of each copying event being a strict replacement.  In the basic extensible model, this occurs with a given probability which is a parameter of the model.  
+
+% This yields Algorithm \ref{alg:extensible-axelrod}:
+
+% \begin{algorithm}[H]
+% 	\caption{``Extensible Trait'' Axelrod model copying rule}
+% 	\label{alg:extensible-axelrod}
+% 	\begin{boxedminipage}{\textwidth}
+% 	\begin{algorithmic}[1]
+% 		\REQUIRE addrate parameter gives probability of adding versus replacing a trait
+% 		\STATE { $focal \leftarrow$ GetRandomAgent()}
+% 		\STATE { $neighbor \leftarrow$ GetRandomNeighbor(focal)}
+
+% 		\IF { $focal = neighbor \lor focal \cap neighbor = \varnothing\;\lor  
+% 		neighbor \subsetneq focal $}
+% 		\label{alg:ext-first-if}
+% 			\STATE { exit }
+% 			\COMMENT{ No interaction is possible, move on to next agent }
+% 		\ENDIF
+
+% 		\STATE { $prob \leftarrow (focal \cup neighbor  - focal \cap neighbor) / focal \cup neighbor$ }
+
+% 		\IF {RandomUniform() $< prob$}
+% 			\STATE { $differing \leftarrow neighbor \setminus focal$ }
+% 			\STATE { $newtrait \leftarrow$ GetRandomChoice(differing)}
+
+% 			\IF { RandomUniform() $< addrate$}
+% 				\STATE { $focal \leftarrow focal \cup newtrait$ }
+% 				\COMMENT{ Simply add the neighbor's trait }
+% 			\ELSE
+% 				\STATE { $randtrait \leftarrow$ GetRandomChoice(focal)}
+% 				\STATE { $focal \leftarrow focal \setminus randtrait$ }
+% 				\STATE { $focal \leftarrow focal \cup newtrait$ }
+% 				\COMMENT{ Replace an existing trait with the neighbor's trait}
+% 			\ENDIF
+
+% 		\ENDIF
+
+
+% 	\end{algorithmic}
+% 	\end{boxedminipage}
+% \end{algorithm}
+
+\begin{algorithm}[H]
+	\caption{}
+	\label{alg:tree-prereq-axelrod}
+	\begin{boxedminipage}{\textwidth}
+	\begin{algorithmic}[1]
+		\REQUIRE lossrate is the population rate at which traits are randomly lost to drift
+		\REQUIRE innovrate is the population rate at which individuals randomly learn a trait
+		\REQUIRE learningrate is the probability of learning a missing prerequisite during a learning interaction
+
+		\STATE { $focal \leftarrow$ GetRandomAgent()}
+		\STATE { $neighbor \leftarrow$ GetRandomNeighbor(focal)}
+
+		\IF { $focal = neighbor \lor focal \cap neighbor = \varnothing\;\lor  
+		neighbor \subsetneq focal $}
+		\label{alg:ext-first-if}
+			\STATE { exit }
+			\COMMENT{ No interaction is possible, move on to next agent }
+		\ENDIF
+
+		\STATE { $prob \leftarrow (focal \cup neighbor  - focal \cap neighbor) / focal \cup neighbor$ }
+
+		\IF {RandomUniform() $< prob$}
+			\STATE { $differing \leftarrow neighbor \setminus focal$ }
+			\STATE { $newtrait \leftarrow$ GetRandomChoice(differing)}
+
+			\IF {hasPrerequisiteForTrait($focal$, $newtrait$) = True}
+				\STATE {$replace \leftarrow$ GetTraitUniquetoFocal(focal,neighbor)}
+				\STATE { $focal \leftarrow focal \setminus replace$}
+				\STATE { $focal \leftarrow focal \cup newtrait$}
+			\ELSE
+				\IF {RandomUniform() $< learningrate$}
+					\STATE {$prereq \leftarrow$ GetDeepestMissingPrerequisite(newtrait, focal)}
+					\STATE { $focal \leftarrow focal \cup prereq$ }
+				\ENDIF
+			\ENDIF
+
+		\ENDIF
+
+		\IF {RandomUniform() $< lossrate$}
+			\STATE { $focal2 \leftarrow$ GetRandomAgent()}
+			\STATE { $loss \leftarrow$ GetRandomTrait(focal2)}
+			\STATE { $focal2 \leftarrow focal2 \setminus loss$}
+		\ENDIF
+
+		\IF {RandomUniform() $< innovrate$}
+			\STATE { $focal3 \leftarrow$ GetRandomAgent()}
+			\STATE { $innovation \leftarrow$ GetRandomTraitNotInFocal(focal3)}
+			\STATE { $focal3 \leftarrow focal3 \cup innovation$}
+		\ENDIF
+
+	\end{algorithmic}
+	\end{boxedminipage}
+\end{algorithm}
+
+Algorithm \ref{alg:tree-prereq-axelrod} describes the ``tree-structured prerequisites'' version of a ``semantic'' Axelrod model.  All of the results presented here come from this initial model.  Within the algorithm, there are several functions which find traits with particular properties.  Some, like \textbf{GetTraitUniquetoFocal()}, are fairly simple set operations but were abbreviated to clarify the notation.  
+
+\textbf{GetDeepestMissingPrerequisite()} takes the trait set of an individual, and a trait for which the individual is known to be missing necessary prerequisite traits, and returns the missing prerequisite for that trait \emph{closest to the root} of the tree representing trait prerequisites.  This is done by finding the path which connects the root and desired trait, and walking its vertices from the root downward, checking to see if each vertex is part of the individual's trait set.  The first trait so located is returned.  
+
+
+
+
+
