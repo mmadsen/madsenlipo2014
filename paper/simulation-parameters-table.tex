@@ -1,31 +1,29 @@
-\begin{table}[h]
+\begin{table}[H]
 \begin{tabular}{|p{0.6\textwidth}|p{0.4\textwidth}|}
 \hline
 \textbf{Simulation Parameter} & \textbf{Value or Values} \\ 
 \hline
-Population rate at which new traits arise by individual learning & 1e-05, 5e-05, 0.0001, 2e-05\\ 
+Population rate at which new traits arise by individual learning & 0.0, 5e-05, 0.0001\\ 
  \hline 
-Maximum number of initial traits (not including their prerequisites) each individual is endowed with & 4, 8, 16, 32\\ 
+Maximum number of initial traits (not including their prerequisites) each individual is endowed with & 4\\ 
  \hline 
-Number of distinct trees of traits and prerequisites & 4, 8, 12, 16\\ 
+Number of distinct trees of traits and prerequisites & 4, 16\\ 
  \hline 
-Population sizes & 100\\ 
+Population sizes & 100, 225, 400\\ 
  \hline 
-Replicate simulation runs at each parameter combination & 10\\ 
+Replicate simulation runs at each parameter combination & 25\\ 
  \hline 
-Maximum time after which a simulation is sampled and terminated if it does not converge & 4000000\\ 
+Maximum time after which a simulation is sampled and terminated & 10000000\\ 
  \hline 
-Individual rate at which a missing prerequisite is learned during an interaction & 0.1, 0.2, 0.3, 0.5\\ 
+Individual rate at which a missing prerequisite is learned during an interaction & 0.05, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9\\ 
  \hline 
-Population rate at which existing traits are lost, perhaps by disuse & 1e-05, 5e-05, 0.0001, 2e-05\\ 
+Number of branches at each level of a trait tree & 3, 5\\ 
  \hline 
-Number of branches at each level of a trait tree & 2, 3, 4, 6\\ 
- \hline 
-Depth of traits/prerequisites in each trait tree & 3, 4, 6, 8\\ 
+Depth of traits/prerequisites in each trait tree & 3, 5\\ 
  \hline 
 \hline
 \end{tabular}
-\caption{Parameters for Semantic Axelrod simulations for Experiment Name: foo}
+\caption{Parameter space for simulations described in this chapter}
 \label{tab:axelrodct-sim-parameters}
 \end{table}
 

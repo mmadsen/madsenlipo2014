@@ -7,14 +7,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "paper/madsenlipo2014-semanticaxelrod.Rmd",
-			"settings":
-			{
-				"buffer_size": 23499,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "Packages/Makefile/Make.sublime-build",
 	"command_palette":
@@ -59,6 +51,9 @@
 	},
 	"file_history":
 	[
+		"/Users/mark/Dropbox/Research/projects/structuredinformation/semanticaxelrod/madsenlipo2014/semanticaxelrod.sublime-project",
+		"/Users/mark/Dropbox/Research/projects/structuredinformation/semanticaxelrod/madsenlipo2014/paper/madsenlipo2014-semanticaxelrod.Rmd",
+		"/Users/mark/Dropbox/Research/projects/structuredinformation/semanticaxelrod/madsenlipo2014-semanticaxelrod/paper/madsenlipo2014-semanticaxelrod.Rmd",
 		"/Users/mark/Dropbox/Research/projects/structuredinformation/semanticaxelrod/madsenlipo2014-semanticaxelrod/outline/outline.tex",
 		"/Users/mark/Dropbox/Research/projects/structuredinformation/semanticaxelrod/madsenlipo2014-semanticaxelrod/paper/author.tex",
 		"/Users/mark/Dropbox/Research/projects/structuredinformation/semanticaxelrod/madsenlipo2014-semanticaxelrod/paper/xelatex-template.tex",
@@ -71,7 +66,6 @@
 		"/Users/mark/Desktop/Adamic Talk - Rumor Propagtion Online",
 		"/Users/mark/Desktop/Sandy Pentland - Fast and Slow Social Learn",
 		"/Users/mark/Dropbox/Research/projects/structuredinformation/semanticaxelrod/madsenlipo2014-semanticaxelrod/paper/latexmkrc",
-		"/Users/mark/Dropbox/Research/projects/structuredinformation/semanticaxelrod/madsenlipo2014-semanticaxelrod/paper/madsenlipo2014-semanticaxelrod.Rmd",
 		"/Users/mark/Dropbox/Research/projects/structuredinformation/semanticaxelrod/madsenlipo2014-semanticaxelrod/presentation/libraries/frameworks/io2012/js/prettify/lang-apollo.js",
 		"/Users/mark/Dropbox/Research/projects/structuredinformation/semanticaxelrod/madsenlipo2014-semanticaxelrod/LICENSE",
 		"/Users/mark/Dropbox/Research/projects/structuredinformation/semanticaxelrod/madsenlipo2014-semanticaxelrod/paper/madsenlipo2014-semanticaxelrod.tex",
@@ -156,37 +150,8 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "paper/madsenlipo2014-semanticaxelrod.Rmd",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 23499,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								20123,
-								20123
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Markdown/Markdown.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 4374.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
 			]
 		}
 	],

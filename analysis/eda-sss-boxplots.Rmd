@@ -5,12 +5,13 @@ library(dplyr)
 library(semanticaxelrod)
 library(ggplot2)
 
-load("data/saa_finalized_combined.rda")
+#load("data/saa_finalized_combined.rda")
+load("data/saa-test.rda")
 
-smallstate100 <- subset(saa_finalized_combined, branching_factor == 3 & depth_factor == 3 & population_size == 100 & innovation_rate == 0 & num_trait_trees != 8)
+smallstate100 <- subset(saa_full_combined, branching_factor == 3 & depth_factor == 3 & population_size == 100 & innovation_rate == 0 )
 
 
-smallstate100innov <- subset(saa_finalized_combined, branching_factor == 3 & depth_factor == 3 & population_size == 100 & innovation_rate > 0 & num_trait_trees != 8)
+smallstate100innov <- subset(saa_full_combined, branching_factor == 3 & depth_factor == 3 & population_size == 100 & innovation_rate > 0 )
 
 ```
 

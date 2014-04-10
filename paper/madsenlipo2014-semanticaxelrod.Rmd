@@ -1,61 +1,147 @@
-% Cultural Transmission of Structured Knowledge and Technological Complexity: Axelrod’s Model Extended
+Behavioral Modernity and the Cultural Transmission of Structured
+Information: The Semantic Axelrod Model
 
-
-``` {r libraries, echo=FALSE, cache=FALSE}
-library(ggplot2)
-library(randtoolbox)
-library(xtable)
+```{r libraries, echo=FALSE, cache=FALSE} 
+library(ggplot2) 
+library(randtoolbox) 
+library(xtable) 
 options(tikzDefaultEngine = "xetex")
 ```
 
 # Introduction
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum mauris quis turpis pellentesque, quis porta arcu varius. Suspendisse dictum at odio id luctus. Curabitur ut tristique nisl. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus molestie at elit a sodales. Vestibulum suscipit leo sed semper facilisis. Nam lacinia lobortis imperdiet. Nulla facilisi. Duis suscipit elementum risus, vitae molestie eros accumsan ut. Nulla facilisi. Praesent quis adipiscing sem. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+Although humans and our hominid ancestors have been cultural animals
+throughout our evolutionary history, an important change occurred in our
+lineage during the Middle and Upper Paleolithic. After many millennia
+with varied but relatively small toolkits, and material culture which
+was very similar across continental distances, our cultural repertoire
+began to explode. The artifactual toolkit became larger and its
+constituent tools and technologies more complex, the range of materials
+used to construct it was enriched, and our solutions to the problems of
+everyday life became regionalized and differentiated. Further, the
+economic basis of our lives began to broaden and also, in many areas, to
+become specialized [@bar2002upper][@d2011evolution][@guy2005mosaic] This
+transition has long been called the "Upper Paleolithic Revolution," or
+less humbly, even the "Human Revolution."
 
-# Previous Research
+Careful examination of the Middle Paleolithic archaeological record,
+especially in Africa and the Near East, suggests that this change in
+behavior was not a sharp "revolution," and that much of the enriched
+material culture we later characterize as the "Upper Paleolithic" had
+precursors in many areas. Their appearance was patchy, and did not
+persist long
+[@bouzouggar200782][@d2007additional][@d2011evolution][@guy2005mosaic]
+[@mcbrearty2000revolution][@mcbrearty2007down].
+Nevertheless, if the time scale over which this permanent enrichment of
+human material culture occurred has lengthened and the spatial scope has
+widened, it remains a central puzzle in the evolution of our species.
+Innovation and differentation became hallmarks of what we now think of
+as "human culture," and intergenerational social learning became highly
+cumulative in two senses: greater fidelity of learning led to reliable
+retention of beneficial skills and information, and we began to
+elaborate and tinker with previous knowledge, producing new forms from
+existing ones.
 
-Most archaeological research on cultural transmission models employ models derived from theoretical population genetics [@CF1981; @Neiman1995], and increasingly derived from the cognitive bias models of [@BR1985].  Neutral models, in particular, serve an important role as "null models" for unbiased social interaction, within which the action of cognitive biases, demographic change, or the structure of interaction can be detected [@eerkens2007cultural; @Lipo2000; @Lipo2001b, @Neiman1995; @Lipo1997; @Lipo2001b]. 
+Explanations for behavioral modernity in the late Pleistocene are many,
+and our purpose here is not to review them . However, we see no evidence
+that ancestral sapiens was biologically incapable of rich, cumulative
+culture, and indeed the better we understand the Middle Paleolithic in
+Asia and Africa, the more we see evidence for complex toolkits and
+personal adornment, even if these are patchy and often do not persist.
+Among explanations which do not focus upon biological capabilities or
+species differences, those with the most potential, we believe, address
+the process by which cultural information itself is passed on and
+modified.
 
-With respect to the changes in toolkit diversity seen in the later Paleolithic, @shennan2001demography employed a simple multiplicative fitness model to demonstrate how population size can have a drastic effect on fitness and cultural diversity [also @shennan2000population].  @premo2012local recently added metapopulation structure to the list of factors which might have led to greater local differentiation and assemblage diversity in the lower Paleolithic.     
+Among explanations that relate to cultural transmission, demography has
+been suggested as an important factor, since reduced cultural diversity
+and loss of toolkit elements have been documented in Tasmania during a
+population bottleneck
+[@henrich2004][@shennan2000population][@shennan2001demography]. But a
+recent comparative study shows that population size itself is only
+weakly associated (if at all) with toolkit diversity (except possibly
+during bottlenecks). The structure of bands or demes into larger
+regional metapopulations also has strong effects. Premo
+[@premo2012local] has examined whether metapopulation dynamics, with
+local extinction and recolonization, might account for the retention and
+expansion of diversity, with promising results. Finally, the way social
+learning occurs within a population can radically change its
+quantitative results over time. Sharon [@sharon2009acheulian] suggested
+that Middle Paleolithic populations might have been characterized by
+strongly conformist learning, which changed over time, leading to a
+dramatic increase in cultural diversity.
 
-# The Axelrod Model of Cultural Differentiation
+A foundational aspects of human behavior like "behavioral modernity" is
+highly unlikely to have a single cause, especially if it evolved over
+many tens of millennia in a widely distributed popuulation. Instead, we
+should expect a rich, multi-factor narrative. Demography, and the
+metapopulation dynamics of individual demes or groups, likely played
+roles. Changes in the way individuals learned skills and information
+likely played important roles. The evolution of cooperation and
+pro-social behaviors are probably implicated, as well. Sterelny
+[@sterelny2012evolved] sums up the multi-factor view nicely:
 
-Most of the cultural transmission models employed in archaeological research to date have been directly derived from, or inspired by, the classic models of theoretical population genetics.  Key examples include neutral models describing both drift in small populations, and the diffusion of cultural traits with no apparent fitness differentials (i.e., "stylistic" types) [@Neiman1995, @Lipo1997], and models of conformist bias derived from Boyd and Richerson's [-@BR1985] pioneering work.  Such models are excellent for studying certain classes of behavior, such as the quasi-stationary distribution of traits given loss to drift and addition via mutation, or the average amount of time for a new innovation to be lost to drift in a fixed-size population.  One thing that is difficult to systematically study with such models, however, is the formation of distinct cultural groups, given that pure diffusion models converge to a single equilibrium state (or stationary distribution of states).  
+> ...the cultural learning characteristic of the Upper Paleolithic
+> transition and later periods of human culture—social transmission with
+> both a large bandwidth and sufficient accuracy for incremental
+> improvement—requires individual cognitive adaptations for cultural
+> learning, highly structured learning environments, and population
+> structures that both buffer existing resources effectively and support
+> enough specialization to generate a supply of innovation.
 
-Robert Axelrod [-@axelrod1997] formulated a model aimed at studying the balance between "local convergence" and "global polarization."  Axelrod's model combines social influence, in the form of random copying, spatial structure to interaction, in the form of localized copying of neighbors on a lattice, and the tendency to interact most strongly with those to whom we are already culturally similar (homophily).  The model displays a rich and interesting set of behaviors, and has been extensively studied by social scientists and physicists [see @castellano2009statistical for a recent review].  In the remainder of this section, we describe the model in formal detail, prepatory to describing our modifications to add trait systems which are structured in ways analogous to real knowledge and skills.  
+Bringing this kind of explanation into formalized, testable form
+requires the construction of models. In addition to existing models
+which address the effects of population size and metapopulation
+structure on the results of cumulative cultural transmission, we need to
+understand how the nature of the social learning process itself might
+have changed.  By themselves, none of the above factors describe
+the increasing tendency for tools and technologies to be the cumulative,
+composite result of earlier, simpler components in the Upper Paleolithic
+and more recent archaeological records.  What we require is a social learning model 
+in which traits are not merely tokens or markers, but can build upon one another.
 
-\begin{figure}[htbp] 
-\centering 
-\includegraphics[]{images/lattice-population.png} 
-\includegraphics[]{images/ws-smallworld-population.png} 
-\caption{Square lattice and Watts-Strogatz small-world graph models} 
-\label{img:pop-models} 
-\end{figure} 
+To that end, we have constructed a model which combines a hierarchical
+trait space capable of expressing the "semantics" of relationships
+between skills and information [@Mesoudi2008a], and a modified version
+of Robert Axelrod's [@axelrod1997] homophilic social learning model
+which allows us to examine how different learning rates affect the resulting
+sets of cultural traits.  Models like this begin
+to move beyond diffusion dynamics, bringing the actual meaning and
+relations of traits into the modeling process. Hence we call these
+"semantic Axelrod" models, and believe that such models form a platform
+for formalizing the type of multi-factor hypotheses necessary to examine
+major transitions in human evolution, such as "behavioral modernity." In
+this chapter, we describe the structure of our initial semantic Axelrod
+model, and initial results on analysis of its behavior across a range of
+learning rates.
 
+# The Semantic Axelrod Model for Trait Prerequisites 
 
-The basic Axelrod model locates $N$ individuals on the nodes of a graph.  In its most basic form, the agent graph is formed by the sites of a regular lattice or grid, but various structures have been studied, including graphs with the so-called "small world" property which characterizes most social networks (Figure \ref{img:pop-models}).  Each individual is endowed with $F$ integer variables $(\sigma_1,\ldots,\sigma_F)$, that can each assume $q$ values.  In the original model, each variable is a "cultural feature" each of which can assume $q$ "traits."  In archaeological parlance, the cultural variation is divided into $F$ dimensions with $q$ attributes, yielding $F^q$ classes which can describe a cultural configuration.  In each step, a randomly chosen individual $i$ and a random neighbor $j$ are selected, and "interact" with probability equal to the overlap between their cultural repertoire.  Overlap, in the basic model, is simply the fraction of features for which $i$ and $j$ possess the same trait value:
+In what way might the learning environment change, to create greater fidelity of transmission, 
+and cumulative addition and recombination of variation to create more complex and composite tools?
+There are many possibilities, but deliberate teaching, and apprentice learning are ways in which the learning environment can be 
+structured and the acquisition of important skills and prerequisite knowledge "scaffolded" [@wimsatt2007reproducing; @wimsatt2007re]. 
+The point of structuring the learning environment with teaching and/or apprenticeship is to 
+give the learner skilled models to imitate, shortcut trial and error when learning a skill, 
+provide a reference for needed information, and to guide individuals to put their information and
+skills together into appropriate sequences to accomplish an overall goal.  Much of our technical knowledge and skills are 
+built recursively from simpler elements.  We can bundle both needed skills and necessary background 
+knowledge into the term "prerequisites" for modeling purposes.  In this chapter, we model 
+social and individual learning where the information learned has a clear "prerequisite" structure. 
 
-\begin{equation}p(i,j) = \frac{1}{F} \sum_{f=1}^{F} \delta_{\sigma_f(i)\sigma_f(j)}\end{equation}
+Given a realistic but abstract model of cultural traits and their prerequisites, we ask whether increasing the fidelity with which individuals can learn the prerequisites of traits they observe in the population leads to more diverse and deep sets of knowledge after many cycles of social learning.  In the next sections, we describe the trait representation, social learning rules, and methods of analyzing trait structures in detail.  
 
-where $\delta_{i,j}$ is Kronecker's delta function, taking the value $1$ when its two arguments are equal and $0$ otherwise.  When individuals interact, the focal individual $i$ takes the trait value of its neighbor for one of the features where the two individuals differ.[^featureprob]  The full algorithm for the original Axelrod model is given in Algorithm \ref{alg:original-axelrod}.
+## Representation of Traits And Their Prerequisites
 
-It is evident that pairs of individuals are more likely to interact and thus "learn" cultural traits from one another when they already share a substantial fraction of their cultural repertoire.  Interaction has no effect when two individuals already possess identical cultural repertoires, and there is no probability of interaction if individuals have no traits in common.  This last feature eventually causes the model to reach an absorbing state where no further changes are possible.  Instances of the model are initialized with a random distribution of traits among individuals, and left to update until the steady state is reached.  The evolution of the population leads to two classes of absorbing states:  (a) a "monocultural" state in which all individuals share the same set of variables, and (b) a "polycultural" state in which subpopulations exist which share the same set of variables within the group, and are completely different from their neighbors.  
-
-Which of the two results is reached, and the statistical character of "polycultural" states when they exist, depends mainly upon the number of traits possible $q$ for each cultural feature.  For small values of $q$, individuals share many traits with their neighbors, interactions are thus frequent, and one domain comprising a single set of traits will grow to become fixed within the entire population.  In contrast, when the value of $q$ is high, individuals start out sharing very few traits, with interactions that are correspondingly less frequent.  Regions of uniform cultural variation do grow, but as they do, sets of individuals who share no traits at all (and thus do not interaction) grow as well, and often prevent any single regional culture from expanding to fix within the population.  
-
-The Axelrod model is often studied as an example of a system with phase transitions -- sudden changes in the behavior of a system as the value of a parameter crosses a threshold.  It turns out that the "monocultural state" occurs whenever $q < q_c$, the latter being a "critical value," which depends upon the value of $F$, and regional differentiation of cultures becomes more frequent and more fragmented as $q > q_c$.  Physicists studying the Axelrod model focus on two empirical observables:  (a) the average size of the largest cultural region in a polyculture, and (b) the number of cultural regions in a polycultural state.  
-
-Many variants of the basic Axelrod model have been studied, including the addition of "drift" via the introduction of copying error, situating agents on different types of complex networks, the addition of an external "field" to simulate the effects of mass media, and copying that obeys a "conformist" or majoritarian rule by selecting the most common trait among the neighbor set [@castellano2000nonequilibrium; @de2009effects; @flache2006sustains; @GonzalezAvella:2007p6910; @GonzalezAvella:2007p6912; @gonzalez2005nonequilibrium; @gonzalez2006local; @Klemm:2003p7031; @Klemm:2003p7112; @Klemm:2005tb; @Lanchier:2010p16999; @Lanchier:2012ur].  In general, modifications of the basic model can reduce the tendency of the model to produce polycultural solutions, or change the time scale or location of the critical point.  To date, though, Axelrod models have not been modified to introduce structure to the traits themselves.  
-
-# Extending the Axelrod Model to Structured Cultural Traits
-
-We introduce a simple extension of Axelrod's model in which traits can have a variety of relations which then affect the basic copying rule.  An example of such relationships would be "prerequisites," in which comprehension of a concept or mastery of a skill requires prior skills and knowledge.   Another key example are steps in the construction of a complex artifact, which are related in a sequence but are often learned separately, especially by novices [@Bamforth:2008kq; @Bleed:2008in; @Ferguson:2008ce; @Hogberg:2008fj; @bleed2001trees; @bleed2002obviously; @schiffer1987theory; @stout2002skill].  A set of structured relations between traits can be represented as a graph, with vertices representing traits, edges the relations between them, and the graph as a whole composing the "design space" of possible phenotypes [@o2010cultural].   Simple relations between traits, representing perhaps production sequences or knowledge prerequisites, require only a single class of edge and can be represented as simple graphs or even trees (that is, a connected graph with no cycles) [@diestel2010graph].  More complex situations may require more than one edge between vertices, leading to trait spaces which are _multigraphs_.
-
-Hereafter, we refer to Axelrod-style models with homophilic copying rules but graph-structured trait spaces as "semantic" Axelrod models.  In such models we also relax the restriction that individuals have a fixed number of traits in their cultural repertoire.  This is essential if individuals are to "learn" knowledge or skills in ways that are governed by the structure of the trait space and their interactions.  In models where agents may possess an unlimited number of traits, and traits are not assigned to dimensions or "loci," the Axelrod copying rule is modified such that the probability of interaction between two agents is given by the overlap of their trait sets, which is simply the Jaccard coefficient:
-
-\begin{equation}J(A,B) = \frac{|A \cup B| - |A \cap B|}{|A \cup B|}\end{equation}
-
-where $A$ and $B$ are the sets containing the traits held by two individuals. 
+In order to represent the "prerequisite" relations between a number of
+cultural traits, we organize the traits into trees, where nodes higher
+in the tree represent knowledge, skills, or concepts which are necessary
+for traits further down the tree.  If we consider the different skills and information
+necessary for the construction of a single artifact, say a dart thrown by an atlatl, it's 
+clear that there are sets of skills and information relating to the selection of raw materials 
+for the projectile point, relating to knapping different types of bifaces, methods of hafting bifaces
+into different kinds of shafts, and so on.  We model such examples as a number of different trees, 
+or as a "forest" of trees [^forest].
 
 \begin{figure}[htbp] 
 \centering 
@@ -64,13 +150,26 @@ where $A$ and $B$ are the sets containing the traits held by two individuals.
 \label{img:trait-tree} 
 \end{figure} 
 
-## A Simple Model of Knowledge and Skill Prerequisites
+Specifically, we model the design space as $T$ independent trees, each
+tree possessing a branching factor $r$ and depth $h$. Each trait tree in
+a forest has $\sum_{i=0}^{h} r^i$ traits in each of $T$ trees, and represents a set of traits
+which all have prerequisites stemming from that "root" prerequisite. 
+The tree depicted in Figure \ref{img:trait-tree} thus has 40 vertices, and a design space
+with 4 such trees would have 160 possible traits. Even such a relatively
+small space of traits creates a vast number of possible cultural
+configurations.[^2]  
 
-In order to represent the "prerequisite" relations between a number of cultural traits, we organize the traits into trees, where nodes higher in the tree represent knowledge, skills, or concepts which are necessary for traits further down the tree.  In our first "semantic" Axelrod model, we model the design space as a forest with $T$  independent trees, each tree possessing a branching factor $r$ and depth $h$.  Each trait tree in the design space has $\sum_{i=0}^{h} r^i$ traits in each of $T$ trees.  The tree depicted in Figure \ref{img:trait-tree} thus has 40 vertices, and a design space with 4 such trees would have 160 possible traits.  Even such a relatively small space of traits creates a vast number of possible cultural configurations, however.[^cayley]  
+Given the total "design space" represented by a forest of trait trees, each individual in our
+model is initialized with a small number of "initial" traits.  Initial traits are chosen randomly but 
+heavily weighted towards the roots of the trees (using a Poisson random variable with $\lambda = 0.5$ to select the "depth" of an initial trait), to represent the fact that our knowledge starts out
+basic and sparse.  
 
-In this paper we examine whether homophilic copying governed by the prerequisite structure of cultural knowledge, combined with individual learning of prerequisites, leads to a consistent "shape" or topology for the traits held by individuals.  For examples, when do individuals tend to end up with a breadth of knowledge or skills within a given area (i.e., root), as opposed to having specialized but not broad skills?   
 
-We begin each simulation with $N$ (usually 100) agents, arranged on a square grid, each initialized with $t_{init}$ traits (where $t_{init}$ is a uniform random variable between 1 and a maximum value for that simulation run).  Traits (and their prerequisites) are chosen randomly from the configured number of trait trees, but biased towards the root of each trait tree, to simulate individuals starting with only "basic" knowledge, and learning over time through trial and error and cultural transmission.  
+
+
+
+
+
 
 \begin{figure}[htbp] 
 \centering 
@@ -79,88 +178,366 @@ We begin each simulation with $N$ (usually 100) agents, arranged on a square gri
 \label{img:prereq} 
 \end{figure} 
 
-At each time step, two neighboring agents are chosen at random, and their probability of interaction is calculated as the Jaccard coefficient of their trait sets.  If the agents interact, the focal agent randomly selects a trait from the neighbor which it does not already possess.  If the focal agent has the necessary prerequisites for the desired trait, it can learn the trait and add it to its repertoire.  If not, it cannot immediately learn the trait, but there is a probability (a parameter of the simulation run) it can learn a needed prerequisite from the neighbor instead.  Figure \ref{img:prereq} illustrates the needed prerequisites (green vertices) for a randomly chosen leaf trait (in red).  Additionally, at each time step, there is a probability that a random agent will lose an existing trait (through forgetting or disuse), or learn a new trait through individual learning that it does not already possess.  The full simulation rule algorithm is given as Algorithm \ref{alg:tree-prereq-axelrod}, and the range of parameter values studied is given in Table \ref{tab:axelrodct-sim-parameters}.
 
-As in the original Axelrod model, the simulation proceeds until there are no neighboring pairs with a positive probability of interacting.  At this point, the population should be at a mono- or polycultural equilibrium, with a cluster or cluster of agents who all possess the same trait trees.  Our analysis of the model focuses upon these "final" trait trees, their shape and topology, and what fraction of the total design space they represent.  
+
+
+
+
+
+
+## The Axelrod Model of Cultural Differentiation
+
+
+
+
+Most of the cultural transmission models employed in archaeological
+research to date have been directly derived from, or inspired by, the
+classic models of theoretical population genetics. Key examples include
+neutral models describing both drift in small populations, and the
+diffusion of cultural traits with no apparent fitness differentials
+(i.e., "stylistic" types) [@Neiman1995], and models of conformist bias
+derived from Boyd and Richerson's [@BR1985] pioneering work. Such models
+are excellent for studying certain classes of behavior, such as the
+quasi-stationary distribution of traits given loss to drift and addition
+via mutation, or the average amount of time for a new innovation to be
+lost to drift in a fixed-size population. One thing that is difficult to
+systematically study with such models, however, is the formation of
+distinct cultural groups, given that pure diffusion models converge to a
+single equilibrium state (or stationary distribution of states).
+
+Robert Axelrod [@axelrod1997] formulated a model aimed at studying the
+balance between "local convergence" and "global polarization." Axelrod's
+model combines social influence, in the form of random copying, spatial
+structure to interaction, in the form of localized copying of neighbors
+on a lattice, and the tendency to interact most strongly with those to
+whom we are already culturally similar (homophily). The model displays a
+rich and interesting set of behaviors, and has been extensively studied
+by social scientists and physicists [@castellano2009statistical]. In the
+remainder of this section, we describe the model in formal detail,
+prepatory to describing our modifications to add trait systems which are
+structured in ways analogous to real knowledge and skills.
+
+The basic Axelrod model locates $N$ individuals on the nodes of a graph.
+In its most basic form, the agent graph is formed by the sites of a
+regular lattice or grid, but various structures have been studied,
+including graphs with the so-called "small world" property which
+characterizes most social networks (Figure ). Each individual is endowed
+with $F$ integer variables $(\sigma_1,\ldots,\sigma_F)$, that can each
+assume $q$ values. In the original model, each variable is a "cultural
+feature" each of which can assume $q$ "traits." In archaeological
+parlance, the cultural variation is divided into $F$ dimensions with $q$
+attributes, yielding $F^q$ classes which can describe a cultural
+configuration. In each step, a randomly chosen individual $i$ and a
+random neighbor $j$ are selected, and "interact" with probability equal
+to the overlap between their cultural repertoire. Overlap, in the basic
+model, is simply the fraction of features for which $i$ and $j$ possess
+the same trait value:
+
+where $\delta_{i,j}$ is Kronecker's delta function, taking the value $1$
+when its two arguments are equal and $0$ otherwise. When individuals
+interact, the focal individual $i$ takes the trait value of its neighbor
+for one of the features where the two individuals differ.[^1] The full
+algorithm for the original Axelrod model is given in Algorithm .
+
+It is evident that pairs of individuals are more likely to interact and
+thus "learn" cultural traits from one another when they already share a
+substantial fraction of their cultural repertoire. Interaction has no
+effect when two individuals already possess identical cultural
+repertoires, and there is no probability of interaction if individuals
+have no traits in common. This last feature eventually causes the model
+to reach an absorbing state where no further changes are possible.
+Instances of the model are initialized with a random distribution of
+traits among individuals, and left to update until the steady state is
+reached. The evolution of the population leads to two classes of
+absorbing states: (a) a "monocultural" state in which all individuals
+share the same set of variables, and (b) a "polycultural" state in which
+subpopulations exist which share the same set of variables within the
+group, and are completely different from their neighbors.
+
+Which of the two results is reached, and the statistical character of
+"polycultural" states when they exist, depends mainly upon the number of
+traits possible $q$ for each cultural feature. For small values of $q$,
+individuals share many traits with their neighbors, interactions are
+thus frequent, and one domain comprising a single set of traits will
+grow to become fixed within the entire population. In contrast, when the
+value of $q$ is high, individuals start out sharing very few traits,
+with interactions that are correspondingly less frequent. Regions of
+uniform cultural variation do grow, but as they do, sets of individuals
+who share no traits at all (and thus do not interaction) grow as well,
+and often prevent any single regional culture from expanding to fix
+within the population.
+
+The Axelrod model is often studied as an example of a system with phase
+transitions -- sudden changes in the behavior of a system as the value
+of a parameter crosses a threshold. It turns out that the "monocultural
+state" occurs whenever $q < q_c$, the latter being a "critical value,"
+which depends upon the value of $F$, and regional differentiation of
+cultures becomes more frequent and more fragmented as $q > q_c$.
+Physicists studying the Axelrod model focus on two empirical
+observables: (a) the average size of the largest cultural region in a
+polyculture, and (b) the number of cultural regions in a polycultural
+state.
+
+Many variants of the basic Axelrod model have been studied, including
+the addition of "drift" via the introduction of copying error, situating
+agents on different types of complex networks, the addition of an
+external "field" to simulate the effects of mass media, and copying that
+obeys a "conformist" or majoritarian rule by selecting the most common
+trait among the neighbor set
+[@castellano2000nonequilibrium][@de2009effects][@flache2006sustains][@GonzalezAvella:2007p6910][@GonzalezAvella:2007p6912][@gonzalez2005nonequilibrium][@gonzalez2006local][@Klemm:2003p7031][@Klemm:2003p7112][@Klemm:2005tb][@Lanchier:2010p16999][@Lanchier:2012ur].
+In general, modifications of the basic model can reduce the tendency of
+the model to produce polycultural solutions, or change the time scale or
+location of the critical point. To date, though, Axelrod models have not
+been modified to introduce structure to the traits themselves.
+
+
+
+We introduce a simple extension of Axelrod's model in which traits can
+have a variety of relations which then affect the basic copying rule. An
+example of such relationships would be "prerequisites," in which
+comprehension of a concept or mastery of a skill requires prior skills
+and knowledge. Another key example are steps in the construction of a
+complex artifact, which are related in a sequence but are often learned
+separately, especially by novices
+[@Bamforth:2008kq][@Bleed:2008in][@Ferguson:2008ce][@Hogberg:2008fj][@bleed2001trees][@bleed2002obviously][@schiffer1987theory][@stout2002skill].
+A set of structured relations between traits can be represented as a
+graph, with vertices representing traits, edges the relations between
+them, and the graph as a whole composing the "design space" of possible
+phenotypes [@o2010cultural]. Simple relations between traits,
+representing perhaps production sequences or knowledge prerequisites,
+require only a single class of edge and can be represented as simple
+graphs or even trees (that is, a connected graph with no cycles)
+[@diestel2010graph]. More complex situations may require more than one
+edge between vertices, leading to trait spaces which are *multigraphs*.
+
+Hereafter, we refer to Axelrod-style models with homophilic copying
+rules but graph-structured trait spaces as "semantic" Axelrod models. In
+such models we also relax the restriction that individuals have a fixed
+number of traits in their cultural repertoire. This is essential if
+individuals are to "learn" knowledge or skills in ways that are governed
+by the structure of the trait space and their interactions. In models
+where agents may possess an unlimited number of traits, and traits are
+not assigned to dimensions or "loci," the Axelrod copying rule is
+modified such that the probability of interaction between two agents is
+given by the overlap of their trait sets, which is simply the Jaccard
+coefficient:
+
+where $A$ and $B$ are the sets containing the traits held by two
+individuals.
+
+## A Simple Model of Knowledge and Skill Prerequisites
+
+
+In this paper we examine whether homophilic copying governed by the
+prerequisite structure of cultural knowledge, combined with individual
+learning of prerequisites, leads to a consistent "shape" or topology for
+the traits held by individuals. For examples, when do individuals tend
+to end up with a breadth of knowledge or skills within a given area
+(i.e., root), as opposed to having specialized but not broad skills?
+
+We begin each simulation with $N$ (usually 100) agents, arranged on a
+square grid, each initialized with $t_{init}$ traits (where $t_{init}$
+is a uniform random variable between 1 and a maximum value for that
+simulation run). Traits (and their prerequisites) are chosen randomly
+from the configured number of trait trees, but biased towards the root
+of each trait tree, to simulate individuals starting with only "basic"
+knowledge, and learning over time through trial and error and cultural
+transmission.
+
+At each time step, two neighboring agents are chosen at random, and
+their probability of interaction is calculated as the Jaccard
+coefficient of their trait sets. If the agents interact, the focal agent
+randomly selects a trait from the neighbor which it does not already
+possess. If the focal agent has the necessary prerequisites for the
+desired trait, it can learn the trait and add it to its repertoire. If
+not, it cannot immediately learn the trait, but there is a probability
+(a parameter of the simulation run) it can learn a needed prerequisite
+from the neighbor instead. Figure illustrates the needed prerequisites
+(green vertices) for a randomly chosen leaf trait (in red).
+Additionally, at each time step, there is a probability that a random
+agent will lose an existing trait (through forgetting or disuse), or
+learn a new trait through individual learning that it does not already
+possess. The full simulation rule algorithm is given as Algorithm , and
+the range of parameter values studied is given in Table .
+
+As in the original Axelrod model, the simulation proceeds until there
+are no neighboring pairs with a positive probability of interacting. At
+this point, the population should be at a mono- or polycultural
+equilibrium, with a cluster or cluster of agents who all possess the
+same trait trees. Our analysis of the model focuses upon these "final"
+trait trees, their shape and topology, and what fraction of the total
+design space they represent.
 
 ## Measuring Trait Tree Variation
 
-At the conclusion of each simulation run, each cultural configuration (one, in a monocultural equilibrium, more in a polycultural solution) is composed of some number of trait trees, up to the original number $T$ configured for a simulation run.  We analyzed how each trait tree in a solution compares to the full design space by measuring the mean remaining density of vertices (compared to the original), mean vertex degree, and mean radius.[^radius]  
-
-In addition to these simple numerical measures comparing final trees to the original design space, we want to measure the "shape" of the trees themselves.  One way of formalizing this notion is to examine the _symmetries_ of the final trait trees.  Examining Figure \ref{img:trait-tree}, if we ignore the exact identities of traits for the moment, it is apparent that the traits at each "level" are structurally interchangeable.  They possess the same number of parent connections (1), and the same number of children (either 3 or 0).  Compare this with Figure \ref{img:final-tree}.  The latter is much more asymmetric than the original trait tree, but yet there are still repeating patterns, such as the three sets of doublets in the bottom row.  
+At the conclusion of each simulation run, each cultural configuration
+(one, in a monocultural equilibrium, more in a polycultural solution) is
+composed of some number of trait trees, up to the original number $T$
+configured for a simulation run. We analyzed how each trait tree in a
+solution compares to the full design space by measuring the mean
+remaining density of vertices (compared to the original), mean vertex
+degree, and mean radius.[^3]
 
 \begin{figure}[htbp] 
 \centering 
 \includegraphics[]{images/equil-trait-tree.png} 
-\caption{An example set of traits at the conclusion of a simulation run, for a simulation with branching factor 3 and depth factor 3 (and thus trait trees of order 40).  The remaining density of vertices, mean vertex degree, and radius of the tree are noted.  Vertex colors denote ``structural equivalence'' classes or ``orbit structure,'' as measured by adjacency patterns, and is one measure of the symmetries present in the tree.} 
+\caption{An example set of traits at the conclusion of a simulation run, extracted from a simulation with branching factor 3 and depth factor 3, and a single trait tree as the trait space.  The remaining density of vertices, mean vertex degree, and radius of the tree are noted.  Vertex colors denote ``structural equivalence'' classes or ``orbit structure,'' as measured by adjacency patterns, and is one measure of the symmetries present in the tree.} 
 \label{img:final-tree} 
 \end{figure} 
 
-The set of symmetries of a trait tree ($t$) are those permutations which preserve the adjacency pattern of edges in the tree, or in other words preserve vertex degree.  The set of all such symmetries is called the _automorphism group_ of the graph $\textit{Aut}(G)$ [@godsil2001algebraic].  We can measure the number of possible permutations by the number of elements of the automorphism group, since a maximally asymmetric graph will have only the identity in $\textit{Aut}(G)$ and thus a group size of 1, whereas the complete graph $K_{10}$ has $n!$ possible symmetries, or $|\,\textit{Aut}(K_{10})\,| = \num{3628800}$.  
+In addition to these simple numerical measures comparing final trees to
+the original design space, we want to measure the "shape" of the trees
+themselves. One way of formalizing this notion is to examine the
+*symmetries* of the final trait trees. Examining Figure , if we ignore
+the exact identities of traits for the moment, it is apparent that the
+traits at each "level" are structurally interchangeable. They possess
+the same number of parent connections (1), and the same number of
+children (either 3 or 0). Compare this with Figure . The latter is much
+more asymmetric than the original trait tree, but yet there are still
+repeating patterns, such as the three sets of doublets in the bottom
+row.
 
-Because group sizes have the potential to be extremely large in graphs of even moderate order (e.g., $|\,\textit{Aut}(K_{341})\,| \approx 10^{717}$), another approach is to count the _orbits_ of trait trees.  The orbits of the automorphism group for a graph define a set of equivalence classes for vertices.  Two vertices which are in the same orbit share the same adjacency pattern and are thus interchangeable in terms of the graph structure.  As an example, the graph in Figure \ref{img:trait-tree} has 5 orbits, corresponding to the vertices at each level in the graph.  In this analysis, we employ the \textbf{nauty and Traces} software by Brendan McKay and Adolfo Piperno [-@McKay201494].[^nauty]
+The set of symmetries of a trait tree ($t$) are those permutations which
+preserve the adjacency pattern of edges in the tree, or in other words
+preserve vertex degree. The set of all such symmetries is called the
+*automorphism group* of the graph $\textit{Aut}(G)$
+[@godsil2001algebraic]. We can measure the number of possible
+permutations by the number of elements of the automorphism group, since
+a maximally asymmetric graph will have only the identity in
+$\textit{Aut}(G)$ and thus a group size of 1, whereas the complete graph
+$K_{10}$ has $n!$ possible symmetries, or
+$|\,\textit{Aut}(K_{10})\,| = \num{3628800}$.
 
-(NOTE:  Here we should translate the hypotheses from the start of the paper into expectations for the trait tree metrics....)
+Because group sizes have the potential to be extremely large in graphs
+of even moderate order (e.g.,
+$|\,\textit{Aut}(K_{341})\,| \approx 10^{717}$), another approach is to
+count the *orbits* of trait trees. The orbits of the automorphism group
+for a graph define a set of equivalence classes for vertices. Two
+vertices which are in the same orbit share the same adjacency pattern
+and are thus interchangeable in terms of the graph structure. As an
+example, the graph in Figure has 5 orbits, corresponding to the vertices
+at each level in the graph. In this analysis, we employ the software by
+Brendan McKay and Adolfo Piperno [@McKay201494].[^4]
+
+(NOTE: Here we should translate the hypotheses from the start of the
+paper into expectations for the trait tree metrics....)
+
+# Experiments
+
+* effect of prerequisite learning rate on resulting trait diversity and depth
+* effect of prereq LR on cultural differentiation
+* interaction with population size
+
+
+\input{simulation-parameters-table.tex}
 
 
 
 
 # Results
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum mauris quis turpis pellentesque, quis porta arcu varius. Suspendisse dictum at odio id luctus. Curabitur ut tristique nisl. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus molestie at elit a sodales. Vestibulum suscipit leo sed semper facilisis. Nam lacinia lobortis imperdiet. Nulla facilisi. Duis suscipit elementum risus, vitae molestie eros accumsan ut. Nulla facilisi. Praesent quis adipiscing sem. Interdum et malesuada fames ac ante ipsum primis in faucibus.
-
-
-
-
-
- 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum
+mauris quis turpis pellentesque, quis porta arcu varius. Suspendisse
+dictum at odio id luctus. Curabitur ut tristique nisl. Pellentesque
+habitant morbi tristique senectus et netus et malesuada fames ac turpis
+egestas. Vivamus molestie at elit a sodales. Vestibulum suscipit leo sed
+semper facilisis. Nam lacinia lobortis imperdiet. Nulla facilisi. Duis
+suscipit elementum risus, vitae molestie eros accumsan ut. Nulla
+facilisi. Praesent quis adipiscing sem. Interdum et malesuada fames ac
+ante ipsum primis in faucibus.
 
 # Discussion
 
-
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum mauris quis turpis pellentesque, quis porta arcu varius. Suspendisse dictum at odio id luctus. Curabitur ut tristique nisl. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus molestie at elit a sodales. Vestibulum suscipit leo sed semper facilisis. Nam lacinia lobortis imperdiet. Nulla facilisi. Duis suscipit elementum risus, vitae molestie eros accumsan ut. Nulla facilisi. Praesent quis adipiscing sem. Interdum et malesuada fames ac ante ipsum primis in faucibus.
-
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum
+mauris quis turpis pellentesque, quis porta arcu varius. Suspendisse
+dictum at odio id luctus. Curabitur ut tristique nisl. Pellentesque
+habitant morbi tristique senectus et netus et malesuada fames ac turpis
+egestas. Vivamus molestie at elit a sodales. Vestibulum suscipit leo sed
+semper facilisis. Nam lacinia lobortis imperdiet. Nulla facilisi. Duis
+suscipit elementum risus, vitae molestie eros accumsan ut. Nulla
+facilisi. Praesent quis adipiscing sem. Interdum et malesuada fames ac
+ante ipsum primis in faucibus.
 
 # Acknowledgements
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum mauris quis turpis pellentesque, quis porta arcu varius. Suspendisse dictum at odio id luctus. Curabitur ut tristique nisl. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum
+mauris quis turpis pellentesque, quis porta arcu varius. Suspendisse
+dictum at odio id luctus. Curabitur ut tristique nisl. Pellentesque
+habitant morbi tristique senectus et netus et malesuada fames ac turpis
+egestas.
 
-The first author thanks $\textrm{Fr\'ed\'eric}$ Chapoton of the Institut Camille Jordan for answering a question about the maximal automorphism group of trees, and  Ben MacArthur and $\textrm{Rub\'en J. S\'anchez-Garc\'ia}$ for sharing their geometric decomposition code.  
+The first author thanks $\textrm{Fr\'ed\'eric}$ Chapoton of the Institut
+Camille Jordan for answering a question about the maximal automorphism
+group of trees, and Ben MacArthur and
+$\textrm{Rub\'en J. S\'anchez-Garc\'ia}$ for sharing their geometric
+decomposition code.
 
-
-
-# Appendices 
+# Appendices
 
 ## Copying Rule Algorithms
 
-\input{algorithms-appendix}
-
-## Simulation Parameters
-
-\input{simulation-parameters-table}
-
-## Simulation Software and Replication of Analysis
-
-The software used to simulate the "Semantic Axelrod" model and its variants is available under an open-source license at Mark Madsen's GitHub repository [https://github.com/mmadsen/axelrod-ct](https://github.com/mmadsen/axelrod-ct).  Required libraries and software are listed in the source archive itself, and include Python 2.7 and the open-source MongoDB database engine to store simulation output.
-
-The codebase consists of a set of library modules which implement the shared and unique aspects of each model, unit tests to verify the basic functionality of the code, and scripts which execute each model.  As of February 2014, the **axelrod-ct** repository contains three models:
-
-* An implementation of the original Axelrod model using the **axelrod-ct** libraries.
-
-* A basic model with an "extensible" trait space but no relations between traits.  
-
-* A "semantic" Axelrod model with tree-structured trait space representing prerequisite relationships between traits.  
-
-Stepwise construction of the models on the same code libraries allowed a degree of verification, which is difficult in a situation where there is no existing mathematical theory against which to compare the code implementation [@national2012Assessing]. 
-
-The analysis and final dataset reported here are available, along with the source of this paper and associated presentations, in an associated GitHub repository:  [https://github.com/mmadsen/axelrod-ct](https://github.com/mmadsen/axelrod-ct).  The raw simulation data are too large to store on GitHub, FigShare, or other repositories, so instructions and a configuration file are included for replicating the simulation results.  Raw simulation output is post-processed by scripts located along with the paper manuscript.  Statistical analysis of the final dataset is performed in R, embedded in the source version of the paper, which uses [Knitr](http://yihui.name/knitr/) and produces \LaTeX\ suitable for publication.  A Makefile or build script is provided to enable easy replication of post-processing and analysis steps, once raw simulation output is available.  
+\input{algorithms-appendix.tex}
 
 
-[^featureprob]: This feature is chosen with uniform probability when more than one feature differs between individuals $i$ and $j$.
 
-[^cayley]: If we consider each trait to be unique and non-interchangeable, the number of unique trees with unique vertex labels is $n^{n-2}$ by Cayley's theorem [@diestel2010graph].  For example, for each trait tree of 40 vertices, there are roughly $10^{60}$ possible trees.  Even if we consider traits to be interchangeable (e.g., we look at the abstract topology of trees rather than the details of individual traits), there are _at least_ $10^{16}$ possible unlabelled rooted trees on 40 vertices (using Otter's [-@otter1948number] approximation).
+## Reproducible Analysis
 
-[^radius]: The radius of a rooted tree is simply the number of edges traversed between the root and the most distant leaf.  In this case, the radius of a trait tree will be less than or equal to its original depth factor, and the ratio of the two is an indicator of how much trait trees include more specialized, as opposed to more generalized or prerequisite, traits.  
+The software used in this chapter is available under an open-source
+license at Mark Madsen's GitHub repository
+<https://github.com/mmadsen/axelrod-ct>. Required libraries and software
+are listed in the source archive itself, and include Python 2.7 and the
+open-source MongoDB database engine to store simulation output.
 
-[^nauty]:  Nauty+Traces can be downloaded at [http://pallini.di.uniroma1.it/](http://pallini.di.uniroma1.it/).  We employed version 2.5r7 for this research.  
+The codebase consists of a set of library modules which implement the
+shared and unique aspects of each model, unit tests to verify the basic
+functionality of the code, and scripts which execute each model. The
+**axelrod-ct** repository contains three models:
+
+-   An implementation of the original Axelrod model using the
+    **axelrod-ct** libraries.
+
+-   A basic model with an "extensible" trait space but no relations
+    between traits.
+
+-   A "semantic" Axelrod model with tree-structured trait space
+    representing prerequisite relationships between traits.
+
+Stepwise construction of the models on the same code libraries allowed a
+degree of verification, which is difficult in a situation where there is
+no existing mathematical theory against which to compare the code
+implementation [@national2012Assessing].
+
+The analysis and final dataset reported here are available, along with
+the source of this paper and associated presentations, in an associated
+GitHub repository: <https://github.com/mmadsen/axelrod-ct>. Statistical
+analyses of the final dataset were performed in R, embedded in the
+source version of the paper, which uses Knitr[^Knitr] and produces multiple
+output formats, including LaTeX for publication.
+
+[^1]: This feature is chosen with uniform probability when more than one
+    feature differs between individuals $i$ and $j$.
+
+[^2]: If we consider each trait to be unique and non-interchangeable,
+    the number of unique trees with unique vertex labels is $n^{n-2}$ by
+    Cayley's theorem [@diestel2010graph]. For example, for each trait
+    tree of 40 vertices, there are roughly $10^{60}$ possible trees.
+    Even if we consider traits to be interchangeable (e.g., we look at
+    the abstract topology of trees rather than the details of individual
+    traits), there are *at least* $10^{16}$ possible unlabelled rooted
+    trees on 40 vertices (using Otter's [@otter1948number]
+    approximation).
+
+[^3]: The radius of a rooted tree is simply the number of edges
+    traversed between the root and the most distant leaf. In this case,
+    the radius of a trait tree will be less than or equal to its
+    original depth factor, and the ratio of the two is an indicator of
+    how much trait trees include more specialized, as opposed to more
+    generalized or prerequisite, traits.
+
+[^4]: Nauty+Traces can be downloaded at
+    <http://pallini.di.uniroma1.it/>. We employed version 2.5r7 for this
+    research.
+
+[^Knitr]: http://yihui.name/knitr/
+
+[^forest]: For our purposes, a forest is a graph composed of multiple disconnected components, each of which is a tree.  

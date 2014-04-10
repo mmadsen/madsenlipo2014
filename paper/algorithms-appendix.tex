@@ -21,9 +21,9 @@ The copying rule from the original Axelrod model follows Algorithm \ref{alg:orig
 	\end{boxedminipage}
 \end{algorithm}
 
-where the ``Hamming distance'' between two strings is given as the number of places at which the strings differ, assuming that the same alphabet is used in both strings \citep{hamming1950error}.  
+In the above, ``Hamming distance'' between two strings is given as the number of places at which the strings differ, assuming that the same alphabet is used in both strings \citep{hamming1950error}.  
 
-The ``extensible'' and ``semantic'' versions of the Axelrod model studied here remove the notion of features and associated traits, so the algorithms for determining ``overlap'' and the probability of interaction differ.  In this implementation, we treat the traits of individuals as mathematical ``sets.''  Set-theoretic binary operations then suffice to determine whether agents can interact, and the Jaccard index or coefficient gives the correct probability of interaction.  We first rule out set equality, disjointness, and the random neighbor being a strict subset of the focal agent (in line \ref{alg:ext-first-if}).  Set operations also suffice for the addition and removal of traits from an agent's cultural repertoire.  
+The ``semantic'' version of the Axelrod model studied here eliminates the notion of features and associated traits, so the algorithms for determining ``overlap'' and the probability of interaction differ.  Instead, we treat the traits of individuals as mathematical ``sets.''  Jaccard index or coefficient thus gives the correct probability of interaction.  We first rule out set equality, disjointness, and the random neighbor being a strict subset of the focal agent (in line \ref{alg:ext-first-if}), as optimizations.    
 
 % In addition, we allow the trait set to grow instead of each copying event being a strict replacement.  In the basic extensible model, this occurs with a given probability which is a parameter of the model.  
 
@@ -73,7 +73,7 @@ The ``extensible'' and ``semantic'' versions of the Axelrod model studied here r
 	\label{alg:tree-prereq-axelrod}
 	\begin{boxedminipage}{\textwidth}
 	\begin{algorithmic}[1]
-		\REQUIRE lossrate is the population rate at which traits are randomly lost to drift
+		%\REQUIRE lossrate is the population rate at which traits are randomly lost to drift
 		\REQUIRE innovrate is the population rate at which individuals randomly learn a trait
 		\REQUIRE learningrate is the probability of learning a missing prerequisite during a learning interaction
 
@@ -105,12 +105,11 @@ The ``extensible'' and ``semantic'' versions of the Axelrod model studied here r
 			\ENDIF
 
 		\ENDIF
-
-		\IF {RandomUniform() $< lossrate$}
-			\STATE { $focal2 \leftarrow$ GetRandomAgent()}
-			\STATE { $loss \leftarrow$ GetRandomTrait(focal2)}
-			\STATE { $focal2 \leftarrow focal2 \setminus loss$}
-		\ENDIF
+		%\IF {RandomUniform() $< lossrate$}
+		%	\STATE { $focal2 \leftarrow$ GetRandomAgent()}
+		%	\STATE { $loss \leftarrow$ GetRandomTrait(focal2)}
+		%	\STATE { $focal2 \leftarrow focal2 \setminus loss$}
+		%\ENDIF
 
 		\IF {RandomUniform() $< innovrate$}
 			\STATE { $focal3 \leftarrow$ GetRandomAgent()}
@@ -122,9 +121,9 @@ The ``extensible'' and ``semantic'' versions of the Axelrod model studied here r
 	\end{boxedminipage}
 \end{algorithm}
 
-Algorithm \ref{alg:tree-prereq-axelrod} describes the ``tree-structured prerequisites'' version of a ``semantic'' Axelrod model.  All of the results presented here come from this initial model.  Within the algorithm, there are several functions which find traits with particular properties.  Some, like \textbf{GetTraitUniquetoFocal()}, are fairly simple set operations but were abbreviated to clarify the notation.  
+Algorithm \ref{alg:tree-prereq-axelrod} describes ``semantic'' Axelrod model variant studied in this chapter.  Within the algorithm, there are several functions which find traits with particular properties.  Some, like \textbf{GetTraitUniquetoFocal()}, are fairly simple set operations but were abbreviated to clarify the notation.  
 
-\textbf{GetDeepestMissingPrerequisite()} takes the trait set of an individual, and a trait for which the individual is known to be missing necessary prerequisite traits, and returns the missing prerequisite for that trait \emph{closest to the root} of the tree representing trait prerequisites.  This is done by finding the path which connects the root and desired trait, and walking its vertices from the root downward, checking to see if each vertex is part of the individual's trait set.  The first trait so located is returned.  
+\textbf{GetDeepestMissingPrerequisite()} is a procedure which takes the trait set of an individual, and a trait for which the individual is known to be missing necessary prerequisites, and returns the ``most basic'' missing prerequisite for that trait (i.e., closest to the root). This is done by finding the path which connects the root and desired trait, and walking its vertices from the root downward, checking to see if each vertex is part of the individual's trait set.  The first trait not found in the individual's repertoire is returned.  
 
 
 
