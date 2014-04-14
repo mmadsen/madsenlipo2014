@@ -1,29 +1,29 @@
-The copying rule from the original Axelrod model follows Algorithm \ref{alg:original-axelrod}:
+% The copying rule from the original Axelrod model follows Algorithm \ref{alg:original-axelrod}:
 
-\begin{algorithm}[H]
-	\caption{Original Axelrod model copying rule}
-	\label{alg:original-axelrod}
-	\begin{boxedminipage}{\textwidth}
-	\begin{algorithmic}[1]
-		\REQUIRE Agents have equal length trait lists
-		\STATE { $focal \leftarrow$ GetRandomAgent()}
-		\STATE { $neighbor \leftarrow$ GetRandomNeighbor(focal)}
-		\STATE { $prob \leftarrow HammingDistance(focal, neighbor) / \left\vert{focal}\right\vert$ }
+% \begin{algorithm}[H]
+% 	\caption{Original Axelrod model copying rule}
+% 	\label{alg:original-axelrod}
+% 	\begin{boxedminipage}{\textwidth}
+% 	\begin{algorithmic}[1]
+% 		\REQUIRE Agents have equal length trait lists
+% 		\STATE { $focal \leftarrow$ GetRandomAgent()}
+% 		\STATE { $neighbor \leftarrow$ GetRandomNeighbor(focal)}
+% 		\STATE { $prob \leftarrow HammingDistance(focal, neighbor) / \left\vert{focal}\right\vert$ }
 
-		\IF {RandomUniform() $< prob$}
-			\STATE { diff $\leftarrow$ neighbor $\setminus$ focal }
-			\STATE { (feature,trait) $\leftarrow$ GetRandomChoice(diff)}
-			\STATE { SetTrait(focal, feature, trait)}
-		\ENDIF
+% 		\IF {RandomUniform() $< prob$}
+% 			\STATE { diff $\leftarrow$ neighbor $\setminus$ focal }
+% 			\STATE { (feature,trait) $\leftarrow$ GetRandomChoice(diff)}
+% 			\STATE { SetTrait(focal, feature, trait)}
+% 		\ENDIF
 
 
-	\end{algorithmic}
-	\end{boxedminipage}
-\end{algorithm}
+% 	\end{algorithmic}
+% 	\end{boxedminipage}
+% \end{algorithm}
 
-In the above, ``Hamming distance'' between two strings is given as the number of places at which the strings differ, assuming that the same alphabet is used in both strings \citep{hamming1950error}.  
+% In the above, ``Hamming distance'' between two strings is given as the number of places at which the strings differ, assuming that the same alphabet is used in both strings \citep{hamming1950error}.  
 
-The ``semantic'' version of the Axelrod model studied here eliminates the notion of features and associated traits, so the algorithms for determining ``overlap'' and the probability of interaction differ.  Instead, we treat the traits of individuals as mathematical ``sets.''  Jaccard index or coefficient thus gives the correct probability of interaction.  We first rule out set equality, disjointness, and the random neighbor being a strict subset of the focal agent (in line \ref{alg:ext-first-if}), as optimizations.    
+% The ``semantic'' version of the Axelrod model studied here eliminates the notion of features and associated traits, so the algorithms for determining ``overlap'' and the probability of interaction differ.  Instead, we treat the traits of individuals as mathematical ``sets.''  Jaccard index or coefficient thus gives the correct probability of interaction.  We first rule out set equality, disjointness, and the random neighbor being a strict subset of the focal agent (in line \ref{alg:ext-first-if}), as optimizations.    
 
 % In addition, we allow the trait set to grow instead of each copying event being a strict replacement.  In the basic extensible model, this occurs with a given probability which is a parameter of the model.  
 
@@ -67,6 +67,8 @@ The ``semantic'' version of the Axelrod model studied here eliminates the notion
 % 	\end{algorithmic}
 % 	\end{boxedminipage}
 % \end{algorithm}
+
+Algorithm \ref{alg:tree-prereq-axelrod} describes the ``semantic'' Axelrod model variant studied in this chapter.  Within the algorithm, there are several functions which find traits with particular properties.  Some, like \textbf{GetTraitUniquetoFocal()}, are fairly simple set operations but were abbreviated to clarify the notation. 
 
 \begin{algorithm}[H]
 	\caption{}
@@ -119,9 +121,7 @@ The ``semantic'' version of the Axelrod model studied here eliminates the notion
 
 	\end{algorithmic}
 	\end{boxedminipage}
-\end{algorithm}
-
-Algorithm \ref{alg:tree-prereq-axelrod} describes ``semantic'' Axelrod model variant studied in this chapter.  Within the algorithm, there are several functions which find traits with particular properties.  Some, like \textbf{GetTraitUniquetoFocal()}, are fairly simple set operations but were abbreviated to clarify the notation.  
+\end{algorithm} 
 
 \textbf{GetDeepestMissingPrerequisite()} is a procedure which takes the trait set of an individual, and a trait for which the individual is known to be missing necessary prerequisites, and returns the ``most basic'' missing prerequisite for that trait (i.e., closest to the root). This is done by finding the path which connects the root and desired trait, and walking its vertices from the root downward, checking to see if each vertex is part of the individual's trait set.  The first trait not found in the individual's repertoire is returned.  
 

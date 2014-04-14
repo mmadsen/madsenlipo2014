@@ -1,9 +1,4 @@
-strict graph "original-trait-tree-3-3" {
-labelloc=t;
-ratio=auto;
-pad="1.0";
-label="Example of a design space tree with r = 3, h = 3";
-node [fixedsize=true, width="0.1", shape=circle, height="0.1", label=""];
+strict graph "empty_graph(40)" {
 	0 -- 1;
 	0 -- 2;
 	0 -- 3;

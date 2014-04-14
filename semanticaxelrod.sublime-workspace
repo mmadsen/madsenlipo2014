@@ -7,6 +7,30 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "paper/madsenlipo2014-semanticaxelrod.Rmd",
+			"settings":
+			{
+				"buffer_size": 27562,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/mark/yesterday.Rmd",
+			"settings":
+			{
+				"buffer_size": 28364,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "paper/algorithms-appendix.tex",
+			"settings":
+			{
+				"buffer_size": 6025,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "Packages/Makefile/Make.sublime-build",
 	"command_palette":
@@ -51,6 +75,13 @@
 	},
 	"file_history":
 	[
+		"/Users/mark/madsenlipo2014-semanticaxelrod.Rmd",
+		"/Users/mark/Dropbox/Research/projects/structuredinformation/madsenlipo2014/paper/simulation-parameters-table.tex",
+		"/Users/mark/Dropbox/Research/projects/structuredinformation/madsenlipo2014/paper/algorithms-appendix.tex",
+		"/Users/mark/Dropbox/Research/projects/structuredinformation/madsenlipo2014/paper/madsenlipo2014-semanticaxelrod.Rmd",
+		"/Users/mark/Dropbox/Research/projects/structuredinformation/madsenlipo2014/paper/Makefile",
+		"/Users/mark/Dropbox/Research/projects/structuredinformation/madsenlipo2014/paper/notes.txt",
+		"/Users/mark/Dropbox/Research/projects/structuredinformation/madsenlipo2014/paper/author.tex",
 		"/Users/mark/Dropbox/Research/projects/structuredinformation/semanticaxelrod/madsenlipo2014/semanticaxelrod.sublime-project",
 		"/Users/mark/Dropbox/Research/projects/structuredinformation/semanticaxelrod/madsenlipo2014/paper/madsenlipo2014-semanticaxelrod.Rmd",
 		"/Users/mark/Dropbox/Research/projects/structuredinformation/semanticaxelrod/madsenlipo2014-semanticaxelrod/paper/madsenlipo2014-semanticaxelrod.Rmd",
@@ -126,6 +157,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"][",
 			"copy",
 			"argparse",
 			"\\text{",
@@ -140,6 +172,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			";"
 		],
 		"reverse": false,
 		"show_context": true,
@@ -150,8 +183,94 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "paper/madsenlipo2014-semanticaxelrod.Rmd",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 27562,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								26889,
+								26889
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 7972.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/Users/mark/yesterday.Rmd",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 28364,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								15773,
+								15692
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 2877.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "paper/algorithms-appendix.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6025,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3583,
+								3560
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1116.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -197,7 +316,7 @@
 	"project": "semanticaxelrod.sublime-project",
 	"replace":
 	{
-		"height": 46.0
+		"height": 64.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -235,7 +354,7 @@
 	"settings":
 	{
 	},
-	"show_minimap": true,
+	"show_minimap": false,
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
