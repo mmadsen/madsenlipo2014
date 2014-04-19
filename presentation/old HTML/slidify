@@ -1,0 +1,10 @@
+#!/usr/bin/Rscript --vanilla --slave
+
+library(slidify)
+library(slidifyLibraries)
+
+args <- commandArgs(trailingOnly = TRUE)
+input <- args[1]
+output <- args[2]
+
+slidify(input, output)
