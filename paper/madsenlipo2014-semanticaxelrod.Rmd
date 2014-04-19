@@ -1,10 +1,9 @@
-Behavioral Modernity and the Cultural Transmission of Structured
-Information: The Semantic Axelrod Model
 
 ```{r libraries, echo=FALSE, cache=FALSE} 
 library(ggplot2) 
 library(randtoolbox) 
 library(xtable) 
+library(dplyr)
 options(tikzDefaultEngine = "xetex")
 ```
 
@@ -45,9 +44,9 @@ and loss of toolkit elements observed in Tasmania during a
 population bottleneck
 [@henrich2004].  But a
 recent comparative study shows that population size itself bears no relationship 
-with toolkit diversity [@collard2013risk].  If our simple transmission models do show 
+with toolkit diversity [@collard2013risk].  If simple transmission models do show 
 a relation between diversity and population size, it is likely to be a second-order effect
-in the real world, easily dominated by other factors.  
+in the real world, dominated by or interacting with other factors.  
 
 The structure of bands or demes into larger
 regional metapopulations, however, is a first-order effect, given what we know about 
@@ -82,12 +81,12 @@ pro-social behaviors are probably implicated, as well. Sterelny
 
 We believe Sterelny is on the right track.  A useful next step is to construct
 formal models which incorporate some of these factors, and determine if their
-dynamics exhibit the kind of qualitative behavior we see in the transition 
+dynamics exhibit the kind of qualitative changes we see in the transition 
 from archaic to behaviorally modern assemblages.  Specifically, we need models which:
 
 * Represent cultural traits as hierarchically structured, in order to study increases in complexity
-* Have learning rules sensitive to the relational structure of traits
-* Have mechanisms such as homophily that foster cultural differentiation endogeneous to the model
+* Have learning rules sensitive to the structure and relations of cultural traits
+* Have mechanisms (such as homophily) which allow cultural differentiation endogeneous to the model
 
 As the "learning environment" in such models is tuned from lower to higher fidelity, 
 we would expect to see greater diversity, larger structured sets of traits persisting in the population, and greater differentiation of the population into "different" cultural configurations.
@@ -107,18 +106,20 @@ for studying the onset of behavioral modernity in the later Paleolithic.
 
 # The Semantic Axelrod Model for Trait Prerequisites 
 
-Much of our technical knowledge, whether of stone tool manufacture, throwing clay pots, or computer repair, is built from simple tasks, bits of background knowledge, and step-by-step procedures.  This belies the complexity of expert knowledge, of course--the difference between a beginner and an expert in some field is often the fact that a beginner may know one way to accomplish a goal, while the expert many know several or many, and be able to improvise new methods when needed tools and materials are unavailable [@Bleed:2008in;@bleed2002obviously;@stout2002skill].  
+Much of our technical knowledge, whether of stone tool manufacture, throwing clay pots, or computer repair, is built from simple tasks, bits of background knowledge, and step-by-step procedures [@neff1992ceramics; @schiffer1987theory].  We organize our knowledge and skills in many ways, but it common to think of a complex process as a "script" or "recipe" [@schank1977scripts].  Of course, experts in a task or field may not see it this way, having internalized such structures below the conscious level.  Experts will often know more than one way to accomplish any given goal, and be able to repurpose and recombine methods and tools, as opposed to the simpler, more linear or tree-based recipes of the novice or student. [e.g., @Bleed:2008in;@bleed2002obviously;@stout2002skill].  
 
-A detailed formal model of the relations between steps in a technological process, or the knowledge necessary to create a class of tools, will involve many kinds of relations.  Some items will be related in time:  steps in a process.  Others will be related by subsumption:  arrowheads are a subclass of bifacial stone tools, and require many of the same production techniques as bifaces used in other projectiles.  Still others will be related as sets of alternatives:  choices of surface treatment for a given ceramic paste, given the firing regime selected, for example.   For modeling purposes, it is useful to choose a way of representing such relations.  Models of stone tool production often use sequences, but models such as trees or more general graphs are possible and useful, as Bleed [-@bleed2001trees] describes.  We focus here on models which treat "prerequisite" relationships in general, and model them as trees in the graph-theoretic sense, although we stress that this is a subset of possible structures, chosen in this initial study for wide applicability and computational tractability.   
+A detailed formal model of the relations between steps in a technological process, or the knowledge necessary to create a class of tools, will involve many kinds of relations.  Some items will be related in time:  steps in a process.  Others will be related by subsumption:  arrowheads are a subclass of bifacial stone tools, and require many of the same production techniques as bifaces used in other projectiles.  Still others will be related as sets of alternatives:  choices of surface treatment for a given ceramic paste, given the firing regime selected, for example.   For modeling purposes, it is useful to choose a way of representing such relations.  Models of stone tool production often use sequences, but models such as trees or more general graphs are possible and useful, as Bleed [-@bleed2001trees] describes.  
 
-Next, our model requires a way of representing a changing learning environment, in ways that create higher fidelity and greater possibility for building cumulative knowledge.  In real learning envrionments, there are many possibilities, but deliberate teaching, and apprentice learning are repeatedly seen across human groups as ways that naive individuals can reliably learn the complex skills and information needed for foraging, artifact production and maintenance, and navigating an increasingly rich social world.  The point of structuring the learning environment with teaching and/or apprenticeship is to 
+In this chapter, we focus on a very simple model of the relations between skills or information:  the "prerequisite" relationships that exist between such cultural traits.  Some pieces of information or skills must be in place before a person can effectively learn or practice other.  Examples from our own childhoods abound:  one needed to understand addition and subtraction and multiplication before learning long division; in order to make a soup, we need to understand how to simmer rather than boil, how to chop and slice, and so on.  The fact that knowledge and skills build upon one another make prerequisite relations between cultural traits ubiquitous, and a useful first step in constructing social learning models which incorporate structured information.  We represent prerequisite relations as trees in the graph-theoretic sense, replacing the "flat" structure of "local/allele" models or the "dimension/mode" structure of classifications and some typologies [@Dunnell1971].  
+
+Our model also requires a way of representing a changing learning environment, in ways that create higher fidelity and greater possibility for building cumulative knowledge.  In real learning envrionments, there are many possibilities, but deliberate teaching, and apprentice learning are repeatedly seen across human groups as ways that naive individuals can reliably learn the complex skills and information needed for foraging, artifact production and maintenance, and navigating an increasingly rich social world.  The point of structuring the learning environment with teaching and/or apprenticeship is to 
 give the learner skilled models to imitate, shortcut trial and error when acquiring a skill, 
 provide a reference for needed information, and to guide individuals to put their information and
 skills together into appropriate sequences to accomplish an overall goal.  Apprenticeship and formalized teaching provide a social learning "scaffold", helping to lower the amount of individual trial and error learning needed to master a body of material [@wimsatt2007reproducing; @wimsatt2007re].  
 
-Within a standard discrete-time simulation model of a social learning process, we can model this type of learning environment with the following modifications to a normal unbiased copying process:
+Within a standard discrete-time simulation model of a social learning process, we can model this type of learning environment with the following modifications:
 
-1.  Disallowing individuals the ability to copy traits for which they don't have necessary background or prerequisites
+1.  Disallowing individuals the ability to copy traits for which they don't have necessary background or prerequisites.
 2.  Creating a probability that individuals, if disallowed a trait, may be able to learn one of its necessary prerequisites instead, leading to the possibility of full acquisition at some future time.
 
 By changing the probability that individuals learn a missing prerequisite trait, we can "tune" the learning environment.  Low probabilities might correspond, for example, to a learning environment where individuals can observe others executing a production step, but are given little or no instruction or guidance on what they need to know in order to successfully master it.  High probabilities of learning prerequisites would correspond, on the other hand, to environments where individuals receive instruction, or work together with a more skilled individual who guides them toward learning the information and skills they lack.  In the next section, we discuss the implementation of both points in more detail.
@@ -229,14 +230,14 @@ location of the critical point.
 ### Semantic Extensions to the Axelrod Model
 
 We begin each simulation with $N$ (either 100 or 225) agents, arranged on a
-square grid.
+square grid.  A design space is created, with some number of trait trees (4 or 16), with uniform branching factors and depth factors (3 or 5).  An example of such a tree is shown in panel A of Figure \ref{img:prereq}.
 Initial traits (and their prerequisites) are chosen randomly
-across the configured number of trait trees, as follows.  For each individual, we select a random number $t$ between 1 and 4, and repeat the trait selection process $t$ times for that individual.  In each selection, we choose a random tree in the design space, and then select a depth in the tree for the trait, given by $d  \sim \textrm{Poisson}(0.5)$.  This biases trait selection towards the root of the tree, as one would expect in young or inexperienced individuals.  We then walk $d$ steps into the tree, making uniform random selections for the children of each vertex.  The path of vertices thus constructed is added to the individual's trait set, giving them an initial trait and its necessary prerequisites.  One such path is visible in Figure \ref{img:prereq}.  Given that individuals begin with a small number of initial traits (between 1 and 4, selected randomly), and their prerequisites, the initial trait endowment of an individual is between 1 and $4h$, where $h$ is the maximum depth of the design space (either 3 or 5 in the experiments reported here).  
+across the configured number of trait trees, as follows.  For each individual, we select a random number $t$ between 1 and 4, and repeat the trait selection process $t$ times for that individual.  In each selection, we choose a random tree in the design space, and then select a depth in the tree for the trait, given by $d  \sim \textrm{Poisson}(0.5)$.  This biases trait selection towards the root of the tree, as one would expect in young or inexperienced individuals.  We then walk $d$ steps into the tree, making uniform random selections for the children of each vertex.  The path of vertices thus constructed is added to the individual's trait set, giving them an initial trait and its necessary prerequisites.  One such initial trait is shown in Panel B of Figure \ref{img:prereq}.  Given that individuals begin with a small number of initial traits (between 1 and 4, selected randomly), and their prerequisites, the initial trait endowment of an individual is between 1 and $4h$, where $h$ is the maximum depth of the design space (either 3 or 5 in the experiments reported here).[^median] 
 
 \begin{figure}[htbp] 
 \centering 
-\includegraphics[]{images/trait-tree-prereq.png} 
-\caption{Illustration of ``prerequisites'' for a cultural trait (35).} 
+\includegraphics[scale=0.5]{figure/design-init-final.pdf} 
+\caption{Illustration of a design space composed of a single trait tree, along with a random initial trait chosen from the design space, and a final sample from a simulation run, showing the evolution of traits within the design space.  Also shown in the top panel are the ``prerequisites'' for a cultural trait (35), as an example.} 
 \label{img:prereq} 
 \end{figure} 
 
@@ -253,7 +254,7 @@ not, it cannot immediately learn T, but there is a learning rate parameter
 for the simulation run which governs the chance that agent A will instead learn one of T's prerequisites during this time step.  Given a learning event, we again walk from the 
 root of the tree down the path towards the trait T, finding the first trait in the path
 that Agent A does not already possess.  For example, agent A might require the trait
-closest to T (e.g., trait 11 in Figure \ref{img:prereq}).  
+closest to T (e.g., trait 11 in Figure \ref{img:prereq}, if the original trait targeted was 35).  
 
 Additionally, at each time step, there is a probability that one individual, chosen randomly,
 will learn a new trait (and necessary prerequisites) that it does not already
@@ -263,12 +264,12 @@ functions much like "infinite-alleles mutation" in the classical Wright-Fisher n
 or like noise terms in Axelrod, Ising, or Potts models [@castellano2009statistical], we will refer to this as the "mutation" rate in this chapter.
 
 Each simulation run lasts 10 million steps, which is an average of 100,000 copying events
-per individual (in a population of 100).[^time]  Samples are taken beginning at 6 million steps, and sampling at an interval of 1 million steps.  For reference, the full algorithm for each copying step is 
-reproduced in the Appendix as Algorithm \ref{alg:tree-prereq-axelrod}.
+per individual (in a population of 100).[^time]  Samples are taken beginning at 6 million steps, and sampling at an interval of 1 million steps, and record the trait trees seen in the population.  An example of such a sampled tree is shown in Panel C of Figure \ref{img:prereq}.  For reference, the full algorithm for each copying step is 
+given in the Appendix as Algorithm \ref{alg:tree-prereq-axelrod}.
 
 # Measuring Cultural Diversity and the Results of Structured Learning #
 
-Each sample from a simulation run is composed of the distinct sets of trait trees possessed by individuals in the population, along with summary statistics.  If a simulation run converges to a monocultural solution, the sample will have one set of trait trees, which are shared across the entire population.  In other cases, there will be multiple cultural configurations, which might be unique to a single individual, or shared by some number of agents.  Each "culture region" will be composed of some number of trait trees (typically, the number configured for the simulation run:  4 or 16, but perhaps a subset), and each trait tree will be the result of many agents learning traits and their prerequisites socially, and for runs with a non-zero mutation rate, by individual learning or innovation.  Each culture region will thus have some number of traits, typically higher (often much higher) than the initial endowment given to the population.  
+Each sample from a simulation run is composed of the distinct sets of trait trees possessed by individuals in the population, along with summary statistics.  If a simulation run converges to a monocultural solution, the sample will have one set of trait trees, which are shared across the entire population.  In other cases, there will be multiple cultural configurations or "regions," which might be unique to a single individual, or shared by some number of agents.  Each region will be composed of some number of trait trees (typically, the number configured for the simulation run:  4 or 16, but perhaps a subset), and each trait tree will be the result of many agents learning traits and their prerequisites socially, and for runs with a non-zero mutation rate, by individual learning or innovation.  Each culture region will thus have some number of traits, typically higher (often much higher) than the initial endowment given to the population.  
 
 \begin{figure}[htbp] 
 \centering 
@@ -277,7 +278,7 @@ Each sample from a simulation run is composed of the distinct sets of trait tree
 \label{img:final-tree} 
 \end{figure} 
 
-For each culture region, the sample contains descriptive statistics for the trait trees.  The ratio of the number of traits in the sample to the full design space size (or "remaining density" of traits) is a measure of how diverse a cultural region is.  The radius of a rooted tree is the number of edges in the path from root to the furthest edge.  The average radius of trees in a sample (or its ratio to the depth of the design space) is another measure of how diverse a cultural configuration is (in terms of depth).  Similarly, in the original design space, the branching factor describes how many children each node in the tree started with, so measuring the average vertex degree gives us a rough measure of how diverse the cultural configuration is (in terms of breadth)[^degree].  Each of these measures is illustrated in Figure \ref{img:final-tree} for an example tree selected from our data.  
+Samples contain descriptive statistics for the trait trees of each cultural region, as follows.  The ratio of the number of traits in the sample to the full design space size (or "remaining density" of traits) is a measure of how diverse a cultural region is.  The radius of a rooted tree is the number of edges in the path from root to the furthest edge.  The average radius of trees in a sample (or its ratio to the depth of the design space) is a measure of how diverse and "deep" a cultural configuration is.  Similarly, in the original design space, the branching factor describes how many children each node in the tree started with, so measuring the average vertex degree gives us a rough measure of how diverse the cultural configuration is (in terms of breadth)[^degree].  Each of these measures is illustrated in Figure \ref{img:final-tree} for an example tree selected from our data.  
 
 
 In addition to these simple numerical measures comparing final trees to
@@ -295,7 +296,7 @@ object is preserved [@rotman1995introduction].  Graph automorphisms map vertices
 repeating patterns will thus have an automorphism group size of 1, indicating that the only symmetry is the entire tree itself.  A balanced tree with branching and depth factors of 3, as depicted in 
 Figure \ref{img:trait-tree}, has approximately $1.3 \times 10^{10}$ automorphisms.  
 
-Because group sizes grow quickly and the accuracy of forming ratios with truly astronomical numbers is low, another good measure of the symmetries present is to count the _classes_ of equivalences into which vertices fall.  The _orbits_ of the automorphism group are the sets of vertices which are interchangable by some permutation that preserves structure.  For example, the graph in \ref{img:trait-tree} has five orbits, with each vertex at a given level interchangable (in a structural sense).  Similarly, the six leaf vertices that are part of pairs in Figure \ref{img:final-tree} are part of the same orbit; in this illustration, each orbit is given a different color to highlight their equivalence. 
+Because group sizes grow quickly and the accuracy of forming ratios with truly astronomical numbers is low, another possible measure of the symmetries present is to count the _classes_ of equivalences into which vertices fall.  The _orbits_ of the automorphism group are the sets of vertices which are interchangable by some permutation that preserves structure.  For example, the graph in \ref{img:trait-tree} has five orbits, with each vertex at a given level interchangable (in a structural sense).  Similarly, the six leaf vertices that are part of pairs in Figure \ref{img:final-tree} are part of the same orbit; in this illustration, each orbit is given a different color to highlight their equivalence. 
 
 For each cultural region found when sampling a simulation, we calculate the size of the automorphism group and the number and multiplicity (frequency) of orbits.  For this analysis, we employ the _nauty + Traces_ software by
 Brendan McKay and Adolfo Piperno [@McKay201494].[^4]  Finally, given these graph algebraic properties of trait forests, we can form the ratio of "non-trivial" orbits (orbits with more than one member--the root of the tree always fits into a trivial orbit of its own, for example) to the total number of vertices in the forest.  Following Xiao, we refer to this as the $\lambda_G$ statistic [@macarthur2008symmetry;@xiao2008symmetry].  
@@ -303,29 +304,73 @@ Brendan McKay and Adolfo Piperno [@McKay201494].[^4]  Finally, given these graph
 
 # Experiments
 
-* effect of prerequisite learning rate on resulting trait diversity and depth
-* effect of prereq LR on cultural differentiation
-* interaction with population size
+For this chapter, we examined populations of size 100 and 225, to begin to examine the effects of population size.  For these populations, we examined design spaces that were small (4 trait trees) and large (16 trait trees).  Within each size, we further examined combinations of branching factor and depth factor with values of 3 and 5, thus yielding 8 total sizes of design space (Table \ref{tab:axelrod-design-space-size}).
 
+\input{design-space-table.tex}
+
+Further, we examined three levels of global mutation or innovation rate:  zero, or no mutation, and 0.00005 and 0.0001.  Such rates created a constant supply of new innovations, but several orders of magnitude less frequent than copying and prerequisite learning events.  The full set of parameters are given in Table \ref{tab:axelrodct-sim-parameters}.  For each combination of all of the above parameters, we performed 25 replications.
 
 \input{simulation-parameters-table.tex}
 
+The simulations were designed to examine whether the combination of a hierarchical, tree-like representation of cultural traits, in combination with an Axelrod-like model which provides the possibility of cultural differentiation, is a good platform for exploring questions surrounding behavioral modernity.  We are not experts concerning Paleolithic assemblages, so our efforts are exploratory, and an attempt to construct models which can be extended and applied to real data.  
 
+In analyzing the results of the semantic Axelrod model described here, we looked at the degree to which individuals converged in their cultural repertoire (as we might describe conditions in the early Paleolithic), or under what conditions did social learning lead to greater individual variation in repertoires?  We did not examine metapopulation models in this chapter, so the question of regional-scale diversity will await a later paper.  Second, we looked at whether highly structured learning environments, represented here by higher probabilities of naive individuals gaining the prerequisites for the skills and information they encounter with peers, led to deeper and richer cultural repertoires.  We also began examining whether there are invariant statistical properties of those repertoires, through the use of symmetry measures.  Finally, we began to examine how the structured learning environment might interact with demography, by simulating the same parameters across two sizes of population.      
 
 
 # Results
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum
-mauris quis turpis pellentesque, quis porta arcu varius. Suspendisse
-dictum at odio id luctus. Curabitur ut tristique nisl. Pellentesque
-habitant morbi tristique senectus et netus et malesuada fames ac turpis
-egestas. Vivamus molestie at elit a sodales. Vestibulum suscipit leo sed
-semper facilisis. Nam lacinia lobortis imperdiet. Nulla facilisi. Duis
-suscipit elementum risus, vitae molestie eros accumsan ut. Nulla
-facilisi. Praesent quis adipiscing sem. Interdum et malesuada fames ac
-ante ipsum primis in faucibus.
+We begin by noting that compared to the original Axelrod model, or neutral and biased copying models, the dynamics of our semantic axelrod model are highly variable.  A very wide range of outcomes is possible for each parameter combination, especially when the size of the design space is large.  We should expect this, and means that any specific simulation trajectory is path-dependent.  Thus, in future studies, larger numbers of replications are advisable, although this is computationally quite expensive at present.[^expense]
+
+## Cultural Diversity ##
+
+Variation among individuals is foundational to evolutionary processes, and is the raw material from which differentiation between regions and cultural groups is constructed.  In the simulations reported here, we examine diversity within a single population, but we are planning a set of metapopulation experiments with the same model to address regional diversification.  In Figure \ref{img:size-spectrum-cultures} we show the size spectrum of cultural regions (clusters of individuals with the same trait trees), for each combination of prerequisite learning rate and design space size.  The variable plotted here is the number of cultural regions in a given sample.  Thus, in a population of size 100, if there is 1 cultural solution, then all 100 individuals share it.  If there are 100 cultural regions, then every individual had a unique configuration of cultural traits.  In the lower left corner are the very lowest learning rates, in small design spaces.  We believe this could correspond to the kind of learning environments and knowledge structures that characterizes human technology through much of the early and middle Paleolithic.  In this corner, most cultural regions span the entire population (given the large spike on the left).  In small design spaces, configurations become more diverse and smaller on average, as the learning rate increases.  As it becomes highly probable that an individual will learn the prerequisites they need for an encountered skill or trait, the population fragments among different portions of the design space. 
+
+\begin{figure}[htbp] 
+\centering 
+\includegraphics[scale=0.4]{figure/size-spectrum-regions-saa12full.pdf} 
+\caption{The sizes (in number of individuals) of cultural configurations, by the size of the design space (horizontal facets), and prerequisite learning rate (vertical facets), for population size 100.} 
+\label{img:size-spectrum-cultures} 
+\end{figure}  
+
+Two other effects are also visible in these data.  First, the distributions become bimodal for most combinations of design space size and learning rate.  The left hand peak corresponds to simulation runs which had no global innovation or mutation rate, and where only copying and prerequisite learning occurred.  In such populations, cultural regions were uniformly large and populations quickly converged on a single set of traits.  This highlights the importance of various "innovation" and "invention" processes in the creation and maintenance of cultural differentiation and diversity [@eerkens2005cultural; @o2010innovation], and suggests that systematic change in innovation processes may be a crucial component of any multi-factor model for the evolution of behaviorial modernity.  The second effect is the distinctive narrowing of the size distribution in the largest design spaces and highest learning rates.  This is not an artifact of the length of time into the simulation run a sample was taken, since the distributions look identical for samples taken at 1 million step intervals.  This is likely just the signature of a small population evolving in a very large design space.  This effect warrants further study, since it may be a source for group divergence as information and technology accumulates in human societies.  
+
+
+## Trait Richness and Knowledge Depth ##
+
+* this is our ability to talk about cumulative knowledge, but in the abstract
+* looks like there's a bifurcation, but *both* individual social learning rates and global innovation are key to the deeper regime.
+* is there literature on the criticality of innovation to cumulative social learning?
+
+
+\begin{figure}[htbp] 
+\centering 
+\includegraphics[scale=0.4]{figure/mean-radius-by-learning-rate-innov.pdf} 
+\caption{Mean radius (i.e, depth) of trait sets, by prerequisite learning rate and global innovation rate, for population size 100.} 
+\label{img:mean-radius-cultures} 
+\end{figure} 
+
+
+## Trait Tree Symmetries ##
+
+* need to see other population sizes, but there's a speculative effect of narrowing here
+* no clue what it means, the shape stuff is still exploratory
+
+\begin{figure}[htbp] 
+\centering 
+\includegraphics[scale=0.4]{figure/autgroupsize-by-learning-by-innovation.pdf} 
+\caption{Number of symmetries in trait tree samples, measured as the log of the order of the automorphism group of the trait graphs, broken down by prerequisite learning rate and global innovation rate.} 
+\label{img:autgsize} 
+\end{figure} 
+
+
+
 
 # Discussion
+
+* clearly there is promise here, summarize results
+* difficult models to characterize, need larger samples, metapopulations, population sizes
+
+* longer term, more trait relations, realistic trait models
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum
 mauris quis turpis pellentesque, quis porta arcu varius. Suspendisse
@@ -386,10 +431,7 @@ implementation [@national2012Assessing].
 The analysis and final dataset reported here are available, along with
 the source of this paper and associated presentations, in an associated
 GitHub repository: <https://github.com/mmadsen/madsenlipo2014>. Statistical
-analyses of the final dataset were performed in R, embedded in the
-source version of the paper, which uses Knitr and produces multiple
-output formats, including LaTeX for publication [@xie2013dynamic].  All aspects of the analysis 
-(once raw simulation output is available), are reproducible.  
+analyses of the final dataset were performed in R, employing Knitr to render the results directly in publication format, and thus reproducible by others [@xie2013dynamic].  
 
 
 [^2]: If we consider each trait to be unique and non-interchangeable,
@@ -417,3 +459,7 @@ output formats, including LaTeX for publication [@xie2013dynamic].  All aspects 
 [^time]:  100,000 was chosen as a compromise for running large batches of simulations in parallel.  Some simulation runs, especially in small design spaces with very high prerequisite learning rates, can converge to a monocultural solution and quasi-stable equilibrium quite quickly; in the largest design spaces and low learning rates, convergence may never occur even though the process is well-mixed.
 
 [^degree]:  This is an approximate measure, compared to radius, because the leaves of a tree have no children, and thus the mean degree of the design space is slightly less than the branching factor of the tree (plus one, because every vertex does have a parent node).  This can be made more precise by calculating the actual mean degree of the original design space, but we have not done so here. 
+
+[^median]:  The median number of traits in samples taken after 6-10 million time steps is considerably higher--259 traits per cultural configuration or region.  Thus, cultural repertoires grow significantly over time, as expected.  
+
+[^expense]:  The simulations reported here ran on a cluster of 4 compute-optimized "extra large" Linux instances on Amazon's EC2 computing cloud, for a total of 17 days of wall clock time, and roughly 1500 CPU hours.  We plan further optimizations to the simulation code to make larger samples economically feasible.  

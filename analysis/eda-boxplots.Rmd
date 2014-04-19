@@ -1,21 +1,18 @@
-# SAA-2, SAA-3, SAA-4, SAA-7 EDA:  SSS Boxplots #
+# SAA-1 and 2 EDA:  Full Data Set Boxplots #
 
 ```{r libraries, error=FALSE, message=FALSE, echo=FALSE, cache=FALSE, warning=FALSE}
 library(dplyr)
 library(semanticaxelrod)
 library(ggplot2)
 
-#load("data/saa_finalized_combined.rda")
-load("data/saa-test.rda")
+load("~/local-research/semanticaxelrod/rawdata/saa12-full.rda")
 
-smallstate100 <- subset(saa_full_combined, branching_factor == 3 & depth_factor == 3 & population_size == 100 & innovation_rate == 0 )
-
-
-smallstate100innov <- subset(saa_full_combined, branching_factor == 3 & depth_factor == 3 & population_size == 100 & innovation_rate > 0 )
+saa12fullnoinnov <- subset(saa12full, innovation_rate == 0 )
+saa12fullinnov <- subset(saa12full, innovation_rate > 0 )
 
 ```
 
-To start, I'm looking just at the size 100 population, and the "smallest" trait trees, $r=3, h=3$, and contrasting "small state spaces" with 4 trait trees with larger state spaces with 16 trees.  
+To start, I'm looking just at the size 100 population. 
 
 ## Orbit Number ##
 
@@ -23,7 +20,7 @@ With no innovation rate -- just copying and learning of prerequisites:
 
 ```{r eda-sss-orbit-box, results="asis", message=FALSE, warning=FALSE, highlight=TRUE, fig.width=12}
 
-p <- ggplot(data=smallstate100, aes(y=orbit_number, x=factor(learning_rate), fill=factor(num_trait_trees)))
+p <- ggplot(data=saa12fullnoinnov, aes(y=orbit_number, x=factor(learning_rate), fill=factor(num_trait_trees)))
 p + geom_boxplot(notch=FALSE)
 
 ```
@@ -32,7 +29,7 @@ Hmm.  Through learning rates of 0.6, the means basically overlap each other's in
 
 ```{r eda-sss-orbit-innov, results="asis", message=FALSE, warning=FALSE, highlight=TRUE, fig.width=12}
 
-p <- ggplot(data=smallstate100innov, aes(y=orbit_number, x=factor(learning_rate), fill=factor(num_trait_trees)))
+p <- ggplot(data=saa12fullinnov, aes(y=orbit_number, x=factor(learning_rate), fill=factor(num_trait_trees)))
 p + geom_boxplot(notch=FALSE)
 
 ```
@@ -44,7 +41,7 @@ This should be accompanied by the orbit multiplicity going up, towards the avera
 
 ```{r eda-sss-mult, results="asis", message=FALSE, warning=FALSE, highlight=TRUE, fig.width=12}
 
-p <- ggplot(data=smallstate100, aes(y=mean_orbit_multiplicity, x=factor(learning_rate), fill=factor(num_trait_trees)))
+p <- ggplot(data=saa12fullnoinnov, aes(y=mean_orbit_multiplicity, x=factor(learning_rate), fill=factor(num_trait_trees)))
 p + geom_boxplot(notch=FALSE)
 
 ```
@@ -54,7 +51,7 @@ With noise/innovation:
 
 ```{r eda-sss-mult-innov, results="asis", message=FALSE, warning=FALSE, highlight=TRUE, fig.width=12}
 
-p <- ggplot(data=smallstate100innov, aes(y=mean_orbit_multiplicity, x=factor(learning_rate), fill=factor(num_trait_trees)))
+p <- ggplot(data=saa12fullinnov, aes(y=mean_orbit_multiplicity, x=factor(learning_rate), fill=factor(num_trait_trees)))
 p + geom_boxplot(notch=FALSE)
 
 ```
@@ -65,7 +62,7 @@ p + geom_boxplot(notch=FALSE)
 
 ```{r eda-sss-aut, results="asis", message=FALSE, warning=FALSE, highlight=TRUE, fig.width=12}
 
-p <- ggplot(data=smallstate100, aes(y=log(autgroupsize), x=factor(learning_rate), fill=factor(num_trait_trees)))
+p <- ggplot(data=saa12fullnoinnov, aes(y=log(autgroupsize), x=factor(learning_rate), fill=factor(num_trait_trees)))
 p + geom_boxplot(notch=FALSE)
 
 ```
@@ -75,7 +72,7 @@ and with innovation:
 
 ```{r eda-sss-aut-innov, results="asis", message=FALSE, warning=FALSE, highlight=TRUE, fig.width=12}
 
-p <- ggplot(data=smallstate100innov, aes(y=log(autgroupsize), x=factor(learning_rate), fill=factor(num_trait_trees)))
+p <- ggplot(data=saa12fullinnov, aes(y=log(autgroupsize), x=factor(learning_rate), fill=factor(num_trait_trees)))
 p + geom_boxplot(notch=FALSE)
 
 ```
@@ -86,7 +83,7 @@ p + geom_boxplot(notch=FALSE)
 
 ```{r eda-sss-density, results="asis", message=FALSE, warning=FALSE, highlight=TRUE, fig.width=12}
 
-p <- ggplot(data=smallstate100, aes(y=remaining_density, x=factor(learning_rate), fill=factor(num_trait_trees)))
+p <- ggplot(data=saa12fullnoinnov, aes(y=remaining_density, x=factor(learning_rate), fill=factor(num_trait_trees)))
 p + geom_boxplot(notch=FALSE)
 
 ```
@@ -96,7 +93,7 @@ and with innovation:
 
 ```{r eda-sss-density-innov, results="asis", message=FALSE, warning=FALSE, highlight=TRUE, fig.width=12}
 
-p <- ggplot(data=smallstate100innov, aes(y=remaining_density, x=factor(learning_rate), fill=factor(num_trait_trees)))
+p <- ggplot(data=saa12fullinnov, aes(y=remaining_density, x=factor(learning_rate), fill=factor(num_trait_trees)))
 p + geom_boxplot(notch=FALSE)
 
 ```
@@ -106,7 +103,7 @@ p + geom_boxplot(notch=FALSE)
 
 ```{r eda-sss-rfrac, results="asis", message=FALSE, warning=FALSE, highlight=TRUE, fig.width=12}
 
-p <- ggplot(data=smallstate100, aes(y=radius_frac, x=factor(learning_rate), fill=factor(num_trait_trees)))
+p <- ggplot(data=saa12fullnoinnov, aes(y=radius_frac, x=factor(learning_rate), fill=factor(num_trait_trees)))
 p + geom_boxplot(notch=FALSE)
 
 ```
@@ -116,7 +113,7 @@ and with innovation:
 
 ```{r eda-sss-rfrac-innov, results="asis", message=FALSE, warning=FALSE, highlight=TRUE, fig.width=12}
 
-p <- ggplot(data=smallstate100innov, aes(y=radius_frac, x=factor(learning_rate), fill=factor(num_trait_trees)))
+p <- ggplot(data=saa12fullinnov, aes(y=radius_frac, x=factor(learning_rate), fill=factor(num_trait_trees)))
 p + geom_boxplot(notch=FALSE)
 
 ```
@@ -128,7 +125,7 @@ Lambda is the fraction of vertices in a graph that belong to non-trivial orbits.
 
 ```{r eda-sss-lambda, results="asis", message=FALSE, warning=FALSE, highlight=TRUE, fig.width=12}
 
-p <- ggplot(data=smallstate100, aes(y=msg_lambda, x=factor(learning_rate), fill=factor(num_trait_trees)))
+p <- ggplot(data=saa12fullnoinnov, aes(y=msg_lambda, x=factor(learning_rate), fill=factor(num_trait_trees)))
 p + geom_boxplot(notch=FALSE)
 
 ```
@@ -138,7 +135,7 @@ and with innovation:
 
 ```{r eda-sss-lambda-innov, results="asis", message=FALSE, warning=FALSE, highlight=TRUE, fig.width=12}
 
-p <- ggplot(data=smallstate100innov, aes(y=msg_lambda, x=factor(learning_rate), fill=factor(num_trait_trees)))
+p <- ggplot(data=saa12fullinnov, aes(y=msg_lambda, x=factor(learning_rate), fill=factor(num_trait_trees)))
 p + geom_boxplot(notch=FALSE)
 
 ```
@@ -149,7 +146,7 @@ Beta is the ratio of the observed automorphism group size to the order of the sy
 
 ```{r eda-sss-beta, results="asis", message=FALSE, warning=FALSE, highlight=TRUE, fig.width=12}
 
-p <- ggplot(data=smallstate100, aes(y=msg_beta, x=factor(learning_rate), fill=factor(num_trait_trees)))
+p <- ggplot(data=saa12fullnoinnov, aes(y=msg_beta, x=factor(learning_rate), fill=factor(num_trait_trees)))
 p + geom_boxplot(notch=FALSE)
 
 ```
@@ -159,7 +156,7 @@ and with innovation:
 
 ```{r eda-sss-beta-innov, results="asis", message=FALSE, warning=FALSE, highlight=TRUE, fig.width=12}
 
-p <- ggplot(data=smallstate100innov, aes(y=msg_beta, x=factor(learning_rate), fill=factor(num_trait_trees)))
+p <- ggplot(data=saa12fullinnov, aes(y=msg_beta, x=factor(learning_rate), fill=factor(num_trait_trees)))
 p + geom_boxplot(notch=FALSE)
 
 ```
