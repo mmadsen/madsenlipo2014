@@ -1,0 +1,38 @@
+```{r libraries, error=FALSE, message=FALSE,   echo=FALSE, cache=FALSE, warning=FALSE}
+library(dplyr)
+library(semanticaxelrod)
+library(ggplot2)
+library(grid)
+
+theme_set(theme_bw())
+
+
+load("~/local-research/semanticaxelrod/rawdata/saa12-full.rda")
+
+saa12fullnoinnov <- subset(saa12full, innovation_rate == 0 )
+saa12fullinnov <- subset(saa12full, innovation_rate > 0 )
+
+# subset of data for the conference presentation
+
+#cf <- subset(saa12full, size_trait_space == 160 | size_trait_space == 640 | size_trait_space == 2496 | size_trait_space == 62496 )
+#confsubset <- subset(cf, learning_rate == 0.1 | learning_rate == 0.4 | learning_rate == 0.9)
+
+
+```
+
+
+## Orbit Number ##
+
+```{r orbit-1, results="asis", message=FALSE, warning=FALSE, highlight=TRUE, fig.width=12}
+
+p <- ggplot(data=saa12full, aes(y=orbit_number, x=factor(learning_rate), fill=factor(innovation_rate))) + ylab("Number of Symmetry Classes (Orbits)") + xlab("Prerequisite Learning Rate") + labs(fill="Global Innovation Rate")
+p + geom_boxplot(notch=FALSE)
+```
+
+```{r auto-1, results="asis", message=FALSE, warning=FALSE, highlight=TRUE, fig.width=12}
+
+p <- ggplot(data=saa12full, aes(y=log(autgroupsize), x=factor(learning_rate), fill=factor(innovation_rate))) + ylab("Log(Automorphism Group Size)") + xlab("Prerequisite Learning Rate") + labs(fill="Global Innovation Rate")
+p + geom_boxplot(notch=FALSE)
+```
+
+

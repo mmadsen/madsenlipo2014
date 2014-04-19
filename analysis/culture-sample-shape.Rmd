@@ -1,0 +1,53 @@
+```{r libraries, error=FALSE, message=FALSE,   echo=FALSE, cache=FALSE, warning=FALSE}
+library(dplyr)
+library(semanticaxelrod)
+library(ggplot2)
+
+load("~/local-research/semanticaxelrod/rawdata/saa12-final.rda")
+
+
+saa12finalnoinnov <- subset(saa12final, innovation_rate == 0 )
+saa12finalinnov <- subset(saa12final, innovation_rate > 0 )
+
+```
+
+## Orbit Number and |Aut(G)|:  How Much Symmetry? ##
+
+Without innovation:
+
+```{r orbits-noinnov, results="asis", message=FALSE, warning=FALSE, fig.width=12}
+
+p <- ggplot(saa12finalnoinnov, aes(x=orbit_number)) + geom_density(fill="red")
+p + facet_grid(learning_rate ~ size_trait_space, scale="free_y")
+
+```
+
+And with innovation:
+
+```{r orbits-innov, results="asis", message=FALSE, warning=FALSE, fig.width=12}
+
+p <- ggplot(saa12finalinnov, aes(x=orbit_number)) + geom_density(fill="red")
+p + facet_grid(learning_rate ~ size_trait_space, scale="free_y")
+
+```
+
+Aut(g) first without innovation:
+
+```{r autg-noinnov, results="asis", message=FALSE, warning=FALSE, fig.width=12}
+
+p <- ggplot(saa12finalnoinnov, aes(x=log(autgroupsize))) + geom_density(fill="red")
+p + facet_grid(learning_rate ~ size_trait_space, scale="free_y")
+
+```
+
+And with innovation:
+
+```{r autg-innov, results="asis", message=FALSE, warning=FALSE, fig.width=12}
+
+p <- ggplot(saa12finalinnov, aes(x=log(autgroupsize))) + geom_density(fill="red")
+p + facet_grid(learning_rate ~ size_trait_space, scale="free_y")
+
+```
+
+
+

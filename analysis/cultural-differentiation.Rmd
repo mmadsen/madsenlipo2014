@@ -1,0 +1,128 @@
+```{r libraries, error=FALSE, message=FALSE,   echo=FALSE, cache=FALSE, warning=FALSE}
+library(dplyr)
+library(semanticaxelrod)
+library(ggplot2)
+library(grid)
+
+theme_set(theme_bw())
+
+
+load("~/local-research/semanticaxelrod/rawdata/saa12-full.rda")
+
+
+saa12fullnoinnov <- subset(saa12full, innovation_rate == 0 )
+saa12fullinnov <- subset(saa12full, innovation_rate > 0 )
+
+# for cultural differentation
+rc <- select(saa12full, simulation_run_id, num_culture_regions, size_trait_space, learning_rate, innovation_rate)
+full_region_count <- unique(rc)
+
+rc_by_time <- select(saa12full, simulation_run_id, num_culture_regions, size_trait_space, learning_rate, innovation_rate, sample_time)
+rc_by_time_count <- unique(rc_by_time)
+
+rc_by_time_0.9 <- subset(rc_by_time_count, learning_rate == 0.9)
+
+rc2 <- select(saa12fullnoinnov, simulation_run_id, num_culture_regions, size_trait_space, learning_rate, innovation_rate)
+rc_noinnov <- unique(rc2)
+
+rc3 <- select(saa12fullinnov, simulation_run_id, num_culture_regions, size_trait_space, learning_rate, innovation_rate)
+rc_innov <- unique(rc3)
+
+
+# subset of data for the conference presentation
+
+cf <- subset(saa12full, size_trait_space == 160 | size_trait_space == 640 | size_trait_space == 2496 | size_trait_space == 62496 )
+confsubset <- subset(cf, learning_rate == 0.1 | learning_rate == 0.4 | learning_rate == 0.9)
+rc4 <- select(confsubset, simulation_run_id, num_culture_regions, size_trait_space, learning_rate)
+confsubset_region_count <- unique(rc4)
+
+```
+
+
+Is there a systematic relationship between the number of culture regions in a sample and the learning rate, at a given size design space?
+
+```{r culture-regions, results="asis", message=FALSE, warning=FALSE, fig.width=12}
+
+
+# THIS FIGURE IS USED IN THE SPRINGER PAPER
+
+p <- ggplot(full_region_count, aes(x=num_culture_regions)) + geom_histogram(binwidth=5, fill="darkgrey") + xlab("Number of Distinct Cultural Configurations") + ggtitle("Size Spectrum of Cultures by Size of the Design Space (horizontal) and Learning Rate (vertical)")
+p + facet_grid(learning_rate ~ size_trait_space, scale="free_y", as.table=FALSE)
+ggsave("../paper/figure/size-spectrum-regions-saa12full.pdf", dpi=300)
+
+
+```
+
+And, a subset which is small enough to be legible for the conference presentation:
+
+```{r culture-regions-conf, results="asis", message=FALSE, warning=FALSE, fig.width=12}
+
+
+# THIS FIGURE IS USED IN THE CONF PAPER
+
+p <- ggplot(confsubset_region_count, aes(x=num_culture_regions)) + geom_histogram(binwidth=5, fill="#39275B") + xlab("Number of Distinct Cultural Configurations") + ggtitle("Size Spectrum of Cultures by Size of the Design Space (horizontal) and Learning Rate (vertical)")
+p + facet_grid(learning_rate ~ size_trait_space, scale="free_y", as.table=FALSE)
+ggsave("../presentation/images/conf-size-spectrum-regions-saa12full.pdf", dpi=300)
+
+
+```
+
+
+
+
+
+How does the mutation or innovation rate affect this?  First, without innovation:
+
+
+```{r culture-regions2, results="asis", message=FALSE, warning=FALSE, fig.width=12}
+p <- ggplot(rc_noinnov, aes(x=num_culture_regions)) + geom_histogram(fill="darkgrey", binwidth=1) + xlab("Number of Distinct Cultural Configurations") + ggtitle("Size Spectrum of Cultures by Size of the Design Space (horizontal) and Learning Rate (vertical)")
+p + facet_grid(learning_rate ~ size_trait_space, scale="free_y", as.table=FALSE)
+
+```
+
+And, with innovation:
+
+```{r culture-regions3, results="asis", message=FALSE, warning=FALSE, fig.width=12}
+
+p <- ggplot(rc_innov, aes(x=num_culture_regions)) + geom_histogram(fill="darkgrey", binwidth=5) + xlab("Number of Distinct Cultural Configurations") + ggtitle("Size Spectrum of Cultures by Size of the Design Space (horizontal) and Learning Rate (vertical)")
+p + facet_grid(learning_rate ~ size_trait_space, scale="free_y", as.table=FALSE)
+
+
+
+```
+
+Now, let's look at the distribution of monocultural solutions:
+
+```{r culture-regions4, results="asis", message=FALSE, warning=FALSE, fig.width=12}
+
+monocultural_both <- subset(full_region_count, num_culture_regions == 1)
+p <- ggplot(monocultural_both, aes(x=learning_rate)) + geom_histogram(fill="darkgrey") + ggtitle("Occcurrence of Monocultural Solutions by Learning Rate")
+p + facet_grid(size_trait_space ~ ., , as.table=FALSE)
+
+
+
+```
+
+
+Time dependence?
+
+```{r time-1, results="asis", message=FALSE, warning=FALSE, fig.width=12}
+
+p <- ggplot(rc_by_time_0.9, aes(x=num_culture_regions)) + geom_histogram(binwidth=5, fill="darkgrey") + xlab("Number of Distinct Cultural Configurations") + ggtitle("Size Spectrum of Cultures by Size of the Design Space (horizontal) and Learning Rate (vertical)")
+p + facet_grid(sample_time ~ size_trait_space, scale="free_y", as.table=FALSE)
+```
+
+
+
+
+
+And we can look at the linear model.  We only have a few values of learning rate and innovation rate, but technically both are continuous variables, as is the response variable.  Here I look at the innovation set only.
+
+```{r lm-1, results="asis", message=FALSE, warning=FALSE, fig.width=12}
+fit <- lm(num_culture_regions ~ learning_rate + innovation_rate + size_trait_space, data=rc_innov)
+summary(fit)
+```
+
+
+
+
