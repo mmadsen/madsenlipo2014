@@ -1,0 +1,56 @@
+```{r libraries, error=FALSE, message=FALSE,   echo=FALSE, cache=FALSE, warning=FALSE}
+library(dplyr)
+library(semanticaxelrod)
+library(ggplot2)
+library(grid)
+
+theme_set(theme_bw())
+
+
+load("~/local-research/semanticaxelrod/rawdata/saa34-full.rda")
+
+saa34fullnoinnov <- subset(saa34full, innovation_rate == 0 )
+saa34fullinnov <- subset(saa34full, innovation_rate > 0 )
+
+# subset of data for the conference presentation
+
+cf <- subset(saa34full, size_trait_space == 160 | size_trait_space == 640 | size_trait_space == 2496 | size_trait_space == 62496 )
+confsubset <- subset(cf, learning_rate == 0.1 | learning_rate == 0.4 | learning_rate == 0.9)
+
+
+```
+
+
+```{r radius-1, results="asis", message=FALSE, warning=FALSE, highlight=TRUE, fig.width=12}
+
+p <- ggplot(data=saa34full, aes(y=radius_frac, x=factor(learning_rate), fill=factor(innovation_rate))) + ylab("Normalized Mean Trait Graph Radius") + xlab("Prerequisite Learning Rate") + labs(fill="Global Innovation Rate")
+p + geom_boxplot(notch=FALSE)
+ggsave("../paper/figure/mean-radius-by-learning-rate-innov-34.pdf",dpi=300)
+ggsave("../presentation/images/mean-radius-by-learning-rate-innov-34.pdf",dpi=300)
+
+```
+
+```{r degree-1, results="asis", message=FALSE, warning=FALSE, highlight=TRUE, fig.width=12}
+
+p <- ggplot(data=saa34full, aes(y=mean_degree, x=factor(learning_rate), fill=factor(innovation_rate))) + ylab("Mean Degree") + xlab("Prerequisite Learning Rate") + labs(fill="Global Innovation Rate")
+p + geom_boxplot(notch=FALSE)
+
+```
+
+```{r order-1, results="asis", message=FALSE, warning=FALSE, highlight=TRUE, fig.width=12}
+
+p <- ggplot(data=saa34full, aes(y=order, x=factor(learning_rate), fill=factor(innovation_rate))) + ylab("Trait Tree Size") + xlab("Prerequisite Learning Rate") + labs(fill="Global Innovation Rate")
+p + geom_boxplot(notch=FALSE)
+
+
+```
+
+
+```{r radius-order-1, results="asis", message=FALSE, warning=FALSE, highlight=TRUE, fig.width=12}
+p <- ggplot(data=saa34full, aes(y=order, x=radius_frac)) + ylab("Trait Tree Size") + xlab("Normalized Mean Trait Graph Radius") 
+p + geom_point()
+p + facet_grid(learning_rate ~ innovation_rate)
+
+```
+
+

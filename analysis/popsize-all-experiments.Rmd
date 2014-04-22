@@ -1,0 +1,26 @@
+```{r libraries, error=FALSE, message=FALSE,   echo=FALSE, cache=FALSE, warning=FALSE}
+library(dplyr)
+library(semanticaxelrod)
+library(ggplot2)
+library(grid)
+
+theme_set(theme_bw())
+
+
+load("~/local-research/semanticaxelrod/rawdata/saa-full.rda")
+
+
+saafullinnov <- subset(saa_alldata, innovation_rate == 1e-04 )
+
+
+```
+
+```{r radius-1, results="asis", message=FALSE, warning=FALSE, highlight=TRUE, fig.width=12}
+
+p <- ggplot(data=saafullinnov, aes(y=radius_frac, x=factor(learning_rate), fill=factor(population_size))) + ylab("Normalized Mean Trait Graph Radius") + xlab("Prerequisite Learning Rate") + labs(fill="Population Size")
+p + geom_boxplot(notch=FALSE)
+ggsave("../paper/figure/mean-radius-by-learning-rate-pop.pdf",dpi=300)
+ggsave("../presentation/images/mean-radius-by-learning-rate-pop.pdf",dpi=300)
+
+```
+
