@@ -51,3 +51,7 @@ https://semanticaxelrod.s3.amazonaws.com/rawdata/saa4-sampled.csv
 https://semanticaxelrod.s3.amazonaws.com/rawdata/saa5-sampled.csv
 https://semanticaxelrod.s3.amazonaws.com/rawdata/saa56-full.rda
 https://semanticaxelrod.s3.amazonaws.com/rawdata/saa6-sampled.csv
+
+Place these files at ~<username>/local-research/semanticaxelrod/rawdata if you want the 
+scripts in `analysis` to work without change, or modify the paths in the R scripts if necessary.
+
