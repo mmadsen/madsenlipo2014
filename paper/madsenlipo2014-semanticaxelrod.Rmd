@@ -304,7 +304,7 @@ Brendan McKay and Adolfo Piperno [@McKay201494].[^4]  Finally, given these graph
 
 # Experiments
 
-For this chapter, we examined populations of size 100 and 225, to begin to examine the effects of population size.  For these populations, we examined design spaces that were small (4 trait trees) and large (16 trait trees).  Within each size, we further examined combinations of branching factor and depth factor with values of 3 and 5, thus yielding 8 total sizes of design space (Table \ref{tab:axelrod-design-space-size}).
+For this chapter, we examined populations of size 100, 225 and 400, to begin to examine the effects of population size.  For these populations, we examined design spaces that were small (4 trait trees) and large (16 trait trees).  Within each size, we further examined combinations of branching factor and depth factor with values of 3 and 5, thus yielding 8 total sizes of design space (Table \ref{tab:axelrod-design-space-size}).
 
 \input{design-space-table.tex}
 
@@ -319,41 +319,52 @@ In analyzing the results of the semantic Axelrod model described here, we looked
 
 # Results
 
-We begin by noting that compared to the original Axelrod model, or neutral and biased copying models, the dynamics of our semantic axelrod model are highly variable.  A very wide range of outcomes is possible for each parameter combination, especially when the size of the design space is large.  We should expect this, and means that any specific simulation trajectory is path-dependent.  Thus, in future studies, larger numbers of replications are advisable, although this is computationally quite expensive at present.[^expense]
+We begin by noting that compared to the original Axelrod model, or neutral and biased copying models, the dynamics of our semantic axelrod model are highly variable.  A very wide range of outcomes is possible for each parameter combination, especially when the size of the design space is large.  Some variables, such as the average vertex degree of sampled trait trees, strongly overlap across all learning rates and thus are not useful.  Given the large amount of variability in the dynamics, larger numbers of replications would be useful, although this is computationally quite expensive at present.[^expense]  That said, several features of the data are strongly suggestive that hierarchical trait models have potential in modeling cumulative technological evolution, making the computational expense worthwhile.
 
 ## Cultural Diversity ##
 
-Variation among individuals is foundational to evolutionary processes, and is the raw material from which differentiation between regions and cultural groups is constructed.  In the simulations reported here, we examine diversity within a single population, but we are planning a set of metapopulation experiments with the same model to address regional diversification.  In Figure \ref{img:size-spectrum-cultures} we show the size spectrum of cultural regions (clusters of individuals with the same trait trees), for each combination of prerequisite learning rate and design space size.  The variable plotted here is the number of cultural regions in a given sample.  Thus, in a population of size 100, if there is 1 cultural solution, then all 100 individuals share it.  If there are 100 cultural regions, then every individual had a unique configuration of cultural traits.  In the lower left corner are the very lowest learning rates, in small design spaces.  We believe this could correspond to the kind of learning environments and knowledge structures that characterizes human technology through much of the early and middle Paleolithic.  In this corner, most cultural regions span the entire population (given the large spike on the left).  In small design spaces, configurations become more diverse and smaller on average, as the learning rate increases.  As it becomes highly probable that an individual will learn the prerequisites they need for an encountered skill or trait, the population fragments among different portions of the design space. 
+Variation among individuals is foundational to evolutionary processes, and is the raw material from which differentiation between regions and cultural groups is constructed.  In the simulations reported here, we examine diversity within a single population, but we are planning a set of metapopulation experiments with the same model to address regional diversification.  In Figure \ref{img:size-spectrum-cultures-100} we show the size spectrum of cultural regions (clusters of individuals with the same trait trees), for each combination of prerequisite learning rate and design space size.  The variable plotted here is the number of cultural regions in a given sample.  Thus, in a population of size 100, if there is 1 cultural solution, then all 100 individuals share it.  If there are 100 cultural regions, then every individual had a unique configuration of cultural traits.  In the lower left corner are the very lowest learning rates, in small design spaces.  We believe this could correspond to the kind of learning environments and knowledge structures that characterizes human technology through much of the early and middle Paleolithic.  In this corner, most cultural regions span the entire population (given the large spike on the left).  In small design spaces, configurations become more diverse and smaller on average, as the learning rate increases.  As it becomes highly probable that an individual will learn the prerequisites they need for an encountered skill or trait, the population fragments among different portions of the design space. 
 
 \begin{figure}[htbp] 
-\centering 
-\includegraphics[scale=0.4]{figure/size-spectrum-regions-saa12full.pdf} 
-\caption{The sizes (in number of individuals) of cultural configurations, by the size of the design space (horizontal facets), and prerequisite learning rate (vertical facets), for population size 100.} 
-\label{img:size-spectrum-cultures} 
-\end{figure}  
+	\centering
+	\includegraphics[scale=0.4]{figure/size-spectrum-regions-saa12full.pdf}
+	\caption{The sizes of cultural configurations, by the size of the design space (horizontal), and prerequisite learning rate (vertical), for population size 100.}
+	\label{img:size-spectrum-cultures-100}
+\end{figure}
+
 
 Two other effects are also visible in these data.  First, the distributions become bimodal for most combinations of design space size and learning rate.  The left hand peak corresponds to simulation runs which had no global innovation or mutation rate, and where only copying and prerequisite learning occurred.  In such populations, cultural regions were uniformly large and populations quickly converged on a single set of traits.  This highlights the importance of various "innovation" and "invention" processes in the creation and maintenance of cultural differentiation and diversity [@eerkens2005cultural; @o2010innovation], and suggests that systematic change in innovation processes may be a crucial component of any multi-factor model for the evolution of behaviorial modernity.  The second effect is the distinctive narrowing of the size distribution in the largest design spaces and highest learning rates.  This is not an artifact of the length of time into the simulation run a sample was taken, since the distributions look identical for samples taken at 1 million step intervals.  This is likely just the signature of a small population evolving in a very large design space.  This effect warrants further study, since it may be a source for group divergence as information and technology accumulates in human societies.  
 
 
 ## Trait Richness and Knowledge Depth ##
 
-* this is our ability to talk about cumulative knowledge, but in the abstract
-* looks like there's a bifurcation, but *both* individual social learning rates and global innovation are key to the deeper regime.
-* is there literature on the criticality of innovation to cumulative social learning?
+Cumulative evolution of technology is represented in our model by the population learning its way _down_ the trees which compose the design space.  Possession of traits deeper in the trees represents skills or information which is more specific, possessing more prerequisites.  Thus, we expect that the depth (or "radius", see Figure \ref{img:final-tree}) of trees would increase with the prerequisite learning rate, representing a learning environment which is structured to ensure such acquisition.   
 
+Figure \ref{img:mean-radius-cultures-100} gives the _normalized_ mean radius of cultural regions, broken out by the prerequisite learning rate along the horizontal axis, and each group of 3 boxplots displays the differing global innovation rates studied.  Radii are normalized to the depth of their design space, to facilitate comparison.  The results indicate that essentially two regimes exist:  shorter trees, which do not grow much beyond their initialized size, and larger trees.  The mean radius has an asymptote just above 0.75, achieved with the prerequisite learning rate is approximately 0.4 or higher.  Further increases do not seem to matter.  Additionally, the difference between the two global innovation rates is small--what matters most in terms of qualitative behavior is the presence of global innovation outside the teaching or learning of prerequisites themselves.  
 
 \begin{figure}[htbp] 
 \centering 
-\includegraphics[scale=0.4]{figure/mean-radius-by-learning-rate-innov.pdf} 
-\caption{Mean radius (i.e, depth) of trait sets, by prerequisite learning rate and global innovation rate, for population size 100.} 
-\label{img:mean-radius-cultures} 
+\includegraphics[scale=0.4]{figure/mean-radius-by-learning-rate-innov-12.pdf} 
+\caption{Mean depth of trait sets, by prerequisite learning rate and global innovation rate, for population size 100.} 
+\label{img:mean-radius-cultures-100} 
 \end{figure} 
 
+## Population Size ##
+
+Earlier, we mentioned that population size does not seem to be a primary factor in explaining the measured diversity in cultural transmission models, except perhaps in bottleneck situations like the one Henrich analyzes in Tasmania [-@henrich2004].  Instead, population size may have an interaction effect with other factors, yielding smaller second-order effects.  We examined the effect of population size in the research reported here, repeating the entire set of simulation runs for populations of 100, 225, and 400.[^budget]  
+
+Figure \ref{img:mean-radius-cultures-pop} displays the relationship between mean radius (or depth) of the cultural traits in each cultural sample, as in Figure \ref{img:mean-radius-cultures-100} above, but the boxplots are instead colored by population size.  There is no qualitative difference in the dynamics as sample size grows, but the mean radius of trait sets does decline slightly, probably due to the slower velocity at which an innovation diffuses in the larger population.  This is the kind of second-order effect which warrants continuing to include population size in analyses of social learning models, we believe, even if it does not serve as a primary explanation or factor.  
+
+\begin{figure}[htbp] 
+\centering 
+\includegraphics[scale=0.4]{figure/mean-radius-by-learning-rate-pop.pdf} 
+\caption{Mean depth of trait sets, by prerequisite learning rate and population sizes of 100, 225 and 400.} 
+\label{img:mean-radius-cultures-pop} 
+\end{figure}
 
 ## Trait Tree Symmetries ##
 
-* need to see other population sizes, but there's a speculative effect of narrowing here
-* no clue what it means, the shape stuff is still exploratory
+Finally, we examined the algebraic properties of the trait trees composing cultural regions, examining both the number of vertex equivalence classes (orbits) and the size of the automorphism group of the trait forests.  We examined the raw metrics, and versions normalized by the size of the maximally symmetric forest with the same number of traits, branching factor, and depth factor.  The latter proved difficult and led to serious overflow problems even with 64 bit arithmetic.  
 
 \begin{figure}[htbp] 
 \centering 
@@ -362,25 +373,30 @@ Two other effects are also visible in these data.  First, the distributions beco
 \label{img:autgsize} 
 \end{figure} 
 
+The logarithm of the automorphism group size does hint at interesting structure (Figure 
+\ref{img:autgsize}).  In the presence of mutation, the learning of prerequisites narrows the range of variability for the automorphism group size, and at higher learning rates renders the distribution multimodal.  The modality arises because of the different combinations of branching factor and depth factor we employed for design spaces--i.e., some design spaces are "wide" and some are "narrow," while also being "shallow" or "deep."  This gives rise to different modes in the measured symmetries, but overall the reduction in variability in symmetry is the most important qualitative effect seen in our data.
 
+We do not fully understand the "shapes" of cultural regions to which the model appears to converge, but it appears that there is a tendency for trait graphs to converge towards shapes which have moderate numbers of symmetries.  This graph is on a logarithmic scale, so a peak at 50 along the horizontal axis correponds to a trait graph with approximately $5 \times 10^{21}$ symmetries.  This is a fairly small number of symmetries, compared to the original design spaces, which have symmetries ranging from approximately $10^{41}$ to $10^{6496}$.  Thus, the geometry of cultural traits in our hierarchical design spaces are fairly asymmetric and represent small and very specific segments of the total design space.  
 
+Further analysis of trait graph "shapes" is needed to tell whether there are repeating patterns or graph "motifs" which characterize a social learning model in a graph-structured trait space.  The results here are suggestive of such a phenomenon, but inconclusive given just the bulk algebraic properties of cultural regions, since the size of the automorphism group (or the number of orbits) tells only _how many_ symmetries there are, not what types of symmetries exist.  The next step in our analysis of shape is to pursue a geometric decomposition of the graph following Ben MacArthur and $\textrm{Rub\'en S\'anchez-Garc\'ia's}$  [-@macarthur2008symmetry] work on the symmetries of complex networks.
 
 # Discussion
 
-* clearly there is promise here, summarize results
-* difficult models to characterize, need larger samples, metapopulations, population sizes
+The "semantic Axelrod" model described here specifically addresses social learning of knowledge with "prerequisite" structure, and a learning environment which is tunable from low to high fidelity.  We introduced this model as a "multifactor" explanation for the transition in the structure of social learning that may have occurred in early _Homo sapiens_ and which has often been called the "Upper Paleolithic Transition" or more neutrally, "behavioral modernity."
 
-* longer term, more trait relations, realistic trait models
+The model displays a characteristic increase in the cultural repertoires of individuals, as they learn in environments of higher fidelity.  Individuals will tend to learn along "pathways" governed by the knowledge of their models, elders, and peers, instead of the "random cultural samples" they receive in a low-fidelity random copying process.  At the individual level, an increase in higher fidelity learning within structured information environments both creates path-dependency in what is learned, and increases the chances for specialization among individuals.  At the group and regional scale, we expect that a metapopulation version of this model will display regional-scale differences in cultural "solutions" which become the seeds for the persistent regional differences which characterize the later Pleistocene and Holocene archaeological records.  
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum
-mauris quis turpis pellentesque, quis porta arcu varius. Suspendisse
-dictum at odio id luctus. Curabitur ut tristique nisl. Pellentesque
-habitant morbi tristique senectus et netus et malesuada fames ac turpis
-egestas. Vivamus molestie at elit a sodales. Vestibulum suscipit leo sed
-semper facilisis. Nam lacinia lobortis imperdiet. Nulla facilisi. Duis
-suscipit elementum risus, vitae molestie eros accumsan ut. Nulla
-facilisi. Praesent quis adipiscing sem. Interdum et malesuada fames ac
-ante ipsum primis in faucibus.
+The model described here only makes a start on modeling the additive and recombinative complexity of real technologies, but it does display accumulated depth of "knowledge" or "skills," as represented by the radius or depth of trait trees.  In combination with realistic models of technology--such as the production sequences studied by experts on stone tools--we believe that empirically sufficient models of the evolution of specific technologies are possible and within reach.  
+
+Several areas suggest themselves for future research in "semantic" Axelrod models. Some we are pursuing, others remain open questions and we invite collaboration towards their solution.  
+
+* Regional scale cultural differentiation given a metapopulation embedding of the basic model.
+* Additional trait relations (e.g., class subsumption, functional equivalencies).
+* Realistic technology models for key artifact classes (e.g., bifaces, scrapers, pottery).
+* Incorporation of trait fitness in order to study directional change.  
+
+We believe that models of the class studied here are a promising platform for studying the effects of social learning of realistic technologies that go beyond abstract, structureless "tokens."  Studying the evolution of biological populations in detail eventually required a detailed model of genomics beyond the "bean-bag" locus/allele models of early theoretical population genetics.  Going beyond the early promise of abstract cultural transmission models and explaining real technological change will require a similar transition beyond "bean-bag" social learning models.  We offer a small step in that direction.
+
 
 # Acknowledgements
 
@@ -462,4 +478,6 @@ analyses of the final dataset were performed in R, employing Knitr to render the
 
 [^median]:  The median number of traits in samples taken after 6-10 million time steps is considerably higher--259 traits per cultural configuration or region.  Thus, cultural repertoires grow significantly over time, as expected.  
 
-[^expense]:  The simulations reported here ran on a cluster of 4 compute-optimized "extra large" Linux instances on Amazon's EC2 computing cloud, for a total of 17 days of wall clock time, and roughly 1500 CPU hours.  We plan further optimizations to the simulation code to make larger samples economically feasible.  
+[^expense]:  The simulations reported here ran on a cluster of 6 compute-optimized "extra large" Linux instances on Amazon's EC2 computing cloud, for a total of 17 days of wall clock time and 2075 CPU hours.  We plan further optimizations to the simulation code to make larger samples economically feasible.  
+
+[^budget]:  We should note that learning rates of 0.8 and 0.9 for population size 400 were cut short due to budget constraints, but this does not appear to affect the pattern in our dataset.  

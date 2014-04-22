@@ -12,6 +12,9 @@ load("~/local-research/semanticaxelrod/rawdata/saa12-full.rda")
 saa12fullnoinnov <- subset(saa12full, innovation_rate == 0 )
 saa12fullinnov <- subset(saa12full, innovation_rate > 0 )
 
+saa12highinnov <- subset(saa12full, innovation_rate == 5e-05)
+
+
 # subset of data for the conference presentation
 
 cf <- subset(saa12full, size_trait_space == 160 | size_trait_space == 640 | size_trait_space == 2496 | size_trait_space == 62496 )
@@ -40,4 +43,10 @@ p + facet_grid(learning_rate ~ ., as.table=FALSE)
 p <- ggplot(data=saa12full, aes(x=log(autgroupsize))) + xlab("Number of Symmetries in Culture Samples log |Aut(g)|") + geom_density(fill="darkgrey")
 p + facet_grid(learning_rate ~ innovation_rate, as.table=FALSE)
 ggsave("../paper/figure/autgroupsize-by-learning-by-innovation.pdf", dpi=300)
+```
+
+```{r orbit-3, results="asis", message=FALSE, warning=FALSE, highlight=TRUE, fig.width=12}
+p <- ggplot(data=saa12highinnov, aes(x=log(autgroupsize))) + xlab("Number of Symmetries in Culture Samples log |Aut(g)|") + geom_density(fill="darkgrey")
+p + facet_grid(learning_rate ~ size_trait_space, as.table=FALSE)
+#ggsave("../paper/figure/autgroupsize-by-learning-by-innovation.pdf", dpi=300)
 ```

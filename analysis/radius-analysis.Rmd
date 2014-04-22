@@ -25,8 +25,8 @@ confsubset <- subset(cf, learning_rate == 0.1 | learning_rate == 0.4 | learning_
 
 p <- ggplot(data=saa12full, aes(y=radius_frac, x=factor(learning_rate), fill=factor(innovation_rate))) + ylab("Normalized Mean Trait Graph Radius") + xlab("Prerequisite Learning Rate") + labs(fill="Global Innovation Rate")
 p + geom_boxplot(notch=FALSE)
-ggsave("../paper/figure/mean-radius-by-learning-rate-innov.pdf",dpi=300)
-ggsave("../presentation/images/mean-radius-by-learning-rate-innov.pdf",dpi=300)
+ggsave("../paper/figure/mean-radius-by-learning-rate-innov-12.pdf",dpi=300)
+ggsave("../presentation/images/mean-radius-by-learning-rate-innov-12.pdf",dpi=300)
 
 ```
 

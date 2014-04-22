@@ -14,8 +14,8 @@ p + geom_boxplot(notch = FALSE)
 ![plot of chunk radius-1](figure/radius-1.png) 
 
 ```r
-ggsave("../paper/figure/mean-radius-by-learning-rate-innov.pdf", dpi = 300)
-ggsave("../presentation/images/mean-radius-by-learning-rate-innov.pdf", dpi = 300)
+ggsave("../paper/figure/mean-radius-by-learning-rate-innov-12.pdf", dpi = 300)
+ggsave("../presentation/images/mean-radius-by-learning-rate-innov-12.pdf", dpi = 300)
 ```
 
 
@@ -68,14 +68,6 @@ p + facet_grid(learning_rate ~ innovation_rate)
 
 ```
 ## Error: No layers in plot
-```
-
-
-
-```r
-p <- ggplot(data = saa12full, aes(y = remaining_density, x = radius_frac)) + 
-    ylab("Normalized Trait Tree Size") + xlab("Normalized Mean Trait Graph Radius") + 
-    geom_point(aes(colour = innovation_rate)) + facet_wrap(learning_rate ~ .)
 ```
 
 
