@@ -11,23 +11,7 @@
 			"file": "paper/madsenlipo2014-semanticaxelrod.Rmd",
 			"settings":
 			{
-				"buffer_size": 27562,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/mark/yesterday.Rmd",
-			"settings":
-			{
-				"buffer_size": 28364,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "paper/algorithms-appendix.tex",
-			"settings":
-			{
-				"buffer_size": 6025,
+				"buffer_size": 52339,
 				"line_ending": "Unix"
 			}
 		}
@@ -75,13 +59,19 @@
 	},
 	"file_history":
 	[
-		"/Users/mark/madsenlipo2014-semanticaxelrod.Rmd",
+		"/Users/mark/Dropbox/Research/projects/structuredinformation/madsenlipo2014/paper/author.tex",
+		"/Users/mark/src/axelrod-ct/README.md",
+		"/Users/mark/Dropbox/Research/projects/structuredinformation/madsenlipo2014/README.md",
 		"/Users/mark/Dropbox/Research/projects/structuredinformation/madsenlipo2014/paper/simulation-parameters-table.tex",
-		"/Users/mark/Dropbox/Research/projects/structuredinformation/madsenlipo2014/paper/algorithms-appendix.tex",
+		"/Users/mark/tmp/test.cpp",
 		"/Users/mark/Dropbox/Research/projects/structuredinformation/madsenlipo2014/paper/madsenlipo2014-semanticaxelrod.Rmd",
+		"/Users/mark/yesterday.Rmd",
+		"/Users/mark/Dropbox/Research/projects/structuredinformation/madsenlipo2014/paper/madsenlipo2014-semanticaxelrod.idx",
+		"/Users/mark/Dropbox/Research/projects/structuredinformation/madsenlipo2014/paper/design-space-table.tex",
+		"/Users/mark/Dropbox/Research/projects/structuredinformation/madsenlipo2014/paper/algorithms-appendix.tex",
+		"/Users/mark/madsenlipo2014-semanticaxelrod.Rmd",
 		"/Users/mark/Dropbox/Research/projects/structuredinformation/madsenlipo2014/paper/Makefile",
 		"/Users/mark/Dropbox/Research/projects/structuredinformation/madsenlipo2014/paper/notes.txt",
-		"/Users/mark/Dropbox/Research/projects/structuredinformation/madsenlipo2014/paper/author.tex",
 		"/Users/mark/Dropbox/Research/projects/structuredinformation/semanticaxelrod/madsenlipo2014/semanticaxelrod.sublime-project",
 		"/Users/mark/Dropbox/Research/projects/structuredinformation/semanticaxelrod/madsenlipo2014/paper/madsenlipo2014-semanticaxelrod.Rmd",
 		"/Users/mark/Dropbox/Research/projects/structuredinformation/semanticaxelrod/madsenlipo2014-semanticaxelrod/paper/madsenlipo2014-semanticaxelrod.Rmd",
@@ -143,11 +133,11 @@
 	],
 	"find":
 	{
-		"height": 25.0
+		"height": 35.0
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 93.0,
 		"where_history":
 		[
 		]
@@ -157,6 +147,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			",$",
+			"*  ,",
+			"\"",
 			"][",
 			"copy",
 			"argparse",
@@ -172,6 +165,8 @@
 		"regex": false,
 		"replace_history":
 		[
+			"",
+			"* ",
 			";"
 		],
 		"reverse": false,
@@ -192,15 +187,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 27562,
+						"buffer_size": 52339,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								26889,
-								26889
+								51036,
+								51036
 							]
 						],
 						"settings":
@@ -208,67 +203,10 @@
 							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 7972.0,
+						"translation.y": 13199.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "/Users/mark/yesterday.Rmd",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 28364,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								15773,
-								15692
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 2877.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "paper/algorithms-appendix.tex",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 6025,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3583,
-								3560
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/LaTeX/LaTeX.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1116.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
 					"type": "text"
 				}
 			]
