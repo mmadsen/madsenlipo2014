@@ -306,7 +306,7 @@ For this chapter, we examined populations of size 100, 225 and 400, to begin to 
 
 \input{design-space-table.tex}
 
-Further, we examined three levels of global mutation or innovation rate:  zero, or no mutation, and 0.00005 and 0.0001.  Such rates created a constant supply of new innovations, but several orders of magnitude less frequent than copying and prerequisite learning events.  The full set of parameters are given in Table \ref{tab:axelrodct-sim-parameters}.  For each combination of all of the above parameters, we performed 25 replications.
+Further, we examined three levels of global mutation or innovation rate:  zero, or no mutation, and 0.00005 and 0.0001.  Such rates created a constant supply of new innovations, but several orders of magnitude less frequent than copying and prerequisite learning events.  The full set of parameters are given in Table \ref{tab:axelrodct-sim-parameters}.  For each combination of all of the above parameters, we performed 25 replications.  With 5 samples per simulation run, this yielded 10,963,691 samples of cultural regions.  
 
 \input{simulation-parameters-table.tex}
 
