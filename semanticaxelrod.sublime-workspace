@@ -11,7 +11,15 @@
 			"file": "paper/madsenlipo2014-semanticaxelrod.Rmd",
 			"settings":
 			{
-				"buffer_size": 52339,
+				"buffer_size": 52044,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "paper/pre-saa-release-arxiv/madsenlipo2014-semanticaxelrod.tex",
+			"settings":
+			{
+				"buffer_size": 62870,
 				"line_ending": "Unix"
 			}
 		}
@@ -59,6 +67,7 @@
 	},
 	"file_history":
 	[
+		"/Users/mark/Dropbox/Research/projects/structuredinformation/madsenlipo2014/paper/pre-saa-release-arxiv/madsenlipo2014-semanticaxelrod.tex",
 		"/Users/mark/Dropbox/Research/projects/structuredinformation/madsenlipo2014/paper/author.tex",
 		"/Users/mark/src/axelrod-ct/README.md",
 		"/Users/mark/Dropbox/Research/projects/structuredinformation/madsenlipo2014/README.md",
@@ -187,15 +196,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 52339,
+						"buffer_size": 52044,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								51036,
-								51036
+								30026,
+								30026
 							]
 						],
 						"settings":
@@ -203,10 +212,40 @@
 							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 13199.0,
+						"translation.y": 7316.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "paper/pre-saa-release-arxiv/madsenlipo2014-semanticaxelrod.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 62870,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								38028,
+								38028
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 11042.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
