@@ -11,15 +11,15 @@
 			"file": "paper/madsenlipo2014-semanticaxelrod.Rmd",
 			"settings":
 			{
-				"buffer_size": 52044,
+				"buffer_size": 55055,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "paper/pre-saa-release-arxiv/madsenlipo2014-semanticaxelrod.tex",
+			"file": "semanticaxelrod.sublime-project",
 			"settings":
 			{
-				"buffer_size": 62870,
+				"buffer_size": 73,
 				"line_ending": "Unix"
 			}
 		}
@@ -68,6 +68,7 @@
 	"file_history":
 	[
 		"/Users/mark/Dropbox/Research/projects/structuredinformation/madsenlipo2014/paper/pre-saa-release-arxiv/madsenlipo2014-semanticaxelrod.tex",
+		"/Users/mark/tmp/lemontest.cc",
 		"/Users/mark/Dropbox/Research/projects/structuredinformation/madsenlipo2014/paper/author.tex",
 		"/Users/mark/src/axelrod-ct/README.md",
 		"/Users/mark/Dropbox/Research/projects/structuredinformation/madsenlipo2014/README.md",
@@ -196,15 +197,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 52044,
+						"buffer_size": 55055,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								30026,
-								30026
+								27486,
+								27486
 							]
 						],
 						"settings":
@@ -212,7 +213,7 @@
 							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 7316.0,
+						"translation.y": 6604.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -220,29 +221,27 @@
 				},
 				{
 					"buffer": 1,
-					"file": "paper/pre-saa-release-arxiv/madsenlipo2014-semanticaxelrod.tex",
-					"semi_transient": false,
+					"file": "semanticaxelrod.sublime-project",
+					"semi_transient": true,
 					"settings":
 					{
-						"buffer_size": 62870,
+						"buffer_size": 73,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								38028,
-								38028
+								0,
+								0
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/LaTeX/LaTeX.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/JavaScript/JSON.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 11042.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,

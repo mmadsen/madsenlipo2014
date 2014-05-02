@@ -19,10 +19,9 @@ constituent tools and technologies more complex, the range of materials
 used to construct it was enriched, and our solutions to the problems of
 everyday life became regionalized and differentiated. Further, the
 economic basis of our lives began to broaden and also, in many areas, to
-become specialized [@bar2002upper;@d2011evolution;@guy2005mosaic] This
-transition has long been called the "Upper Paleolithic Revolution," or
-less humbly, even the "Human Revolution" by those who see such characteristics as 
-marking out what it means to be uniquely human.  
+become specialized [@bar2002upper;@d2011evolution;@guy2005mosaic].  Finally,
+across much of Eurasia, after a period of mixing, Neaderthal populations are
+replaced or become extinct, leaving only modern humans.   
 
 Careful examination of the Middle Paleolithic archaeological record,
 especially in Africa and the Near East, suggests that this change in
@@ -37,16 +36,12 @@ phenomenon, not its timing, geography, or association with biology.
 
 The most promising explanations of behavioral modernity are those which examine
 the nature of cultural variation and social learning itself, and factors which 
-might lead to the evolution of more diverse populations.  Several possibilities have already been explored.   Shennan [-@shennan2000population;-@shennan2001demography] proposed that
+might lead to the evolution of more diverse populations [e.g., @Nishiaki2013Introduction].  The most contentious factor is the role of population size in determining diversity at the population level in social learning processes.   Shennan [-@shennan2000population;-@shennan2001demography] proposed that
 demography has a powerful effect on diversity within cultural transmission processes, and 
 this seems to be supported by the reduced cultural diversity
 and loss of toolkit elements observed in Tasmania during a
 population bottleneck
-[@henrich2004].  But a
-recent comparative study shows that population size itself bears no relationship 
-with toolkit diversity [@collard2013risk].  If simple transmission models do show 
-a relation between diversity and population size, it is likely to be a second-order effect
-in the real world, dominated by or interacting with other factors.  
+[@henrich2004].  Kuhn [-@Kuhn2013Cultural-Transm] argues that low population size and density put Neanderthals in a situation where innovations spread slowly and ultimately led to their demise relative to modern humans.  Furthermore, a growing set of experimental studies clearly show a relationship between accumulation of complex cultural traits and the number of cultural "models" from whom individuals can learn [@muthukrishna2014sociality; @derex2013experimental; @kempe2014experimental].  Collard and colleagues, on the other hand, question whether population size has any real-world effects on toolkit diversity, as a result of a series of comparative studies on a wide range of hunter-gatherer groups which show no association [@collard2011drives; @collard2013population; @collard2013risk; @collard2013plos].  Finally, in his analysis of the overall evolutionary rate, Aoki [-@Aoki2013Determinants-of] found that innovation rates were more important than population size to determining the rate of evolution in a population.  To us, this body of work appears to indicate that while population size is an important parameter in formal social learning processes, it is a second-order effect in the real world, interacting with a myriad of other factors and thus often dominated by those factors.
 
 The structure of bands or demes into larger
 regional metapopulations, however, is a first-order effect, given what we know about 
@@ -63,13 +58,11 @@ dramatic increase in cultural diversity.
 A foundational event in human evolution like behavioral modernity is
 highly unlikely to have a single cause, especially if it evolved over
 many tens of millennia in a widely distributed population. Instead, we
-should expect a combination of factors. Demography, and the
-metapopulation dynamics of individual demes or groups likely played
-roles, with the strength of such effects depending upon localized 
-circumstances. The way in which individuals learn skills and information likely plays
-a central role.  And we cannot forget the strategic dimension of social life: the evolution of cooperation and
-pro-social behaviors are probably implicated as well. Sterelny
-[-@sterelny2012evolved, p.61] sums up the multi-factor view nicely:
+should expect a combination of factors.  The way in which individuals learn skills and information likely plays
+a central role, as emphasized in the "learning hypothesis" analyzed from many angles in this series [@Aoki2013Determinants-of; @Nishiaki2013Introduction; @Nakahashi2013Cultural-Evolut].  
+
+The substantive knowledge and skills which result from different learning strategies are shaped as well by demography and population structure.  And we cannot forget the strategic dimension of social life:  although Middle Paleolithic hunters and in particular Neanderthal populations are known to be cooperative hunters, the extension of cooperative behavior into teaching and training the young may lead to different outcomes given the ability to boost learning fidelity.  Sterelny
+[-@sterelny2012evolved, p.61] sums up this kind of multi-factor viewpoint nicely:
 
 > ...the cultural learning characteristic of the Upper Paleolithic
 > transition and later periods of human culture—social transmission with
@@ -79,30 +72,27 @@ pro-social behaviors are probably implicated as well. Sterelny
 > structures that both buffer existing resources effectively and support
 > enough specialization to generate a supply of innovation.
 
-We believe this is a promising approach.  A useful next step is to construct
-formal models which incorporate some of these factors, and determine if their
-dynamics exhibit the kind of qualitative changes we see in the transition 
-from archaic to behaviorally modern assemblages.  Specifically, we need models which:
+We believe this is a promising approach, and in particular we suggest that the size and structure of artifact design spaces and fidelity of the learning environment have a strong effect upon the cumulative richness and complexity of toolkits and technology.  To formalize this idea, we need a model which:
 
-* Represent cultural traits as hierarchically structured, in order to study increases in complexity
-* Have learning rules sensitive to the structure and relations of cultural traits
-* Have mechanisms (such as homophily) which allow cultural differentiation endogeneous to the model
+* Represents cultural traits as hierarchically structured, in order to study increases in complexity
+* Has a learning rule sensitive to the structure and relations of cultural traits, with levels of fidelity
+* Has a mechanism (such as homophily) which allows cultural differentiation endogeneous to the model
 
 As the "learning environment" in such models is tuned from lower to higher fidelity, 
-we would expect to see greater diversity, larger structured sets of traits persisting in the population, and greater differentiation of the population into "different" cultural configurations.
+we would expect to see greater diversity, larger structured sets of traits persisting in the population, and greater differentiation of the population into "different" cultural configurations.  We also expect that individual innovation, independent of the social learning context, will play a role in the accumulation of cultural complexity by allowing a population to explore increasingly large spaces of technological design possibilities; this expectation is concordant with Aoki's [-@Aoki2013Determinants-of] result in Volume I of this series.
 
 In this chapter, we introduce a simulation model which combines a hierarchical
 trait space capable of expressing the "semantics" of relationships
 between skills and information [@Mesoudi2008a], and a modified version
-of Robert Axelrod's [@axelrod1997] homophilic social learning model
-which allows us to examine these expectations.  Models like this begin
+of Robert Axelrod's [-@axelrod1997] homophilic social learning model
+which allows us to examine the conditions under which evolution in a hierarchical design space leads to cultural differentiation. After describing 
+the model, we study its dynamics and provide an initial assessment of its suitability
+for studying the onset of behavioral modernity in the later Paleolithic.  Models like this begin
 to move beyond diffusion dynamics, bringing the actual meaning and
 relations of traits into the modeling process. Hence we call these
 "semantic Axelrod" models, and believe that such models form a platform
 for formalizing the type of multi-factor hypotheses necessary to examine
-major transitions in human evolution, such as "behavioral modernity."  After describing 
-the model, we study its dynamics and provide an initial assessment of its suitability
-for studying the onset of behavioral modernity in the later Paleolithic.
+major transitions in human evolution, such as "behavioral modernity."  
 
 # The Semantic Axelrod Model for Trait Prerequisites 
 
@@ -133,21 +123,28 @@ In order to represent the "prerequisite" relations between a number of
 cultural traits, we organize the traits into trees[^tree], where nodes higher
 in the tree represent knowledge, skills, or concepts which are necessary
 for traits further down the tree.  Let us consider the different skills and information
-necessary for the construction of a single artifact, say a dart thrown by an atlatl.  An artisan will possess information about different raw materials, an understanding of what materials are suitable for specific purposes, skills and information concerning the knapping of different types of bifaces, methods of hafting bifaces into different kinds of shafts, and so on.  Here, we are interested in the order in which people usually _learn_, rather than the 
-order in which steps are executed.  Thus, nodes closer to the top of a tree are "background" or necessary skills to nodes further down in a tree.  For example, a basic understanding of the properties of stone would occur close to the root of a tree, while knowledge of the differences between specific sources of lithic raw material would occupy nodes at the same level below the root.  
+necessary for the construction of a single artifact, say a dart thrown by an atlatl.  An artisan will possess information about different raw materials, an understanding of what materials are suitable for specific purposes, skills and information concerning the knapping of different types of bifaces, methods of hafting bifaces into different kinds of shafts, and so on.  Stout [-@stout2011stone] organized such knowledge into "action hierarchies," which represent sequences of actions, sets of choices, and optional elements for the construction of a class of stone tools.  Action trees, drawn from Moore's [-@moore2010grammars] graphical notation, represent the relations present in execution of a technical process. 
 
-In each simulation model, we begin with a trait or "design space" that incorporates several independent sets of prerequisite relations [@o2010cultural].  This models the fact that some knowledge is always independent and can be learned in parallel, since it may relate to different aspects of a process.  For example, one might 
-learn about the sources of good lithic raw materials, independent of learning how to perform different percussion techniques.  The overall design space of a simulation model is thus a forest[^forest], composed of several trees.  
-
-\begin{figure}[htbp] 
+\begin{figure}[h] 
 \centering 
 \includegraphics[]{images/balanced-trait-tree-3-3.png} 
 \caption{A single trait tree, represented by a balanced tree with branching factor 3 and depth factor 3, order 40.  In our model, nodes higher in the tree represent prerequisites for nodes lower down the tree.  Each instance of the model will have several or many of these trees in the design space.} 
 \label{img:trait-tree} 
+\end{figure}  
+
+Here, we are interested in the order in which people usually _learn_ skills and information, rather than the order in which steps are executed.  The difference is potentially significant, in that two adjacent steps in a sequence might involve very different information, tools, or skills, which can be learned in parallel without dependencies.  Because, in our model, traits cannot be learned unless an individual possesses the necessary prerequisites, we introduce the idea of a "learning hierarchy," which is a division of Stout's action hierarchy into components which are learned with ordered dependencies, and independent components represented in separate trees. For example, one might 
+learn about the sources of good lithic raw materials, independent of learning how to perform different percussion techniques.
+
+\begin{figure}[h] 
+\centering 
+\includegraphics[scale=0.6]{figure/design-space-4-trees.pdf} 
+\caption{A design space composed of 4 independent trees, each tree with branching factor 3 and depth factor 3, order 40.  We also studied larger design spaces with 16 independent trees, and with larger branching and depth factors.} 
+\label{img:design-space-4} 
 \end{figure} 
 
-We employ balanced trees which have the same number of nodes at each level, to provide a simplified model of a design space with which to begin our exploration of this class of social learning model, although real design spaces are undoubtedly more complex in their geometry.  Each tree in our model is specified by  a branching factor $r$ and depth $h$. As a result, each trait tree in
+In each simulation model, we begin with a trait or "design space" that incorporates several independent sets of traits [@o2010cultural].  The overall design space of a simulation model is thus a forest[^forest], composed of several trees (Figure \ref{img:design-space-4}).  For each tree in a learning hierarchy, we employ balanced trees which have the same number of nodes at each level, to provide a simplified model of a design space with which to begin our exploration of this class of social learning model, although real design spaces are undoubtedly more complex in their geometry.  Each tree in our model is specified by  a branching factor $r$ and depth $h$. As a result, each trait tree in
 the design space has $\sum_{i=0}^{h} r^i$ traits. 
+
 The tree depicted in Figure \ref{img:trait-tree} thus has 40 vertices, for example.  In this chapter, we examine both small (4 trees) and larger (16 trees) design spaces, to see how learning may differ in problems involving design spaces of different size and complexity.  We examine trees with combinations of branching and depth factors of 3 and 5.  Thus, a design space with 4 trees with branching and depth factors of 3 (as in Figure \ref{img:trait-tree}) would have 160 traits, whereas a design space with 16 trees of branching and depth factors of 5 would have a total of 62,496 traits.[^limits]  Even the small design spaces we consider here create a large space for cultural change and differentiation, given the number of possible trees one can construct on even 40 vertices.[^2] 
 
 Given the total "design space" represented by a forest of trait trees, each individual in our
@@ -245,20 +242,13 @@ Once the population is initialized, the simulation runs a discrete approximation
 \begin{equation}J(A,B) = \frac{|A \cup B| - |A \cap B|}{|A \cup B|}\end{equation} 
 
 
-If the agents end up interacting, agent A
-randomly selects a trait from B which it does not already
-possess. If agent A has the necessary prerequisites for the
-desired trait (T), it learns the trait immediately, adding T to its repertoire. If
-not, it cannot immediately learn T, but there is a learning rate parameter 
-for the simulation run which governs the chance that agent A will instead learn one of T's prerequisites during this time step.  Given a learning event, we again walk from the 
-root of the tree down the path towards the trait T, finding the first trait in the path
-that Agent A does not already possess.  For example, agent A might require the trait
+If the agents end up interacting, agent A observes the traits currently possessed by B, and selects a trait (T) that it does not already possess to learn.  If agent A has the necessary prerequisite traits for the selected trait, it can learn trait T.  If not, there is a probability $\mathbb{P}(l)$ that B can teach A a necessary prerequisite for T instead.  This simulates the process of agent B structuring the learning environment of A through formal instruction or apprenticeship, for example.  If such a prerequisite learning event occurs given $\mathbb{P}(l)$, agent A learns the most fundamental of T's prerequisites that it does not already possess.  For example, agent A might require the trait
 closest to T (e.g., trait 11 in Figure \ref{img:prereq}, if the original trait targeted was 35).  
 
-Additionally, at each time step, there is a probability that one individual, chosen randomly,
+Additionally, at each time step, there is a probability $\mathbb{P}(m)$ that one random individual in the population
 will learn a new trait (and necessary prerequisites) that it does not already
-possess.  This simulates the ongoing process of individual learning unconnected to social learning
-within the population, as well as the process of individual innovation.  Because this 
+possess.  For example, if an innovation event occurs and an agent discovers trait 35 by individual trial and error learning, we assume that the agent also discovered traits 0, 3, and 11.  Thus innovation can introduce one trait to the population, or a linked set depending upon its prerequisites and what the innovating individual already "knows."  This model of innovation simulates an  ongoing process of individual learning unconnected to social learning
+within the population.  Because this 
 functions much like "infinite-alleles mutation" in the classical Wright-Fisher neutral models [@Ewens2004],
 or like noise terms in Axelrod, Ising, or Potts models [@castellano2009statistical], we will refer to this as the "global innovation rate" in this chapter.
 
@@ -451,7 +441,7 @@ implementation [@national2012Assessing].
 The analysis and final dataset reported here are available, along with
 the source of this paper and associated presentations, in an associated
 GitHub repository: <https://github.com/mmadsen/madsenlipo2014>. Statistical
-analyses of the final dataset were performed in R, employing Knitr to render the results directly in publication format, and thus reproducible by others [@xie2013dynamic].  
+analyses of the final dataset were performed in R, employing Knitr to render our results easily reproducible given simulation output [@xie2013dynamic].  
 
 
 [^2]: If we consider each trait to be unique and non-interchangeable,
