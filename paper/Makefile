@@ -32,4 +32,4 @@ epub:
 
 clean:
 	latexmk -CA
-	rm -rf *.log *.bbl *.blg *.out *.md *.pdf *.docx madsenlipo2014-semanticaxelrod.tex *.epub
+	rm -rf *.log *.bbl *.blg *.out *.md madsenlipo2014*.pdf *.docx madsenlipo2014-semanticaxelrod.tex *.epub

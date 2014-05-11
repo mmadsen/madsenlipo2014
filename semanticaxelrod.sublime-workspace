@@ -11,15 +11,7 @@
 			"file": "paper/madsenlipo2014-semanticaxelrod.Rmd",
 			"settings":
 			{
-				"buffer_size": 55055,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "semanticaxelrod.sublime-project",
-			"settings":
-			{
-				"buffer_size": 73,
+				"buffer_size": 55107,
 				"line_ending": "Unix"
 			}
 		}
@@ -197,15 +189,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 55055,
+						"buffer_size": 55107,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								27486,
-								27486
+								5793,
+								5793
 							]
 						],
 						"settings":
@@ -213,38 +205,10 @@
 							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 6604.0,
+						"translation.y": 1303.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "semanticaxelrod.sublime-project",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 73,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JSON.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
 					"type": "text"
 				}
 			]
@@ -283,7 +247,7 @@
 	"menu_visible": true,
 	"output.exec":
 	{
-		"height": 112.0
+		"height": 97.0
 	},
 	"output.find_results":
 	{

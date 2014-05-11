@@ -1,6 +1,6 @@
-$latex = "xelatex  --synctex=1 -file-line-error -output-driver=\"xdvipdfmx -q -E\" %O %S";
-#$pdflatex = 'pdflatex %O %S';
-$pdflatex = "xelatex --synctex=1 -file-line-error -output-driver=\"xdvipdfmx -q -E\" %O %S";
+#$latex = "xelatex  --synctex=1 -file-line-error -output-driver=\"xdvipdfmx -q -E\" %O %S";
+$pdflatex = 'pdflatex %O %S';
+#$pdflatex = "xelatex --synctex=1 -file-line-error -output-driver=\"xdvipdfmx -q -E\" %O %S";
 
 $pdf_previewer = "open -a /Applications/Skim.app"; 
 $clean_ext = "paux lox pdfsync out glg gls glo brf ist synctex.gz bbl thm spl";

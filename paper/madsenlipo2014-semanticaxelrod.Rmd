@@ -19,9 +19,7 @@ constituent tools and technologies more complex, the range of materials
 used to construct it was enriched, and our solutions to the problems of
 everyday life became regionalized and differentiated. Further, the
 economic basis of our lives began to broaden and also, in many areas, to
-become specialized [@bar2002upper;@d2011evolution;@guy2005mosaic].  Finally,
-across much of Eurasia, after a period of mixing, Neaderthal populations are
-replaced or become extinct, leaving only modern humans.   
+become specialized [@bar2002upper;@d2011evolution;@guy2005mosaic].  
 
 Careful examination of the Middle Paleolithic archaeological record,
 especially in Africa and the Near East, suggests that this change in
@@ -58,11 +56,9 @@ dramatic increase in cultural diversity.
 A foundational event in human evolution like behavioral modernity is
 highly unlikely to have a single cause, especially if it evolved over
 many tens of millennia in a widely distributed population. Instead, we
-should expect a combination of factors.  The way in which individuals learn skills and information likely plays
-a central role, as emphasized in the "learning hypothesis" analyzed from many angles in this series [@Aoki2013Determinants-of; @Nishiaki2013Introduction; @Nakahashi2013Cultural-Evolut].  
-
-The substantive knowledge and skills which result from different learning strategies are shaped as well by demography and population structure.  And we cannot forget the strategic dimension of social life:  although Middle Paleolithic hunters and in particular Neanderthal populations are known to be cooperative hunters, the extension of cooperative behavior into teaching and training the young may lead to different outcomes given the ability to boost learning fidelity.  Sterelny
-[-@sterelny2012evolved, p.61] sums up this kind of multi-factor viewpoint nicely:
+should expect a combination of factors.  The way in which individuals learn skills and information likely plays a central role, as emphasized in the "learning hypothesis" analyzed from many angles in this series [@Aoki2013Determinants-of; @Nishiaki2013Introduction].  We know that learning and teaching styles vary across human groups, and formal modeling efforts are beginning to make clear that such variation has evolutionary consequences that might lead to a rapid expansion of the human cultural repertoire [@Nakahashi2013Cultural-Evolut].  Those populations which increased the amount or effectiveness of teaching would have a fitness advantage over those who relied upon imitation and "natural pedagogy" in passing along technological and foraging knowledge [@Csibra:2011dx; @Fogarty:2011gv].  Demography and population structure would also play important roles in reinforcing the fitness differences which different learning strategies would create, as pointed out by Kuhn [-@Kuhn2013Cultural-Transm]. 
+  
+Sterelny [-@sterelny2012evolved, p.61] sums up this combination of factors nicely:
 
 > ...the cultural learning characteristic of the Upper Paleolithic
 > transition and later periods of human culture—social transmission with
@@ -127,7 +123,7 @@ necessary for the construction of a single artifact, say a dart thrown by an atl
 
 \begin{figure}[h] 
 \centering 
-\includegraphics[]{images/balanced-trait-tree-3-3.png} 
+\includegraphics[]{balanced-trait-tree-3-3.png} 
 \caption{A single trait tree, represented by a balanced tree with branching factor 3 and depth factor 3, order 40.  In our model, nodes higher in the tree represent prerequisites for nodes lower down the tree.  Each instance of the model will have several or many of these trees in the design space.} 
 \label{img:trait-tree} 
 \end{figure}  
@@ -137,7 +133,7 @@ learn about the sources of good lithic raw materials, independent of learning ho
 
 \begin{figure}[h] 
 \centering 
-\includegraphics[scale=0.6]{figure/design-space-4-trees.pdf} 
+\includegraphics[scale=0.6]{design-space-4-trees.pdf} 
 \caption{A design space composed of 4 independent trees, each tree with branching factor 3 and depth factor 3, order 40.  We also studied larger design spaces with 16 independent trees, and with larger branching and depth factors.} 
 \label{img:design-space-4} 
 \end{figure} 
@@ -232,7 +228,7 @@ across the configured number of trait trees, as follows.  For each individual, w
 
 \begin{figure}[htbp] 
 \centering 
-\includegraphics[scale=0.5]{figure/design-init-final.pdf} 
+\includegraphics[scale=0.5]{design-init-final.pdf} 
 \caption{Illustration of a design space composed of a single trait tree, along with a random initial trait chosen from the design space, and a final sample from a simulation run, showing the evolution of traits within the design space.  Also shown in the top panel are the ``prerequisites'' for a cultural trait (35), as an example.} 
 \label{img:prereq} 
 \end{figure} 
@@ -262,7 +258,7 @@ Each sample from a simulation run is composed of the distinct sets of trait tree
 
 \begin{figure}[htbp] 
 \centering 
-\includegraphics[]{images/equil-trait-tree.png} 
+\includegraphics[]{equil-trait-tree.png} 
 \caption{An example set of traits at the conclusion of a simulation run, extracted from a simulation with branching factor 3 and depth factor 3, and a single trait tree as the trait space.  The remaining density of vertices, mean vertex degree, and radius of the tree are noted.  Vertex colors denote ``structural equivalence'' classes or ``orbit structure,'' as measured by adjacency patterns, and is one measure of the symmetries present in the tree.} 
 \label{img:final-tree} 
 \end{figure} 
@@ -294,11 +290,63 @@ Brendan McKay and Adolfo Piperno [@McKay201494].[^4]
 
 For this chapter, we examined populations of size 100, 225 and 400, to begin to examine the effects of population size.  For these populations, we examined design spaces that were small (4 trait trees) and large (16 trait trees).  Within each size, we further examined combinations of branching factor and depth factor with values of 3 and 5, thus yielding 8 total sizes of design space (Table \ref{tab:axelrod-design-space-size}).
 
-\input{design-space-table.tex}
+\begin{table}[H]
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{Branching Factor} & \textbf{Depth Factor} & \textbf{Number of Trait Trees} & \textbf{Size of Design Space}\\ 
+\hline
+3 & 3 & 4 & 160\\ 
+\hline 
+5 & 3 & 4 & 624\\ 
+\hline 
+3 & 5 & 4 & 1456\\ 
+\hline 
+5 & 5 & 4 & 15624\\ 
+\hline 
+3 & 3 & 16 & 640\\ 
+\hline 
+5 & 3 & 16 & 2496\\ 
+\hline 
+3 & 5 & 16 & 5824\\ 
+\hline 
+5 & 5 & 16 & 62496\\ 
+\hline 
+\hline
+\end{tabular}
+\caption{Size of design space for different trait tree configurations}
+\label{tab:axelrod-design-space-size}
+\end{table}
 
 Further, we examined three levels of global mutation or innovation rate:  zero, or no mutation, and 0.00005 and 0.0001.  Such rates created a constant supply of new innovations, but several orders of magnitude less frequent than copying and prerequisite learning events.  The full set of parameters are given in Table \ref{tab:axelrodct-sim-parameters}.  For each combination of all of the above parameters, we performed 25 replications.  With 5 samples per simulation run, this yielded 10,963,691 samples of cultural regions.  
 
-\input{simulation-parameters-table.tex}
+\begin{table}[H]
+\begin{tabular}{|p{0.6\textwidth}|p{0.4\textwidth}|}
+\hline
+\textbf{Simulation Parameter} & \textbf{Value or Values} \\ 
+\hline
+Population rate at which new traits arise by individual learning & 0.0, 5e-05, 0.0001\\ 
+ \hline 
+Maximum number of initial traits (not including their prerequisites) each individual is endowed with & 4\\ 
+ \hline 
+Number of distinct trees of traits and prerequisites & 4, 16\\ 
+ \hline 
+Population sizes & 100, 225, 400\\ 
+ \hline 
+Replicate simulation runs at each parameter combination & 25\\ 
+ \hline 
+Maximum time after which a simulation is sampled and terminated & 10000000\\ 
+ \hline 
+Individual probability for learning a missing prerequisite & 0.05, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9\\ 
+ \hline 
+Number of branches at each level of a trait tree & 3, 5\\ 
+ \hline 
+Depth of traits in each trait tree & 3, 5\\ 
+ \hline 
+\hline
+\end{tabular}
+\caption{Parameter space for simulations described in this chapter}
+\label{tab:axelrodct-sim-parameters}
+\end{table}
 
 The simulations were designed to examine whether the combination of a hierarchical, tree-like representation of cultural traits, in combination with an Axelrod-like model which provides the possibility of cultural differentiation, is a good platform for exploring questions surrounding behavioral modernity.  We are not experts concerning Paleolithic assemblages, so our efforts are exploratory, and an attempt to construct models which can be extended and applied to real data.  
 
@@ -317,7 +365,7 @@ Variation among individuals is foundational to evolutionary processes, and is th
 
 \begin{figure}[htbp] 
 	\centering
-	\includegraphics[scale=0.4]{figure/size-spectrum-regions-saa12full.pdf}
+	\includegraphics[scale=0.4]{size-spectrum-regions-saa12full.pdf}
 	\caption{The sizes of cultural configurations, by the size of the design space (horizontal), and prerequisite learning rate (vertical), for population size 100.}
 	\label{img:size-spectrum-cultures-100}
 \end{figure}
@@ -330,7 +378,7 @@ Two other effects are also visible in these data.  First, the distributions beco
 
 \begin{figure}[h] 
 \centering 
-\includegraphics[scale=0.4]{figure/mean-radius-by-learning-rate-innov-12.pdf} 
+\includegraphics[scale=0.4]{mean-radius-by-learning-rate-innov-12.pdf} 
 \caption{Mean depth of trait sets, by prerequisite learning rate and global innovation rate, for population size 100.} 
 \label{img:mean-radius-cultures-100} 
 \end{figure} 
@@ -347,7 +395,7 @@ Earlier, we mentioned that population size does not seem to be a primary factor 
 
 \begin{figure}[h] 
 \centering 
-\includegraphics[scale=0.4]{figure/mean-radius-by-learning-rate-pop.pdf} 
+\includegraphics[scale=0.4]{mean-radius-by-learning-rate-pop.pdf} 
 \caption{Mean depth of trait sets, by prerequisite learning rate and population sizes of 100, 225 and 400.} 
 \label{img:mean-radius-cultures-pop} 
 \end{figure}
@@ -362,7 +410,7 @@ Finally, we examined the algebraic properties of the trait trees composing cultu
 
 \begin{figure}[h] 
 \centering 
-\includegraphics[scale=0.4]{figure/autgroupsize-by-learning-by-innovation.pdf} 
+\includegraphics[scale=0.4]{autgroupsize-by-learning-by-innovation.pdf} 
 \caption{Number of symmetries in trait tree samples, measured as the log of the order of the automorphism group of the trait graphs, broken down by prerequisite learning rate and global innovation rate.} 
 \label{img:autgsize} 
 \end{figure} 
@@ -408,7 +456,62 @@ decomposition code.
 
 ## Algorithm Description
 
-\input{algorithms-appendix.tex}
+Algorithm \ref{alg:tree-prereq-axelrod} describes the ``semantic'' Axelrod model variant studied in this chapter.  Within the algorithm, there are several functions which find traits with particular properties.  Some, like \textbf{GetTraitUniquetoFocal()}, are fairly simple set operations but were abbreviated to clarify the notation. 
+
+\begin{algorithm}[H]
+	\caption{}
+	\label{alg:tree-prereq-axelrod}
+	\begin{boxedminipage}{\textwidth}
+	\begin{algorithmic}[1]
+		%\REQUIRE lossrate is the population rate at which traits are randomly lost to drift
+		\REQUIRE innovrate is the population rate at which individuals randomly learn a trait
+		\REQUIRE learningrate is the probability of learning a missing prerequisite during a learning interaction
+
+		\STATE { $focal \leftarrow$ GetRandomAgent()}
+		\STATE { $neighbor \leftarrow$ GetRandomNeighbor(focal)}
+
+		\IF { $focal = neighbor \lor focal \cap neighbor = \varnothing\;\lor  
+		neighbor \subsetneq focal $}
+		\label{alg:ext-first-if}
+			\STATE { exit }
+			\COMMENT{ No interaction is possible, move on to next agent }
+		\ENDIF
+
+		\STATE { $prob \leftarrow (focal \cup neighbor  - focal \cap neighbor) / focal \cup neighbor$ }
+
+		\IF {RandomUniform() $< prob$}
+			\STATE { $differing \leftarrow neighbor \setminus focal$ }
+			\STATE { $newtrait \leftarrow$ GetRandomChoice(differing)}
+
+			\IF {hasPrerequisiteForTrait($focal$, $newtrait$) = True}
+				\STATE {$replace \leftarrow$ GetTraitUniquetoFocal(focal,neighbor)}
+				\STATE { $focal \leftarrow focal \setminus replace$}
+				\STATE { $focal \leftarrow focal \cup newtrait$}
+			\ELSE
+				\IF {RandomUniform() $< learningrate$}
+					\STATE {$prereq \leftarrow$ GetDeepestMissingPrerequisite(newtrait, focal)}
+					\STATE { $focal \leftarrow focal \cup prereq$ }
+				\ENDIF
+			\ENDIF
+
+		\ENDIF
+		%\IF {RandomUniform() $< lossrate$}
+		%	\STATE { $focal2 \leftarrow$ GetRandomAgent()}
+		%	\STATE { $loss \leftarrow$ GetRandomTrait(focal2)}
+		%	\STATE { $focal2 \leftarrow focal2 \setminus loss$}
+		%\ENDIF
+
+		\IF {RandomUniform() $< innovrate$}
+			\STATE { $focal3 \leftarrow$ GetRandomAgent()}
+			\STATE { $innovation \leftarrow$ GetRandomTraitNotInFocal(focal3)}
+			\STATE { $focal3 \leftarrow focal3 \cup innovation$}
+		\ENDIF
+
+	\end{algorithmic}
+	\end{boxedminipage}
+\end{algorithm} 
+
+\textbf{GetDeepestMissingPrerequisite()} is a procedure which takes the trait set of an individual, and a trait for which the individual is known to be missing necessary prerequisites, and returns the ``most basic'' missing prerequisite for that trait (i.e., closest to the root). This is done by finding the path which connects the root and desired trait, and walking its vertices from the root downward, checking to see if each vertex is part of the individual's trait set.  The first trait not found in the individual's repertoire is returned.  
 
 
 ## Availability of Software and Analysis Code
