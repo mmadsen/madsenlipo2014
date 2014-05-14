@@ -21,6 +21,7 @@ everyday life became regionalized and differentiated. Further, the
 economic basis of our lives began to broaden and also, in many areas, to
 become specialized [@bar2002upper;@d2011evolution;@guy2005mosaic].  
 
+
 Careful examination of the Middle Paleolithic archaeological record,
 especially in Africa and the Near East, suggests that this change in
 behavior was not a sharp "revolution," and that much of the enriched
@@ -28,37 +29,30 @@ material culture we later characterize as the "Upper Paleolithic" had
 precursors in many areas. These were patchy, both in space and time
 [@bouzouggar200782;@d2007additional;@d2011evolution;@guy2005mosaic;@mcbrearty2000revolution;@mcbrearty2007down].
 Nevertheless, even if our understanding of the time scale over which this enrichment  occurred has lengthened and the spatial scope has
-widened, it remains a central puzzle in the evolution of our species.  As a neutral
-term, we prefer "behavioral modernity," which emphasizes a pattern or 
-phenomenon, not its timing, geography, or association with biology.  
+widened, the evolution of "behavioral modernity" remains a central puzzle in the evolution of our species.  
 
 The most promising explanations of behavioral modernity are those which examine
-the nature of cultural variation and social learning itself, and factors which 
-might lead to the evolution of more diverse populations [e.g., @Nishiaki2013Introduction].  The most contentious factor is the role of population size in determining diversity at the population level in social learning processes.   Shennan [-@shennan2000population;-@shennan2001demography] proposed that
+the nature of cultural variation and social learning itself, how these might have varied over time and across populations, and the factors which shaped fitness landscapes for middle and upper Paleolithic hominins.  Our own belief is that some variant of the "learning hypothesis" [@Nishiaki2013Introduction], broadly construed, will yield the best explanations for what amounts to a "phase transition" in the nature of human cultural capacities and material culture.   
+
+The simplest models have tended to explore the consequences for cultural transmission of various factors exogeneous to social learning itself.  Perhaps the most significant debate has occurred around the role of population size in determining diversity.   Shennan [-@shennan2000population;-@shennan2001demography] proposed that
 demography has a powerful effect on diversity within cultural transmission processes, and 
 this seems to be supported by the reduced cultural diversity
 and loss of toolkit elements observed in Tasmania during a
 population bottleneck
-[@henrich2004].  Kuhn [-@Kuhn2013Cultural-Transm] argues that low population size and density put Neanderthals in a situation where innovations spread slowly and ultimately led to their demise relative to modern humans.  Furthermore, a growing set of experimental studies clearly show a relationship between accumulation of complex cultural traits and the number of cultural "models" from whom individuals can learn [@muthukrishna2014sociality; @derex2013experimental; @kempe2014experimental].  Collard and colleagues, on the other hand, question whether population size has any real-world effects on toolkit diversity, as a result of a series of comparative studies on a wide range of hunter-gatherer groups which show no association [@collard2011drives; @collard2013population; @collard2013risk; @collard2013plos].  Finally, in his analysis of the overall evolutionary rate, Aoki [-@Aoki2013Determinants-of] found that innovation rates were more important than population size to determining the rate of evolution in a population.  To us, this body of work appears to indicate that while population size is an important parameter in formal social learning processes, it is a second-order effect in the real world, interacting with a myriad of other factors and thus often dominated by those factors.
+[@henrich2004].  Kuhn [-@Kuhn2013Cultural-Transm] argues that low population size and density put Neanderthals in a situation where innovations spread slowly and ultimately led to their demise relative to modern humans.  Furthermore, a growing set of experimental studies clearly show a relationship between accumulation of complex cultural traits and the number of cultural "models" from whom individuals can learn [@muthukrishna2014sociality; @derex2013experimental; @kempe2014experimental].  Collard and colleagues, on the other hand, question whether population size has any real-world effects on toolkit diversity, as a result of a series of comparative studies on a wide range of hunter-gatherer groups which show no association [@collard2011drives; @collard2013population; @collard2013risk; @collard2013plos].  Finally, in his analysis of the overall evolutionary rate, Aoki [-@Aoki2013Determinants-of] found that innovation rates were more important than population size to determining the rate of evolution in a population.  
 
-The structure of bands or demes into larger
-regional metapopulations, however, is a first-order effect, given what we know about 
-the strong effect that network topology has upon contagion or diffusion processes [e.g., @castellano2009statistical; @smilkov2012influence].   Premo
-[-@premo2012local] has examined whether metapopulation dynamics, with
+To us, this body of work appears to indicate that while population size is an important parameter in our mathematical models, it is a second-order effect in the real world, interacting with a myriad of other factors and thus often dominated by those factors.  One such factor is the structure of bands or demes into larger
+regional metapopulations.  Everything we know about 
+the strong effect that network topology has upon contagion or diffusion processes [e.g., @castellano2009statistical; @smilkov2012influence] suggests that regional structure has critical effects on the outcomes we can expect from a single social "learning rule."  Along these lines, Premo [-@premo2012local] has examined whether metapopulation dynamics, with
 local extinction and recolonization, might account for the retention and
-expansion of diversity, with promising results. Finally, the way social
-learning occurs within a population can radically change its
-quantitative results over time. Sharon [-@sharon2009acheulian] suggested
-that Middle Paleolithic populations might have been characterized by
-strongly conformist learning, which changed over time, leading to a
-dramatic increase in cultural diversity. 
+expansion of diversity, with promising results. 
 
 A foundational event in human evolution like behavioral modernity is
-highly unlikely to have a single cause, especially if it evolved over
-many tens of millennia in a widely distributed population. Instead, we
-should expect a combination of factors.  The way in which individuals learn skills and information likely plays a central role, as emphasized in the "learning hypothesis" analyzed from many angles in this series [@Aoki2013Determinants-of; @Nishiaki2013Introduction].  We know that learning and teaching styles vary across human groups, and formal modeling efforts are beginning to make clear that such variation has evolutionary consequences that might lead to a rapid expansion of the human cultural repertoire [@Nakahashi2013Cultural-Evolut].  Those populations which increased the amount or effectiveness of teaching would have a fitness advantage over those who relied upon imitation and "natural pedagogy" in passing along technological and foraging knowledge [@Csibra:2011dx; @Fogarty:2011gv].  Demography and population structure would also play important roles in reinforcing the fitness differences which different learning strategies would create, as pointed out by Kuhn [-@Kuhn2013Cultural-Transm]. 
-  
-Sterelny [-@sterelny2012evolved, p.61] sums up this combination of factors nicely:
+highly unlikely to have a single cause, even within the broad umbrella of cultural transmission theory and the learning hypothesis.  Instead, we
+should expect a combination of factors.  The way in which individuals learn skills and information likely plays a central role, as emphasized in the "learning hypothesis" analyzed from many angles in this series [@Aoki2013Determinants-of; @Nishiaki2013Introduction].  For example, Sharon [-@sharon2009acheulian] suggested
+that Middle Paleolithic populations might have been characterized by
+strongly conformist learning, which lessened over time, leading to a
+dramatic increase in cultural diversity.  We know that learning and teaching styles vary across human groups, and formal modeling efforts are beginning to make clear that such variation has evolutionary consequences that might lead to a rapid expansion of the human cultural repertoire [@Nakahashi2013Cultural-Evolut].  Those populations which increased the amount or effectiveness of teaching would have a fitness advantage over those who relied upon imitation and "natural pedagogy" in passing along technological and foraging knowledge [@Csibra:2011dx; @Fogarty:2011gv; @Terashima2013The-Evolutionar].  Demography and population structure play important roles in reinforcing the fitness differences which different learning strategies would create, as pointed out by Kuhn [-@Kuhn2013Cultural-Transm].  Sterelny [-@sterelny2012evolved, p.61] sums up this combination of factors nicely:
 
 > ...the cultural learning characteristic of the Upper Paleolithic
 > transition and later periods of human culture—social transmission with
@@ -68,10 +62,12 @@ Sterelny [-@sterelny2012evolved, p.61] sums up this combination of factors nicel
 > structures that both buffer existing resources effectively and support
 > enough specialization to generate a supply of innovation.
 
-We believe this is a promising approach, and in particular we suggest that the size and structure of artifact design spaces and fidelity of the learning environment have a strong effect upon the cumulative richness and complexity of toolkits and technology.  To formalize this idea, we need a model which:
+Creanza and colleagues [-@Creanza2013Exploring-Cultu], Aoki [-@Aoki2013Determinants-of], and Nakahashi [-@Nakahashi2013Cultural-Evolut] develop models which examine the conditions under which teaching (as opposed to simple imitation) affects the overall evolutionary rate or cultural diversity in a population, providing a formal basis for exploring Sterelny's explanatory sketch.  In an important sense, however, these models are "thin" descriptions, providing us an understanding of the effects of teaching _in general_ within a social learning system.  Such models are critical, but we need to complement them with "thicker" models which can describe how the structure and even content of cultural knowledge evolves given social learning processes, the scaffolding provided by teaching and technological infrastructure, and the developmental process by which people learn necessary skills and information [@wimsatt2014].  
+
+Towards this end, in this chapter we suggest that the size and structure of artifact design spaces and fidelity of the learning environment have a strong effect upon the cumulative richness and complexity of toolkits and technology.  To formalize this idea, we construct a model which:
 
 * Represents cultural traits as hierarchically structured, in order to study increases in complexity
-* Has a learning rule sensitive to the structure and relations of cultural traits, with levels of fidelity
+* Has a learning rule sensitive to the order in which cultural traits are acquired, with multiple levels of fidelity
 * Has a mechanism (such as homophily) which allows cultural differentiation endogeneous to the model
 
 As the "learning environment" in such models is tuned from lower to higher fidelity, 
@@ -94,21 +90,21 @@ major transitions in human evolution, such as "behavioral modernity."
 
 Much of our technical knowledge, whether of stone tool manufacture, throwing clay pots, or computer repair, is built from simple tasks, bits of background knowledge, and step-by-step procedures [@neff1992ceramics; @schiffer1987theory].  We organize our knowledge and skills in many ways, but it is common to think of a complex process as a "script" or "recipe" [@schank1977scripts].  Of course, experts in a task or field may not see it this way, having internalized such structures below the conscious level.  Experts will often know more than one way to accomplish any given goal, and be able to repurpose and recombine methods and tools, as opposed to the simpler, more linear or tree-based recipes of the novice or student. [e.g., @Bleed:2008in;@bleed2002obviously;@stout2002skill].  
 
-A detailed formal model of the relations between steps in a technological process, or the knowledge necessary to execute a technological recipe, will involve many kinds of relations.  Some items will be related in time, as steps in a process.  Others will be related by subsumption:  arrowheads are a subclass of bifacial stone tools, and require many of the same production techniques as bifaces used in other projectiles.  Still others will be related as sets of alternatives:  choices of surface treatment for a given ceramic paste, given the firing regime selected, for example.   Models of stone tool production often use sequences to represent the relations in a construction recipe, but models such as trees or more general graphs are possible and useful. Archaeologists have frequently organized 
-the relations between these skills and production steps into "sequence models" or "$\textrm{cha\^ine op\'eratoire}$," but many representations are possible, including trees 
+A formal model of the relations between components in a technology, or the knowledge necessary to execute a technological recipe, will involve many kinds of relationships.  Some items will be related in time, as steps in a process.  Others will be related by subsumption:  arrowheads are a subclass of bifacial stone tools, and require many of the same production techniques as bifaces used in other projectiles.  Still others will be related as sets of alternatives:  choices of surface treatment for a given ceramic paste, given the firing regime selected, for example.  To date, most archaeological models of tool production have focused upon temporal relationships, as in "sequence models" or "$\textrm{cha\^ine op\'eratoire}$," but many representations are possible, including trees and more general graphs to capture multiple types of relations
 [@Bamforth:2008kq;@Bleed:2008in;@Ferguson:2008ce;@Hogberg:2008fj;@bleed2001trees;@bleed2002obviously;@schiffer1987theory;@stout2002skill]. 
 
-In this chapter, we focus not on the execution steps of a recipe, but the relations between skills and information _as it is learned_.  In other words, we focus upon the _prerequisite_ relationships that exist between cultural traits, since these govern the way in which social learning is constrained in the environment of learning and teaching.  Some pieces of information or skills must be in place before a person can effectively learn or practice others.  Examples from our own childhoods abound:  one needed to understand addition and subtraction and multiplication before learning long division; in order to make  soup, we need to understand how to simmer rather than boil, how to chop and slice, what ingredients might be combined, and so on.  The fact that knowledge and skills build upon one another make prerequisite relations between cultural traits ubiquitous.  Incorporating such relations into social learning models is thus a useful first step in understanding how the human cultural repertoire changed in the later Paleolithic.  We represent prerequisite relations as trees in the graph-theoretic sense [@diestel2010graph], replacing the "flat" structure of "local/allele" models or the "dimension/mode" structure of classifications and some typologies [@Dunnell1971].  
+In this chapter, we focus not on the execution steps of a recipe (and thus not on sequence models), but the relations between skills and information _as it is learned_.  In other words, we focus upon the _prerequisite_ relationships that exist between cultural traits, since the ordered dependencies between skills and information form one of the structures within social learning occurs during development (and into adulthood).  Some pieces of information or skills must be in place before a person can effectively learn or practice others.  Examples from our own childhoods abound:  one needed to understand addition and subtraction and multiplication before learning long division; in order to make  soup, we need to understand how to simmer rather than boil, how to chop and slice, what ingredients might be combined, and so on.  The fact that knowledge and skills build upon one another make prerequisite relations between cultural traits ubiquitous.  Incorporating such relations into social learning models is thus a useful first step in developing a slightly "thicker" description of cultural transmission.  In this chapter, we represent prerequisite relations as trees in the graph-theoretic sense [@diestel2010graph], replacing the "nominal scale" structure of "locus/allele" models or paradigmatic classifications and some typologies [@Dunnell1971], but we emphasize that the tree models we discuss here are still classifications and thus analytic tools, designed to allow us to measure variation in the archaeological record, not reconstruct emic models of Paleolithic technologies.    
 
-Our model also requires a way of representing a changing learning environment, in ways that create higher fidelity and greater possibility for building cumulative knowledge.  In real learning envrionments, there are many possibilities, but deliberate teaching, and apprentice learning are repeatedly seen across human groups as ways that naive individuals can reliably learn the complex skills and information needed for foraging, artifact production and maintenance, and navigating an increasingly rich social world.  The point of structuring the learning environment with teaching and/or apprenticeship is to 
+Our model also requires a way of representing a changing learning environment, in ways that create higher fidelity and greater possibility for building cumulative knowledge.  In real learning environments, there are many possibilities, but deliberate teaching and apprentice learning are repeatedly seen across human groups as ways that naive individuals can reliably learn the complex skills and information needed for foraging, artifact production and maintenance, and navigating an increasingly rich social world.  The point of structuring the learning environment with teaching and/or apprenticeship is to 
 give the learner skilled models to imitate, shortcut trial and error when acquiring a skill, 
 provide a reference for needed information, and to guide individuals to put their information and
 skills together into appropriate sequences to accomplish an overall goal.  Apprenticeship and formalized teaching provide a social learning "scaffold," helping to lower the amount of individual trial and error learning needed to master a body of material [@wimsatt2007reproducing; @wimsatt2007re].  
 
 Within a standard discrete-time simulation model of a social learning process, we can model this type of learning environment with the following modifications:
 
-1.  Disallowing individuals the ability to copy traits for which they do not have necessary background or prerequisites.
-2.  Creating a probability that individuals, if disallowed a trait, may be able to learn one of its necessary prerequisites instead, leading to the possibility of full acquisition at some future time.
+1.  Represent the order in which skills and information need to be acquired as a series of trees, with vertices representing traits (either a skill or piece of information), and edges the prerequisite relations between them.
+2.  Disallowing individuals the ability to copy traits from a cultural model for which they do not have necessary background or prerequisites, given the relations in the applicable tree model.
+3.  Creating a probability that individuals, if disallowed a trait, can be taught one of the needed prerequisites instead by that cultural model, leading to the potential accumulation of fuller knowledge and skills over time.
 
 By changing the probability that individuals learn a missing prerequisite trait, we can "tune" the learning environment.  Low probabilities might correspond, for example, to a learning environment where individuals can observe others executing a production step, but are given little or no instruction or guidance on what they need to know in order to successfully master it.  High probabilities of learning prerequisites would correspond, on the other hand, to environments where individuals receive instruction, or work together with a more skilled individual who guides them toward learning the information and skills they lack.  In the next section, we discuss the implementation of both points in more detail.
 
@@ -336,7 +332,7 @@ Replicate simulation runs at each parameter combination & 25\\
  \hline 
 Maximum time after which a simulation is sampled and terminated & 10000000\\ 
  \hline 
-Individual probability for learning a missing prerequisite & 0.05, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9\\ 
+Individual probability for being taught a missing prerequisite & 0.05, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9\\ 
  \hline 
 Number of branches at each level of a trait tree & 3, 5\\ 
  \hline 
@@ -400,7 +396,7 @@ Earlier, we mentioned that population size does not seem to be a primary factor 
 \label{img:mean-radius-cultures-pop} 
 \end{figure}
 
-Figure \ref{img:mean-radius-cultures-pop} displays the relationship between mean radius (or depth) of the cultural traits in each cultural sample, as in Figure \ref{img:mean-radius-cultures-100} above, but the boxplots are instead colored by population size.  There is no qualitative difference in the dynamics as sample size grows, but the mean radius of trait sets does decline slightly, probably due to the slower velocity at which an innovation diffuses in the larger population.  This is the kind of second-order effect which warrants continuing to include population size in analyses of social learning models, we believe, even if it does not serve as a primary explanation or factor.  
+Figure \ref{img:mean-radius-cultures-pop} displays the relationship between mean radius (or depth) of the cultural traits in each cultural sample, as in Figure \ref{img:mean-radius-cultures-100} above, but the boxplots are instead colored by population size.  There is no qualitative difference in the dynamics as population size grows, but the mean radius of trait sets does decline slightly, probably due to the slower velocity at which an innovation diffuses in the larger population.  This is the kind of second-order effect which warrants continuing to include population size in analyses of social learning models, we believe, even if it does not serve as a primary explanation or factor.  
 
 
 
@@ -430,14 +426,14 @@ The model displays a characteristic increase in the cultural repertoires of indi
 
 The model described here only makes a start on modeling the additive and recombinative complexity of real technologies, but it does display accumulated depth of "knowledge" or "skills," as represented by the radius or depth of trait trees.  In combination with realistic models of technology--such as the production sequences studied by experts on stone tools--we believe that empirically sufficient models of the evolution of specific technologies are possible and within reach.  
 
-Several areas suggest themselves for future research in "semantic" Axelrod models. Some we are pursuing, others remain open questions and we invite collaboration towards their solution.  
+Several areas suggest themselves for future research in structured information or "semantic" cultural transmission models. Some we are pursuing, others remain open questions and we invite collaboration towards their solution.  
 
 * Regional scale cultural differentiation given a metapopulation embedding of the basic model.
 * Additional trait relations (e.g., class subsumption, functional equivalencies).
 * Realistic technology models for key artifact classes (e.g., bifaces, scrapers, pottery).
 * Incorporation of trait fitness in order to study directional change.  
 
-We believe that models of the class studied here are a promising platform for studying the effects of social learning of realistic technologies that go beyond abstract, structureless "tokens."  Studying the evolution of biological populations in detail eventually required a detailed model of genomics beyond the "bean-bag" locus/allele models of early theoretical population genetics [@mayr1959mayr].[^mayr]  Going beyond the early promise of abstract cultural transmission models and explaining real technological change will require a similar transition beyond "bean-bag" social learning models.  We offer a small step in that direction.
+We believe that models of the class studied here are a promising platform for studying social learning of realistic technologies in structured learning contexts where ordered acquisition of skills and information are important.  Such models are "thicker" descriptions of how humans acquire skills and information in real learning environments, and thus complement existing models which describe the conditions under which teaching and structured learning might evolve and spread.  We believe models of this type are necessary to formalize evolutionary explanations for complex, multifactor phenomena such as behavioral modernity, and also make a needed "downpayment" on cultural transmission models which can meaningfully interface with archaeometry, the technnological analysis of lithics and pottery [@tostevin2012seeing], and studies of how innovation occurs in various tool classes [e.g., @o2010innovation].  
 
 
 # Acknowledgements
@@ -445,7 +441,7 @@ We believe that models of the class studied here are a promising platform for st
 The authors wish to thank Briggs Buchanan and Mark Collard for the invitation to 
 participate in the symposium "Current Research in Evolutionary Archaeology," at the 79th 
 Annual Meeting of the Society for American Archaeology in Austin, TX.  A summary of 
-this research was presented in that session.  Madsen wishes to thank 
+this research was presented in that session, and Alex Mesoudi provided valuable comments on an early post-conference draft.  Madsen wishes to thank 
 $\textrm{Fr\'ed\'eric}$ Chapoton of the Institut
 Camille Jordan for answering a question about the maximal automorphism
 group of trees, and Ben MacArthur and
@@ -577,4 +573,5 @@ analyses of the final dataset were performed in R, employing Knitr to render our
 
 [^budget]:  We should note that learning rates of 0.8 and 0.9 for population size 400 were cut short due to budget constraints, but this does not appear to affect the pattern in our dataset.  
 
-[^mayr]:  Although the controversy over "bean-bag" genetics is more complex than discussed here.  See Ewens [-@ewens2008commentary] for a contemporary commentary.
+
+[^geertz]: Wimsatt [-@wimsatt2014] notes that studies of cultural transmission tend either to be "long on Geertzian thick description" but short on quantitative predictions and measurements that allow hypotheses to be tested, or formalized mathematical models which are thin on the contextual detail that real social learning entails.  
