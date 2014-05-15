@@ -1,4 +1,10 @@
-\pdfoutput=1
+%%%%%%%%%%%%%%%%%%%% author.tex %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% sample root file for your "contribution" to a contributed volume
+%
+% Use this file as a template for your own input.
+%
+%%%%%%%%%%%%%%%% Springer %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 % RECOMMENDED %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -21,6 +27,7 @@
 \usepackage{multicol}        % used for the two-column index
 \usepackage[bottom]{footmisc}% places footnotes at page bottom
 
+\usepackage{lipsum}
 \usepackage{url}
 \usepackage[section,ruled]{algorithm}
 \usepackage{algorithmic}
@@ -58,83 +65,129 @@
 
 
 
-\abstract*{Cultural transmission models are coming to the fore in explaining increases in the Paleolithic toolkit richness and diversity. Social learning models may drive diversity through  relaxation of conformism, population growth, or the effects of extinction and recolonization in metapopulations. During the Paleolithic, however, technologies increase not only in terms of diversity but also in their complexity and interdependence. As \citet{Mesoudi2008a} have shown selection broadly favors social learning that is hierarchical and structured, rather than information which is piecemeal and independent. The addition of structured information acquisition potentially explains how the complexity of technology changes along with diversity. Here, we introduce a structured extension of the Axelrod model of cultural differentiation (1997). We examine the conditions under which structured suites of traits develop and differentiate in the model, which can represent the chains of prerequisites, “background” information, and local specializations characteristic of real technology traditions. Our results point to ways in which we can build more comprehensive explanations of the archaeological record of the Paleolithic as well as other cases of technological change.}
+\abstract*{Cultural transmission models are coming to the fore in explaining increases in the Paleolithic toolkit richness and diversity. During the later Paleolithic, technologies increase not only in terms of diversity but also in their complexity and interdependence. As \citet{Mesoudi2008a} have shown, selection broadly favors social learning of information that is hierarchical and structured, and multiple studies have demonstrated that teaching within a social learning environment can increase fitness.  We believe that teaching also provides the scaffolding for transmission of more complex cultural traits.  Here, we introduce an extension of the Axelrod \citet{axelrod1997}  model of cultural differentiation in which traits have prerequisite relationships, and where social learning is dependent upon the ordering of those prerequisites. We examine the resulting structure of cultural repertoires as learning environments range from largely unstructured imitation, to structured teaching of necessary prerequisites, and we find that in combination with individual learning and innovation, high probabilities of teaching prerequisites leads to richer cultural repertoires.  Our results point to ways in which we can build more comprehensive explanations of the archaeological record of the Paleolithic as well as other cases of technological change.}
 
-\abstract{Cultural transmission models are coming to the fore in explaining increases in the Paleolithic toolkit richness and diversity. Social learning models may drive diversity through relaxation of conformism, population growth, or the effects of extinction and recolonization in metapopulations. During the Paleolithic, however, technologies increase not only in terms of diversity but also in their complexity and interdependence. As \citet{Mesoudi2008a} have shown selection broadly favors social learning that is hierarchical and structured, rather than information which is piecemeal and independent. The addition of structured information acquisition potentially explains how the complexity of technology changes along with diversity. Here, we introduce a structured extension of the Axelrod model of cultural differentiation (1997). We examine the conditions under which structured suites of traits develop and differentiate in the model, which can represent the chains of prerequisites, “background” information, and local specializations characteristic of real technology traditions. Our results point to ways in which we can build more comprehensive explanations of the archaeological record of the Paleolithic as well as other cases of technological change.}
+\abstract{Cultural transmission models are coming to the fore in explaining increases in the Paleolithic toolkit richness and diversity. During the later Paleolithic, technologies increase not only in terms of diversity but also in their complexity and interdependence. As \citet{Mesoudi2008a} have shown, selection broadly favors social learning of information that is hierarchical and structured, and multiple studies have demonstrated that teaching within a social learning environment can increase fitness.  We believe that teaching also provides the scaffolding for transmission of more complex cultural traits.  Here, we introduce an extension of the Axelrod \citet{axelrod1997} model of cultural differentiation in which traits have prerequisite relationships, and where social learning is dependent upon the ordering of those prerequisites. We examine the resulting structure of cultural repertoires as learning environments range from largely unstructured imitation, to structured teaching of necessary prerequisites, and we find that in combination with individual learning and innovation, high probabilities of teaching prerequisites leads to richer cultural repertoires.  Our results point to ways in which we can build more comprehensive explanations of the archaeological record of the Paleolithic as well as other cases of technological change.}
 
 
 \section{Introduction}\label{introduction}
 
 Although humans and our hominid ancestors have been cultural animals
 throughout our evolutionary history, an important change occurred in our
-lineage during the Middle and Upper Paleolithic. After many millennia
-with varied but relatively small toolkits, and material culture which
-was very similar across continental distances, our cultural repertoire
-began to explode. The artifactual toolkit became larger and its
-constituent tools and technologies more complex, the range of materials
-used to construct it was enriched, and our solutions to the problems of
-everyday life became regionalized and differentiated. Further, the
-economic basis of our lives began to broaden and also, in many areas, to
-become specialized \citep{bar2002upper, d2011evolution, guy2005mosaic}
-This transition has long been called the ``Upper Paleolithic
-Revolution,'' or less humbly, even the ``Human Revolution'' by those who
-see such characteristics as marking out what it means to be uniquely
-human.
+lineage during the Middle and Upper Paleolithic. For millennia our
+ancestors manufactured relatively small toolkits and their material
+culture was remarkably similar across continental distances and over
+many generations. Beginning in the Middle Paleolithic and continuing
+through the Upper Paleolithic, the archaeological record reflects an
+explosion in our cultural repertoire. Over tens of thousands of years,
+artifactual toolkits shift from sets of relatively few objects with
+multiple uses to large collections of functionally-specialized tools
+that, employed increasingly complex technologies and that were
+manufactured from an enriched range of materials. The changes in
+artifacts suggest that human solutions to the problems of everyday life
+became regionalized and differentiated. Further, the economic basis of
+our lives began to broaden and also, in many areas, to become
+specialized \citep{bar2002upper, d2011evolution, guy2005mosaic}.
 
-Careful examination of the Middle Paleolithic archaeological record,
-especially in Africa and the Near East, suggests that this change in
-behavior was not a sharp ``revolution,'' and that much of the enriched
-material culture we later characterize as the ``Upper Paleolithic'' had
-precursors in many areas. These were patchy, both in space and time
+While early researchers believed that the Upper Paleolithic resulted
+from a singular ``revolution'' in human evolution leading to
+behaviorally modern homo sapiens, this view is held by a minority of
+paleoanthropologists and archaeologists today
+\citep[e.g.,][]{klein2009human}. Careful examination of the Middle
+Paleolithic archaeological record especially in Africa and the Near East
+suggests that this change in behavior did not occur as a single distinct
+event, but that change took place over a long period of time since much
+of the enriched material culture we later characterize as the ``Upper
+Paleolithic'' had precursors. In addition, this change now appears to be
+patchy both in space and time
 \citep{bouzouggar200782, d2007additional, d2011evolution, guy2005mosaic, mcbrearty2000revolution, mcbrearty2007down}.
-Nevertheless, even if our understanding of the time scale over which
-this enrichment occurred has lengthened and the spatial scope has
-widened, it remains a central puzzle in the evolution of our species. As
-a neutral term, we prefer ``behavioral modernity,'' which emphasizes a
-pattern or phenomenon, not its timing, geography, or association with
-biology.
+While our understanding of the time scale over which behavioral
+enrichment occurred has lengthened and the spatial scope has widened,
+the evolution of ``behavioral modernity'' remains a central puzzle in
+the evolution of our species.
 
-The most promising explanations of behavioral modernity are those which
-examine the nature of cultural variation and social learning itself, and
-factors which might lead to the evolution of more diverse populations.
-Several possibilities have already been explored. Shennan
+Among the most promising explanations of behavioral modernity are those
+that examine the nature of cultural variation and the processes
+resulting in social learning. These explanations focus on identifying
+the mechanisms by which behavior and material culture might have varied
+over time and across populations in order to isolate the factors that
+shaped fitness landscapes for middle and upper Paleolithic hominins. The
+``learning hypothesis'' \citep{Nishiaki2013Introduction} for example,
+seeks to explain the change in humans as a result of differences in the
+learning abilities of two hominid populations. Broadly construed, we
+believe that this hypothesis provides the foundations for constructing
+falsifiable explanations for what amounts to a ``phase transition'' in
+the nature of human cultural capacities and material culture.
+
+The simplest learning models have tended to explore the consequences for
+cultural transmission of various factors exogeneous to social learning
+itself. For example, the role of population size in determining
+diversity has been a major focus on investigation. Shennan
 \citetext{\citeyear{shennan2000population}; \citeyear{shennan2001demography}}
 proposed that demography has a powerful effect on diversity within
-cultural transmission processes, and this seems to be supported by the
-reduced cultural diversity and loss of toolkit elements observed in
-Tasmania during a population bottleneck \citep{henrich2004}. But a
-recent comparative study shows that population size itself bears no
-relationship with toolkit diversity \citep{collard2013risk}. If simple
-transmission models do show a relation between diversity and population
-size, it is likely to be a second-order effect in the real world,
-dominated by or interacting with other factors.
+cultural transmission processes. The role of demography in affecting
+change in cultural diversity is loss of toolkit elements observed in
+Tasmania during a population bottleneck \citep{henrich2004}. In a
+similar line of reasoning, Kuhn \citeyearpar{Kuhn2013Cultural-Transm}
+argues that low population size and density put Neanderthals in a
+situation where innovations spread slowly and ultimately led to their
+demise relative to modern humans. Furthermore, a growing set of
+experimental studies clearly show a relationship between accumulation of
+complex cultural traits and the number of cultural ``models'' from whom
+individuals can learn
+\citep{muthukrishna2014sociality, derex2013experimental, kempe2014experimental}.
+The role of demography in explanations of changes in cultural diversity,
+however, is not certain. Collard and colleagues, for example, other
+hand, question whether population size has any real-world effects on
+toolkit diversity, as a result of a series of comparative studies on a
+wide range of hunter-gatherer groups which show no association
+\citep{collard2011drives, collard2013population, collard2013risk, collard2013plos}.
+Finally, in his analysis of the overall evolutionary rate, Aoki
+\citeyearpar{Aoki2013Determinants-of} found that innovation rates were
+more important than population size to determining the rate of evolution
+in a population.
 
-The structure of bands or demes into larger regional metapopulations,
-however, is a first-order effect, given what we know about the strong
-effect that network topology has upon contagion or diffusion processes
-\citep[e.g.,][]{castellano2009statistical, smilkov2012influence}. Premo
-\citeyearpar{premo2012local} has examined whether metapopulation
-dynamics, with local extinction and recolonization, might account for
-the retention and expansion of diversity, with promising results.
-Finally, the way social learning occurs within a population can
-radically change its quantitative results over time. Sharon
-\citeyearpar{sharon2009acheulian} suggested that Middle Paleolithic
-populations might have been characterized by strongly conformist
-learning, which changed over time, leading to a dramatic increase in
-cultural diversity.
+To us, this body of work indicates that while population size is an
+important parameter in mathematical models, it may be better understood
+as a second-order effect in the real world, interacting with a myriad of
+other factors and thus often dominated by those factors. One such factor
+is the structure of bands or demes into larger regional metapopulations.
+Network topology, for example, is known to have a substantial effect
+upon contagion or diffusion processes
+\citep[e.g.,][]{castellano2009statistical, smilkov2012influence}. Thus,
+it is likely that regional structure has critical effects on the
+outcomes we can expect from a single social ``learning rule.'' Along
+these lines, Premo \citeyearpar{premo2012local} has examined whether
+metapopulation dynamics that include local extinction and recolonization
+might provide an improved account for the retention and expansion of
+diversity.
 
-A foundational event in human evolution like behavioral modernity is
-highly unlikely to have a single cause, especially if it evolved over
-many tens of millennia in a widely distributed population. Instead, we
-should expect a combination of factors. Demography, and the
-metapopulation dynamics of individual demes or groups likely played
-roles, with the strength of such effects depending upon localized
-circumstances. The way in which individuals learn skills and information
-likely plays a central role. And we cannot forget the strategic
-dimension of social life: the evolution of cooperation and pro-social
-behaviors are probably implicated as well. Sterelny
-\citeyearpar[p.61]{sterelny2012evolved} sums up the multi-factor view
-nicely:
+Ultimately, it is not surprising that the answer will be complicated and
+multifaceted: the foundational event in human evolution that results in
+behavioral modernity is highly unlikely to have a single cause, even
+within the broad umbrella of cultural transmission theory and the
+learning hypothesis. Instead, we should expect a combination of factors.
+The way in which individuals learn skills and information likely plays a
+central role, as emphasized in the learning hypothesis analyzed from
+many angles in this series
+\citep{Aoki2013Determinants-of, Nishiaki2013Introduction}. For example,
+Sharon \citeyearpar{sharon2009acheulian} suggested that the diversity of
+Middle Paleolithic toolkits might best be explained by strongly
+conformist learning, which lessened over time, leading to a dramatic
+increase in cultural diversity. We know that learning and teaching
+styles vary across human groups, and formal modeling efforts are
+beginning to make clear that such variation has evolutionary
+consequences that might lead to a rapid expansion of the human cultural
+repertoire \citep{Nakahashi2013Cultural-Evolut}. Those populations which
+increased the amount or effectiveness of teaching would have a fitness
+advantage over those who relied upon imitation and ``natural pedagogy''
+in passing along technological and foraging knowledge
+\citep{Csibra:2011dx, Fogarty:2011gv, Terashima2013The-Evolutionar}.
+Demography and population structure play important roles in reinforcing
+the fitness differences which different learning strategies would
+create, as pointed out by Kuhn \citeyearpar{Kuhn2013Cultural-Transm}.
+Sterelny \citeyearpar[p.61]{sterelny2012evolved} sums up this
+combination of factors nicely:
 
 \begin{quote}
 \ldots{}the cultural learning characteristic of the Upper Paleolithic
@@ -146,44 +199,67 @@ structures that both buffer existing resources effectively and support
 enough specialization to generate a supply of innovation.
 \end{quote}
 
-We believe this is a promising approach. A useful next step is to
-construct formal models which incorporate some of these factors, and
-determine if their dynamics exhibit the kind of qualitative changes we
-see in the transition from archaic to behaviorally modern assemblages.
-Specifically, we need models which:
+In efforts designed to explore the learning environments mentioned in
+Sterelny's explanatory sketch, Creanza and colleagues
+\citeyearpar{Creanza2013Exploring-Cultu}, Aoki
+\citeyearpar{Aoki2013Determinants-of}, and Nakahashi
+\citeyearpar{Nakahashi2013Cultural-Evolut} have develop models that
+examine the conditions under which teaching (as opposed to simple
+imitation) affects the overall evolutionary rate or cultural diversity
+in a population. In an important sense, however, these models are
+``thin'' (in the Geertzian sense) descriptions of the effects of
+teaching within a social learning system. Such models are critical, but
+we need to complement them with ``thicker'' models that can describe how
+the structure and even content of cultural knowledge evolves given
+social learning processes, the scaffolding provided by teaching and
+technological infrastructure, and the developmental process by which
+people learn necessary skills and information \citep{wimsatt2014}.
+
+Towards this goal, in this chapter we suggest that the size and
+structure of artifact design spaces and fidelity of the learning
+environment have a strong effect upon the cumulative richness and
+complexity of toolkits and technology. To formalize this idea, we
+construct a model which:
 
 \begin{itemize}
 \itemsep1pt\parskip0pt\parsep0pt
 \item
-  Represent cultural traits as hierarchically structured, in order to
+  Represents cultural traits as hierarchically structured, in order to
   study increases in complexity
 \item
-  Have learning rules sensitive to the structure and relations of
-  cultural traits
+  Has a learning rule sensitive to the order in which cultural traits
+  are acquired, with multiple levels of fidelity
 \item
-  Have mechanisms (such as homophily) which allow cultural
+  Has a mechanism (such as homophily) that allows cultural
   differentiation endogeneous to the model
 \end{itemize}
 
-As the ``learning environment'' in such models is tuned from lower to
-higher fidelity, we would expect to see greater diversity, larger
-structured sets of traits persisting in the population, and greater
-differentiation of the population into ``different'' cultural
-configurations.
+As we alter the ``learning environment'' in our models from lower to
+higher fidelity, we expect to see greater diversity, larger structured
+sets of traits persisting in the population, and greater differentiation
+of the population into ``different'' cultural configurations. We also
+expect that individual innovation, independent of the social learning
+context, will play a role in the accumulation of cultural complexity by
+allowing a population to explore increasingly large spaces of
+technological design possibilities; this expectation is concordant with
+Aoki's \citeyearpar{Aoki2013Determinants-of} result in Volume I of this
+series.
 
 In this chapter, we introduce a simulation model which combines a
 hierarchical trait space capable of expressing the ``semantics'' of
 relationships between skills and information \citep{Mesoudi2008a}, and a
-modified version of Robert Axelrod's \citep{axelrod1997} homophilic
-social learning model which allows us to examine these expectations.
+modified version of Robert Axelrod's \citeyearpar{axelrod1997}
+homophilic social learning model which allows us to examine the
+conditions under which evolution in a hierarchical design space leads to
+cultural differentiation. After describing the model, we study its
+dynamics and provide an initial assessment of its suitability for
+studying the onset of behavioral modernity in the later Paleolithic.
 Models like this begin to move beyond diffusion dynamics, bringing the
-actual meaning and relations of traits into the modeling process. Hence
+actual meaning and relations of traits into the modeling process. Hence,
 we call these ``semantic Axelrod'' models, and believe that such models
 form a platform for formalizing the type of multi-factor hypotheses
 necessary to examine major transitions in human evolution, such as
-``behavioral modernity.'' After describing the model, we study its
-dynamics and provide an initial assessment of its suitability for
-studying the onset of behavioral modernity in the later Paleolithic.
+``behavioral modernity.''
 
 \section{The Semantic Axelrod Model for Trait
 Prerequisites}\label{the-semantic-axelrod-model-for-trait-prerequisites}
@@ -192,56 +268,59 @@ Much of our technical knowledge, whether of stone tool manufacture,
 throwing clay pots, or computer repair, is built from simple tasks, bits
 of background knowledge, and step-by-step procedures
 \citep{neff1992ceramics, schiffer1987theory}. We organize our knowledge
-and skills in many ways, but it is common to think of a complex process as
-a ``script'' or ``recipe'' \citep{schank1977scripts}. Of course, experts
-in a task or field may not see it this way, having internalized such
-structures below the conscious level. Experts will often know more than
-one way to accomplish any given goal, and be able to repurpose and
+and skills in many ways, but it is common to think of a complex process
+as a ``script'' or ``recipe'' \citep{schank1977scripts}. Of course,
+experts in a task or field may not see it this way, having internalized
+such structures below the conscious level. Experts will often know more
+than one way to accomplish any given goal, and be able to repurpose and
 recombine methods and tools, as opposed to the simpler, more linear or
 tree-based recipes of the novice or student.
 \citep[e.g.,][]{Bleed:2008in, bleed2002obviously, stout2002skill}.
 
-A detailed formal model of the relations between steps in a
-technological process, or the knowledge necessary to execute a
-technological recipe, will involve many kinds of relations. Some items
-will be related in time, as steps in a process. Others will be related
-by subsumption: arrowheads are a subclass of bifacial stone tools, and
-require many of the same production techniques as bifaces used in other
-projectiles. Still others will be related as sets of alternatives:
-choices of surface treatment for a given ceramic paste, given the firing
-regime selected, for example. Models of stone tool production often use
-sequences to represent the relations in a construction recipe, but
-models such as trees or more general graphs are possible and
-useful. Archaeologists have frequently organized the relations between
-these skills and production steps into ``sequence models'' or
+A formal model of the relations between components in a technology, or
+the knowledge necessary to execute a technological recipe, will involve
+many kinds of relationships. Some items will be related in time, as
+steps in a process. Others will be related by subsumption: arrowheads
+are a subclass of bifacial stone tools, and require many of the same
+production techniques as bifaces used in other projectiles. Still others
+will be related as sets of alternatives: choices of surface treatment
+for a given ceramic paste, given the firing regime selected, for
+example. To date, most archaeological models of tool production have
+focused upon temporal relationships, as in ``sequence models'' or
 ``$\textrm{cha\^ine op\'eratoire}$,'' but many representations are
-possible, including trees
+possible, including trees and more general graphs to capture multiple
+types of relations
 \citep{Bamforth:2008kq, Bleed:2008in, Ferguson:2008ce, Hogberg:2008fj, bleed2001trees, bleed2002obviously, schiffer1987theory, stout2002skill}.
 
-In this chapter, we focus not on the execution steps of a recipe, but
-the relations between skills and information \emph{as it is learned}. In
-other words, we focus upon the \emph{prerequisite} relationships that
-exist between cultural traits, since these govern the way in which
-social learning is constrained in the environment of learning and
-teaching. Some pieces of information or skills must be in place before a
-person can effectively learn or practice others. Examples from our own
-childhoods abound: one needed to understand addition and subtraction and
-multiplication before learning long division; in order to make soup, we
-need to understand how to simmer rather than boil, how to chop and
-slice, what ingredients might be combined, and so on. The fact that
-knowledge and skills build upon one another make prerequisite relations
-between cultural traits ubiquitous. Incorporating such relations into
-social learning models is thus a useful first step in understanding how
-the human cultural repertoire changed in the later Paleolithic. We
-represent prerequisite relations as trees in the graph-theoretic sense
-\citep{diestel2010graph}, replacing the ``flat'' structure of
-``local/allele'' models or the ``dimension/mode'' structure of
-classifications and some typologies \citep{Dunnell1971}.
+In this chapter, we focus not on the execution steps of a recipe (and
+thus not on sequence models), but the relations between skills and
+information \emph{as it is learned}. In other words, we focus upon the
+\emph{prerequisite} relationships that exist between cultural traits,
+since the ordered dependencies between skills and information form one
+of the structures within social learning occurs during development (and
+into adulthood). Some pieces of information or skills must be in place
+before a person can effectively learn or practice others. Examples from
+our own childhoods abound: one needed to understand addition and
+subtraction and multiplication before learning long division; in order
+to make soup, we need to understand how to simmer rather than boil, how
+to chop and slice, what ingredients might be combined, and so on. The
+fact that knowledge and skills build upon one another make prerequisite
+relations between cultural traits ubiquitous. Incorporating such
+relations into social learning models is thus a useful first step in
+developing a slightly ``thicker'' description of cultural transmission.
+In this chapter, we represent prerequisite relations as trees in the
+graph-theoretic sense \citep{diestel2010graph}, replacing the ``nominal
+scale'' structure of ``locus/allele'' models or paradigmatic
+classifications and some typologies \citep{Dunnell1971}, but we
+emphasize that the tree models we discuss here are still classifications
+and thus analytic tools, designed to allow us to measure variation in
+the archaeological record, not reconstruct emic models of Paleolithic
+technologies.
 
 Our model also requires a way of representing a changing learning
 environment, in ways that create higher fidelity and greater possibility
-for building cumulative knowledge. In real learning envrionments, there
-are many possibilities, but deliberate teaching, and apprentice learning
+for building cumulative knowledge. In real learning environments, there
+are many possibilities, but deliberate teaching and apprentice learning
 are repeatedly seen across human groups as ways that naive individuals
 can reliably learn the complex skills and information needed for
 foraging, artifact production and maintenance, and navigating an
@@ -263,12 +342,19 @@ following modifications:
 \def\labelenumi{\arabic{enumi}.}
 \itemsep1pt\parskip0pt\parsep0pt
 \item
-  Disallowing individuals the ability to copy traits for which they
-  do not have necessary background or prerequisites.
+  Represent the order in which skills and information need to be
+  acquired as a series of trees, with vertices representing traits
+  (either a skill or piece of information), and edges the prerequisite
+  relations between them.
 \item
-  Creating a probability that individuals, if disallowed a trait, may be
-  able to learn one of its necessary prerequisites instead, leading to
-  the possibility of full acquisition at some future time.
+  Disallowing individuals the ability to copy traits from a cultural
+  model for which they do not have necessary background or
+  prerequisites, given the relations in the applicable tree model.
+\item
+  Creating a probability that individuals, if disallowed a trait, can be
+  taught one of the needed prerequisites instead by that cultural model,
+  leading to the potential accumulation of fuller knowledge and skills
+  over time.
 \end{enumerate}
 
 By changing the probability that individuals learn a missing
@@ -301,59 +387,72 @@ by an atlatl. An artisan will possess information about different raw
 materials, an understanding of what materials are suitable for specific
 purposes, skills and information concerning the knapping of different
 types of bifaces, methods of hafting bifaces into different kinds of
-shafts, and so on. Here, we are interested in the order in which people
-usually \emph{learn}, rather than the order in which steps are executed.
-Thus, nodes closer to the top of a tree are ``background'' or necessary
-skills to nodes further down in a tree. For example, a basic
-understanding of the properties of stone would occur close to the root
-of a tree, while knowledge of the differences between specific sources
-of lithic raw material would occupy nodes at the same level below the
-root.
+shafts, and so on. Stout \citeyearpar{stout2011stone} organized such
+knowledge into ``action hierarchies,'' which represent sequences of
+actions, sets of choices, and optional elements for the construction of
+a class of stone tools. Action trees, drawn from Moore's
+\citeyearpar{moore2010grammars} graphical notation, represent the
+relations present in execution of a technical process.
 
-In each simulation model, we begin with a trait or ``design space'' that
-incorporates several independent sets of prerequisite relations
-\citep{o2010cultural}. This models the fact that some knowledge is
-always independent and can be learned in parallel, since it may relate
-to different aspects of a process. For example, one might learn about
-the sources of good lithic raw materials, independent of learning how to
-perform different percussion techniques. The overall design space of a
-simulation model is thus a forest\footnote{A forest is a graph composed
-  of multiple components, each of which is a tree.}, composed of several
-trees.
-
-\begin{figure}[htbp] 
+\begin{figure}[h] 
 \centering 
 \includegraphics[]{balanced-trait-tree-3-3.png} 
 \caption{A single trait tree, represented by a balanced tree with branching factor 3 and depth factor 3, order 40.  In our model, nodes higher in the tree represent prerequisites for nodes lower down the tree.  Each instance of the model will have several or many of these trees in the design space.} 
 \label{img:trait-tree} 
 \end{figure}
 
-We employ balanced trees which have the same number of nodes at each
-level, to provide a simplified model of a design space with which to
-begin our exploration of this class of social learning model, although
-real design spaces are undoubtedly more complex in their geometry. Each
-tree in our model is specified by a branching factor $r$ and depth $h$.
-As a result, each trait tree in the design space has
-$\sum_{i=0}^{h} r^i$ traits. The tree depicted in Figure
-\ref{img:trait-tree} thus has 40 vertices, for example. In this chapter,
-we examine both small (4 trees) and larger (16 trees) design spaces, to
-see how learning may differ in problems involving design spaces of
-different size and complexity. We examine trees with combinations of
-branching and depth factors of 3 and 5. Thus, a design space with 4
-trees with branching and depth factors of 3 (as in Figure
-\ref{img:trait-tree}) would have 160 traits, whereas a design space with
-16 trees of branching and depth factors of 5 would have a total of
-62,496 traits.\footnote{We initially chose 6 as the limit on branching
-  and depth factors, but found that we cannot calculate certain
-  symmetric statistics, such as the size of the automorphism group, on
-  trees that large using existing tools. Even a tree with $r=5, h=6$ has
-  over $10^{1623}$ possible symmetries, and calculating that number
-  takes over 100 seconds on a fast multi-core computer.} Even the small
-design spaces we consider here create a large space for cultural change
-and differentiation, given the number of possible trees one can
-construct on even 40 vertices.\footnote{If we consider each trait to be
-  unique and non-interchangeable, the number of unique trees with unique
-  vertex labels is $n^{n-2}$ by Cayley's theorem
+Here, we are interested in the order in which people usually
+\emph{learn} skills and information, rather than the order in which
+steps are executed. The difference is potentially significant, in that
+two adjacent steps in a sequence might involve very different
+information, tools, or skills, which can be learned in parallel without
+dependencies. Because, in our model, traits cannot be learned unless an
+individual possesses the necessary prerequisites, we introduce the idea
+of a ``learning hierarchy,'' which is a division of Stout's action
+hierarchy into components which are learned with ordered dependencies,
+and independent components represented in separate trees. For example,
+one might learn about the sources of good lithic raw materials,
+independent of learning how to perform different percussion techniques.
+
+\begin{figure}[h] 
+\centering 
+\includegraphics[scale=0.6]{design-space-4-trees.pdf} 
+\caption{A design space composed of 4 independent trees, each tree with branching factor 3 and depth factor 3, order 40.  We also studied larger design spaces with 16 independent trees, and with larger branching and depth factors.} 
+\label{img:design-space-4} 
+\end{figure}
+
+In each simulation model, we begin with a trait or ``design space'' that
+incorporates several independent sets of traits \citep{o2010cultural}.
+The overall design space of a simulation model is thus a
+forest\footnote{A forest is a graph composed of multiple components,
+  each of which is a tree.}, composed of several trees (Figure
+\ref{img:design-space-4}). For each tree in a learning hierarchy, we
+employ balanced trees which have the same number of nodes at each level,
+to provide a simplified model of a design space with which to begin our
+exploration of this class of social learning model, although real design
+spaces are undoubtedly more complex in their geometry. Each tree in our
+model is specified by a branching factor $r$ and depth $h$. As a result,
+each trait tree in the design space has $\sum_{i=0}^{h} r^i$ traits.
+
+The tree depicted in Figure \ref{img:trait-tree} thus has 40 vertices,
+for example. In this chapter, we examine both small (4 trees) and larger
+(16 trees) design spaces, to see how learning may differ in problems
+involving design spaces of different size and complexity. We examine
+trees with combinations of branching and depth factors of 3 and 5. Thus,
+a design space with 4 trees with branching and depth factors of 3 (as in
+Figure \ref{img:trait-tree}) would have 160 traits, whereas a design
+space with 16 trees of branching and depth factors of 5 would have a
+total of 62,496 traits.\footnote{We initially chose 6 as the limit on
+  branching and depth factors, but found that we cannot calculate
+  certain symmetric statistics, such as the size of the automorphism
+  group, on trees that large using existing tools. Even a tree with
+  $r=5, h=6$ has over $10^{1623}$ possible symmetries, and calculating
+  that number takes over 100 seconds on a fast multi-core computer.}
+Even the small design spaces we consider here create a large space for
+cultural change and differentiation, given the number of possible trees
+one can construct on even 40 vertices.\footnote{If we consider each
+  trait to be unique and non-interchangeable, the number of unique trees
+  with unique vertex labels is $n^{n-2}$ by Cayley's theorem
   \citep{diestel2010graph}. For example, for each trait tree of 40
   vertices, there are roughly $10^{60}$ possible trees. Even if we
   consider traits to be interchangeable (e.g., we look at the abstract
@@ -493,29 +592,33 @@ replacing Equation \ref{eq:axelrod} with:
 
 \begin{equation}J(A,B) = \frac{|A \cup B| - |A \cap B|}{|A \cup B|}\end{equation}
 
-If the agents end up interacting, agent A randomly selects a trait from
-B which it does not already possess. If agent A has the necessary
-prerequisites for the desired trait (T), it learns the trait
-immediately, adding T to its repertoire. If not, it cannot immediately
-learn T, but there is a learning rate parameter for the simulation run
-which governs the chance that agent A will instead learn one of T's
-prerequisites during this time step. Given a learning event, we again
-walk from the root of the tree down the path towards the trait T,
-finding the first trait in the path that Agent A does not already
-possess. For example, agent A might require the trait closest to T
-(e.g., trait 11 in Figure \ref{img:prereq}, if the original trait
-targeted was 35).
+If the agents end up interacting, agent A observes the traits currently
+possessed by B, and selects a trait (T) that it does not already possess
+to learn. If agent A has the necessary prerequisite traits for the
+selected trait, it can learn trait T. If not, there is a probability
+$\mathbb{P}(l)$ that B can teach A a necessary prerequisite for T
+instead. This simulates the process of agent B structuring the learning
+environment of A through formal instruction or apprenticeship, for
+example. If such a prerequisite learning event occurs given
+$\mathbb{P}(l)$, agent A learns the most fundamental of T's
+prerequisites that it does not already possess. For example, agent A
+might require the trait closest to T (e.g., trait 11 in Figure
+\ref{img:prereq}, if the original trait targeted was 35).
 
-Additionally, at each time step, there is a probability that one
-individual, chosen randomly, will learn a new trait (and necessary
-prerequisites) that it does not already possess. This simulates the
-ongoing process of individual learning unconnected to social learning
-within the population, as well as the process of individual innovation.
-Because this functions much like ``infinite-alleles mutation'' in the
-classical Wright-Fisher neutral models \citep{Ewens2004}, or like noise
-terms in Axelrod, Ising, or Potts models
-\citep{castellano2009statistical}, we will refer to this as the
-``global innovation rate'' in this chapter.
+Additionally, at each time step, there is a probability $\mathbb{P}(m)$
+that one random individual in the population will learn a new trait (and
+necessary prerequisites) that it does not already possess. For example,
+if an innovation event occurs and an agent discovers trait 35 by
+individual trial and error learning, we assume that the agent also
+discovered traits 0, 3, and 11. Thus innovation can introduce one trait
+to the population, or a linked set depending upon its prerequisites and
+what the innovating individual already ``knows.'' This model of
+innovation simulates an ongoing process of individual learning
+unconnected to social learning within the population. Because this
+functions much like ``infinite-alleles mutation'' in the classical
+Wright-Fisher neutral models \citep{Ewens2004}, or like noise terms in
+Axelrod, Ising, or Potts models \citep{castellano2009statistical}, we
+will refer to this as the ``global innovation rate'' in this chapter.
 
 Each simulation run lasts 10 million steps, which is an average of
 100,000 copying events per individual (in a population of
@@ -570,9 +673,8 @@ a cultural configuration is. Similarly, in the original design space,
 the branching factor describes how many children each node in the tree
 started with, so measuring the average vertex degree gives us a rough
 measure of how diverse the cultural configuration is (in terms of
-breadth). Each of
-these measures is illustrated in Figure \ref{img:final-tree} for an
-example tree selected from our data.
+breadth). Each of these measures is illustrated in Figure
+\ref{img:final-tree} for an example tree selected from our data.
 
 In addition to these simple numerical measures comparing final trees to
 the original design space, it is useful to measure something about the
@@ -611,13 +713,13 @@ measure of the symmetries present is to count the \emph{classes} of
 equivalences into which vertices fall. The \emph{orbits} of the
 automorphism group are the sets of vertices which are interchangable by
 some permutation that preserves structure. For example, the graph in
-Figure \ref{img:trait-tree} has five orbits, with each vertex at a given level
-interchangable (in a structural sense). Similarly, the six leaf vertices
-that are part of pairs in Figure \ref{img:final-tree} are part of the
-same orbit; in this illustration, each orbit is given a different color
-to highlight their equivalence. For each cultural region found when
-sampling a simulation, we calculate the size of the automorphism group
-and the number and multiplicity (frequency) of orbits. For this
+Figure \ref{img:trait-tree} has five orbits, with each vertex at a given
+level interchangable (in a structural sense). Similarly, the six leaf
+vertices that are part of pairs in Figure \ref{img:final-tree} are part
+of the same orbit; in this illustration, each orbit is given a different
+color to highlight their equivalence. For each cultural region found
+when sampling a simulation, we calculate the size of the automorphism
+group and the number and multiplicity (frequency) of orbits. For this
 analysis, we employ the \emph{nauty + Traces} software by Brendan McKay
 and Adolfo Piperno \citep{McKay201494}.\footnote{Nauty+Traces can be
   downloaded at \url{http://pallini.di.uniroma1.it/}. We employed
@@ -666,7 +768,8 @@ constant supply of new innovations, but several orders of magnitude less
 frequent than copying and prerequisite learning events. The full set of
 parameters are given in Table \ref{tab:axelrodct-sim-parameters}. For
 each combination of all of the above parameters, we performed 25
-replications.  With 5 samples per simulation run, this yielded 10,963,691 samples of cultural regions.  
+replications. With 5 samples per simulation run, this yielded 10,963,691
+samples of cultural regions.
 
 \begin{table}[H]
 \begin{tabular}{|p{0.6\textwidth}|p{0.4\textwidth}|}
@@ -685,7 +788,7 @@ Replicate simulation runs at each parameter combination & 25\\
  \hline 
 Maximum time after which a simulation is sampled and terminated & 10000000\\ 
  \hline 
-Individual probability for learning a missing prerequisite & 0.05, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9\\ 
+Individual probability for being taught a missing prerequisite & 0.05, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9\\ 
  \hline 
 Number of branches at each level of a trait tree & 3, 5\\ 
  \hline 
@@ -696,8 +799,6 @@ Depth of traits in each trait tree & 3, 5\\
 \caption{Parameter space for simulations described in this chapter}
 \label{tab:axelrodct-sim-parameters}
 \end{table}
-
-
 
 The simulations were designed to examine whether the combination of a
 hierarchical, tree-like representation of cultural traits, in
@@ -859,12 +960,12 @@ Figure \ref{img:mean-radius-cultures-pop} displays the relationship
 between mean radius (or depth) of the cultural traits in each cultural
 sample, as in Figure \ref{img:mean-radius-cultures-100} above, but the
 boxplots are instead colored by population size. There is no qualitative
-difference in the dynamics as sample size grows, but the mean radius of
-trait sets does decline slightly, probably due to the slower velocity at
-which an innovation diffuses in the larger population. This is the kind
-of second-order effect which warrants continuing to include population
-size in analyses of social learning models, we believe, even if it does
-not serve as a primary explanation or factor.
+difference in the dynamics as population size grows, but the mean radius
+of trait sets does decline slightly, probably due to the slower velocity
+at which an innovation diffuses in the larger population. This is the
+kind of second-order effect which warrants continuing to include
+population size in analyses of social learning models, we believe, even
+if it does not serve as a primary explanation or factor.
 
 \subsection{Trait Tree Symmetries}\label{trait-tree-symmetries}
 
@@ -952,9 +1053,10 @@ technology--such as the production sequences studied by experts on stone
 tools--we believe that empirically sufficient models of the evolution of
 specific technologies are possible and within reach.
 
-Several areas suggest themselves for future research in ``semantic''
-Axelrod models. Some we are pursuing, others remain open questions and
-we invite collaboration towards their solution.
+Several areas suggest themselves for future research in structured
+information or ``semantic'' cultural transmission models. Some we are
+pursuing, others remain open questions and we invite collaboration
+towards their solution.
 
 \begin{itemize}
 \itemsep1pt\parskip0pt\parsep0pt
@@ -972,17 +1074,19 @@ we invite collaboration towards their solution.
 \end{itemize}
 
 We believe that models of the class studied here are a promising
-platform for studying the effects of social learning of realistic
-technologies that go beyond abstract, structureless ``tokens.'' Studying
-the evolution of biological populations in detail eventually required a
-detailed model of genomics beyond the ``bean-bag'' locus/allele models
-of early theoretical population genetics \citep{mayr1959mayr}.\footnote{Although
-  the controversy over ``bean-bag'' genetics is more complex than
-  discussed here. See Ewens \citeyearpar{ewens2008commentary} for a
-  contemporary commentary.} Going beyond the early promise of abstract
-cultural transmission models and explaining real technological change
-will require a similar transition beyond ``bean-bag'' social learning
-models. We offer a small step in that direction.
+platform for studying social learning of realistic technologies in
+structured learning contexts where ordered acquisition of skills and
+information are important. Such models are ``thicker'' descriptions of
+how humans acquire skills and information in real learning environments,
+and thus complement existing models which describe the conditions under
+which teaching and structured learning might evolve and spread. We
+believe models of this type are necessary to formalize evolutionary
+explanations for complex, multifactor phenomena such as behavioral
+modernity, and also make a needed ``downpayment'' on cultural
+transmission models which can meaningfully interface with archaeometry,
+the technnological analysis of lithics and pottery
+\citep{tostevin2012seeing}, and studies of how innovation occurs in
+various tool classes \citep[e.g.,][]{o2010innovation}.
 
 \section{Acknowledgements}\label{acknowledgements}
 
@@ -990,7 +1094,8 @@ The authors wish to thank Briggs Buchanan and Mark Collard for the
 invitation to participate in the symposium ``Current Research in
 Evolutionary Archaeology,'' at the 79th Annual Meeting of the Society
 for American Archaeology in Austin, TX. A summary of this research was
-presented in that session. Madsen wishes to thank
+presented in that session, and Alex Mesoudi provided valuable comments
+on an early post-conference draft. Madsen wishes to thank
 $\textrm{Fr\'ed\'eric}$ Chapoton of the Institut Camille Jordan for
 answering a question about the maximal automorphism group of trees, and
 Ben MacArthur and $\textrm{Rub\'en J. S\'anchez-Garc\'ia}$ for sharing
@@ -1000,62 +1105,73 @@ their geometric decomposition code.
 
 \subsection{Algorithm Description}\label{algorithm-description}
 
-Algorithm \ref{alg:tree-prereq-axelrod} describes the ``semantic'' Axelrod model variant studied in this chapter.  Within the algorithm, there are several functions which find traits with particular properties.  Some, like \textbf{GetTraitUniquetoFocal()}, are fairly simple set operations but were abbreviated to clarify the notation. 
+Algorithm \ref{alg:tree-prereq-axelrod} describes the ``semantic''
+Axelrod model variant studied in this chapter. Within the algorithm,
+there are several functions which find traits with particular
+properties. Some, like \textbf{GetTraitUniquetoFocal()}, are fairly
+simple set operations but were abbreviated to clarify the notation.
 
 \begin{algorithm}[H]
-  \caption{}
-  \label{alg:tree-prereq-axelrod}
-  \begin{boxedminipage}{\textwidth}
-  \begin{algorithmic}[1]
-    %\REQUIRE lossrate is the population rate at which traits are randomly lost to drift
-    \REQUIRE innovrate is the population rate at which individuals randomly learn a trait
-    \REQUIRE learningrate is the probability of learning a missing prerequisite during a learning interaction
+    \caption{}
+    \label{alg:tree-prereq-axelrod}
+    \begin{boxedminipage}{\textwidth}
+    \begin{algorithmic}[1]
+        %\REQUIRE lossrate is the population rate at which traits are randomly lost to drift
+        \REQUIRE innovrate is the population rate at which individuals randomly learn a trait
+        \REQUIRE learningrate is the probability of learning a missing prerequisite during a learning interaction
 
-    \STATE { $focal \leftarrow$ GetRandomAgent()}
-    \STATE { $neighbor \leftarrow$ GetRandomNeighbor(focal)}
+        \STATE { $focal \leftarrow$ GetRandomAgent()}
+        \STATE { $neighbor \leftarrow$ GetRandomNeighbor(focal)}
 
-    \IF { $focal = neighbor \lor focal \cap neighbor = \varnothing\;\lor  
-    neighbor \subsetneq focal $}
-    \label{alg:ext-first-if}
-      \STATE { exit }
-      \COMMENT{ No interaction is possible, move on to next agent }
-    \ENDIF
-
-    \STATE { $prob \leftarrow (focal \cup neighbor  - focal \cap neighbor) / focal \cup neighbor$ }
-
-    \IF {RandomUniform() $< prob$}
-      \STATE { $differing \leftarrow neighbor \setminus focal$ }
-      \STATE { $newtrait \leftarrow$ GetRandomChoice(differing)}
-
-      \IF {hasPrerequisiteForTrait($focal$, $newtrait$) = True}
-        \STATE {$replace \leftarrow$ GetTraitUniquetoFocal(focal,neighbor)}
-        \STATE { $focal \leftarrow focal \setminus replace$}
-        \STATE { $focal \leftarrow focal \cup newtrait$}
-      \ELSE
-        \IF {RandomUniform() $< learningrate$}
-          \STATE {$prereq \leftarrow$ GetDeepestMissingPrerequisite(newtrait, focal)}
-          \STATE { $focal \leftarrow focal \cup prereq$ }
+        \IF { $focal = neighbor \lor focal \cap neighbor = \varnothing\;\lor  
+        neighbor \subsetneq focal $}
+        \label{alg:ext-first-if}
+            \STATE { exit }
+            \COMMENT{ No interaction is possible, move on to next agent }
         \ENDIF
-      \ENDIF
 
-    \ENDIF
-    %\IF {RandomUniform() $< lossrate$}
-    % \STATE { $focal2 \leftarrow$ GetRandomAgent()}
-    % \STATE { $loss \leftarrow$ GetRandomTrait(focal2)}
-    % \STATE { $focal2 \leftarrow focal2 \setminus loss$}
-    %\ENDIF
+        \STATE { $prob \leftarrow (focal \cup neighbor  - focal \cap neighbor) / focal \cup neighbor$ }
 
-    \IF {RandomUniform() $< innovrate$}
-      \STATE { $focal3 \leftarrow$ GetRandomAgent()}
-      \STATE { $innovation \leftarrow$ GetRandomTraitNotInFocal(focal3)}
-      \STATE { $focal3 \leftarrow focal3 \cup innovation$}
-    \ENDIF
+        \IF {RandomUniform() $< prob$}
+            \STATE { $differing \leftarrow neighbor \setminus focal$ }
+            \STATE { $newtrait \leftarrow$ GetRandomChoice(differing)}
 
-  \end{algorithmic}
-  \end{boxedminipage}
-\end{algorithm} 
+            \IF {hasPrerequisiteForTrait($focal$, $newtrait$) = True}
+                \STATE {$replace \leftarrow$ GetTraitUniquetoFocal(focal,neighbor)}
+                \STATE { $focal \leftarrow focal \setminus replace$}
+                \STATE { $focal \leftarrow focal \cup newtrait$}
+            \ELSE
+                \IF {RandomUniform() $< learningrate$}
+                    \STATE {$prereq \leftarrow$ GetDeepestMissingPrerequisite(newtrait, focal)}
+                    \STATE { $focal \leftarrow focal \cup prereq$ }
+                \ENDIF
+            \ENDIF
 
-\textbf{GetDeepestMissingPrerequisite()} is a procedure which takes the trait set of an individual, and a trait for which the individual is known to be missing necessary prerequisites, and returns the ``most basic'' missing prerequisite for that trait (i.e., closest to the root). This is done by finding the path which connects the root and desired trait, and walking its vertices from the root downward, checking to see if each vertex is part of the individual's trait set.  The first trait not found in the individual's repertoire is returned.  
+        \ENDIF
+        %\IF {RandomUniform() $< lossrate$}
+        %   \STATE { $focal2 \leftarrow$ GetRandomAgent()}
+        %   \STATE { $loss \leftarrow$ GetRandomTrait(focal2)}
+        %   \STATE { $focal2 \leftarrow focal2 \setminus loss$}
+        %\ENDIF
+
+        \IF {RandomUniform() $< innovrate$}
+            \STATE { $focal3 \leftarrow$ GetRandomAgent()}
+            \STATE { $innovation \leftarrow$ GetRandomTraitNotInFocal(focal3)}
+            \STATE { $focal3 \leftarrow focal3 \cup innovation$}
+        \ENDIF
+
+    \end{algorithmic}
+    \end{boxedminipage}
+\end{algorithm}
+
+\textbf{GetDeepestMissingPrerequisite()} is a procedure which takes the
+trait set of an individual, and a trait for which the individual is
+known to be missing necessary prerequisites, and returns the ``most
+basic'' missing prerequisite for that trait (i.e., closest to the root).
+This is done by finding the path which connects the root and desired
+trait, and walking its vertices from the root downward, checking to see
+if each vertex is part of the individual's trait set. The first trait
+not found in the individual's repertoire is returned.
 
 \subsection{Availability of Software and Analysis
 Code}\label{availability-of-software-and-analysis-code}
@@ -1093,8 +1209,8 @@ The analysis and final dataset reported here are available, along with
 the source of this paper and associated presentations, in an associated
 GitHub repository: \url{https://github.com/mmadsen/madsenlipo2014}.
 Statistical analyses of the final dataset were performed in R, employing
-Knitr to render the results directly in publication format, and thus
-reproducible by others \citep{xie2013dynamic}.
+Knitr to render our results easily reproducible given simulation output
+\citep{xie2013dynamic}.
 
 
 %% References with bibTeX database:
