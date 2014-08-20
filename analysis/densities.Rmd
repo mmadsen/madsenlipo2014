@@ -42,7 +42,7 @@ p + facet_grid(learning_rate ~ ., as.table=FALSE)
 ```{r orbit-2, results="asis", message=FALSE, warning=FALSE, highlight=TRUE, fig.width=12}
 p <- ggplot(data=saa12full, aes(x=log(autgroupsize))) + xlab("Number of Symmetries in Culture Samples log |Aut(g)|") + geom_density(fill="darkgrey")
 p + facet_grid(learning_rate ~ innovation_rate, as.table=FALSE)
-ggsave("../paper/figure/autgroupsize-by-learning-by-innovation.pdf", dpi=300)
+#ggsave("autgroupsize-by-learning-by-innovation.pdf", dpi=300)
 ```
 
 ```{r orbit-3, results="asis", message=FALSE, warning=FALSE, highlight=TRUE, fig.width=12}

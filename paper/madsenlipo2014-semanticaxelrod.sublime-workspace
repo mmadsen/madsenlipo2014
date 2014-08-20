@@ -1,0 +1,335 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"boot",
+				"bootstrapdebug"
+			],
+			[
+				"input",
+				"inputfile"
+			],
+			[
+				"file",
+				"filterflag"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"Pack",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"Package",
+				"Package Control: Install Package"
+			],
+			[
+				"Packag",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 593.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+			"import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read())"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": true,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/mark/Dropbox/Research/Dissertation Project/manuscripts/dissertation/frontbackmatter/back.tex",
+		"/Users/mark/Dropbox/Research/Dissertation Project/manuscripts/dissertation/setup/preamble.tex",
+		"/Users/mark/Dropbox/Research/Dissertation Project/manuscripts/dissertation/dissertation-glossary.tex",
+		"/Users/mark/Dropbox/Research/Dissertation Project/manuscripts/dissertation/madsen-dissertation.log",
+		"/Users/mark/Dropbox/Research/Dissertation Project/manuscripts/dissertation/content/chapter-introduction.tex",
+		"/Users/mark/Dropbox/Research/Dissertation Project/manuscripts/dissertation/content/chapter-cg-ct-theory.tex",
+		"/Users/mark/Dropbox/Research/Dissertation Project/manuscripts/dissertation/outlinedrafts/chapter-outline-cg-ct-theory.tex",
+		"/Users/mark/Dropbox/Research/Dissertation Project/manuscripts/dissertation/content/outlines/cg-ct-theory.tex",
+		"/Users/mark/Dropbox/Research/Dissertation Project/manuscripts/dissertation/diss-macros.sty",
+		"/Users/mark/Dropbox/Research/Dissertation Project/manuscripts/dissertation/madsen-dissertation.tex",
+		"/Users/mark/Dropbox/Research/Dissertation Project/manuscripts/dissertation/content/outlines/historical-perspective-outline.tex",
+		"/Users/mark/Dropbox/Research/Dissertation Project/manuscripts/dissertation/outlinedrafts/chapter-outline-historical-perspective.tex",
+		"/Users/mark/Dropbox/Research/Dissertation Project/manuscripts/dissertation/setup/defines.tex",
+		"/Users/mark/Dropbox/Research/Dissertation Project/manuscripts/dissertation/frontbackmatter/title.tex",
+		"/Users/mark/Dropbox/Research/Dissertation Project/manuscripts/dissertation/frontbackmatter/copyright.tex",
+		"/Users/mark/Dropbox/Research/Dissertation Project/manuscripts/dissertation-draft/content/chapter-ct-theory.tex",
+		"/Users/mark/Dropbox/Research/Dissertation Project/manuscripts/dissertation-draft/madsen-dissertation.tex",
+		"/Users/mark/Library/Application Support/Sublime Text 3/Packages/User/build-latexmk.sublime-build",
+		"/Users/mark/Dropbox/Research/manuscripts/papers/encyc-soc-beh-evolarchy/lipomadsen2014-encyc-soc-beh-evolarchy.md",
+		"/Users/mark/Dropbox/Research/projects/structuredinformation/madsenlipo2014/paper/madsenlipo2014-semanticaxelrod.tex",
+		"/Users/mark/Dropbox/Research/manuscripts/papers/encyc-soc-beh-evolarchy/encyclopedia-soc-beh-sci-evolutionary-approaches.md",
+		"/Users/mark/Dropbox/Research/manuscripts/papers/encyc-soc-beh-evolarchy/recent-topics.md",
+		"/Users/mark/Dropbox/Research/manuscripts/papers/encyc-soc-beh-evolarchy/madsenlipo2014-encyc-soc-beh-evolarchy.md",
+		"/Users/mark/Library/Application Support/Sublime Text 2/Packages/Apache Pig/Pig.sublime-settings",
+		"/Users/mark/local-research/diss/experiments/classification/classification-experiment/DESCRIPTION",
+		"/Users/mark/Downloads/elasticsearch-0.90.5/README.textile",
+		"/Users/mark/Dropbox/Research/websites/lnraw/_posts/2013-08-27-classification-research-questions.md",
+		"/Users/mark/src/Ming-0.4.1/ming/session.py",
+		"/Users/mark/src/Ming-0.4.1/ming/datastore.py",
+		"/Users/mark/src/Ming-0.4.1/ming/base.py",
+		"/Users/mark/Dropbox/Research/Dissertation Project/analysis/simulation-calculations/inst/doc/simulationcalculations/xelatex-rmarkdown-template.tex",
+		"/Users/mark/Dropbox/Research/Dissertation Project/analysis/simulation-calculations/inst/doc/simulationcalculations/simulationcalculations.Rmd",
+		"/Users/mark/Dropbox/Research/Dissertation Project/manuscripts/jaa-ct-issue-madsen-safi-symposium/jaa-ct-issue-madsen-safi-symposium.tex",
+		"/Users/mark/Dropbox/Research/projects/reproducible/seriationcombinatorics/inst/doc/seriationcombinatorics/seriationcombinatorics.Rmd",
+		"/Users/mark/Library/Application Support/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/Users/mark/Dropbox/Research/projects/reproducible/seriationcombinatorics/inst/doc/seriationcombinatorics/xelatex-rmarkdown-template.tex",
+		"/Users/mark/Dropbox/Research/projects/reproducible/seriationcombinatorics/inst/doc/seriationcombinatorics/seriation-combinatorics.Rnw",
+		"/Users/mark/Dropbox/Research/websites/lnraw/index.html",
+		"/Users/mark/Dropbox/Research/websites/lnraw/_layouts/default.html",
+		"/Users/mark/Dropbox/Research/websites/lnraw/_layouts/project_layout.html",
+		"/Users/mark/Dropbox/Research/websites/lnraw/tags.html",
+		"/Users/mark/Dropbox/Research/websites/lnraw/_plugins/jekyll.tag-cloud.rb",
+		"/Users/mark/Dropbox/Research/websites/lnraw/openscience.html",
+		"/Users/mark/Dropbox/Research/websites/lnbootstrap/index.html",
+		"/Users/mark/Dropbox/Research/websites/lnbootstrap/_layouts/default.html",
+		"/Users/mark/Dropbox/Research/websites/lnbootstrap/_layouts/project_layout.html",
+		"/Users/mark/Dropbox/Research/websites/lnbootstrap/research.html",
+		"/Users/mark/Dropbox/Research/websites/lnbootstrap/newindex.html",
+		"/Users/mark/Dropbox/Research/websites/lnbootstrap/tags.html",
+		"/Users/mark/Dropbox/Research/websites/lnbootstrap/_layouts/tag_page.html",
+		"/Users/mark/Dropbox/Research/websites/lnbootstrap/_layouts/post.html",
+		"/Users/mark/Dropbox/Research/websites/lnbootstrap/code.html",
+		"/Users/mark/Dropbox/Research/websites/lnbootstrap/openscience.html",
+		"/Users/mark/Dropbox/Research/websites/lnbootstrap/bio.html",
+		"/Users/mark/Dropbox/Research/websites/lnbootstrap/projects/structuredinfo/index.md",
+		"/Users/mark/Dropbox/Research/websites/lnbootstrap/projects/nicheconstruction/index.md",
+		"/Users/mark/Dropbox/Research/websites/lnbootstrap/projects/coarsegraining/index.md",
+		"/Users/mark/Dropbox/Research/websites/lnbootstrap/_layouts/project_layout",
+		"/Users/mark/Dropbox/Research/Dissertation Project/manuscripts/dissertation-draft/content/outlines/historical-perspective-outline.tex",
+		"/Users/mark/Dropbox/Research/templates/labnotebook-post.md",
+		"/Users/mark/Dropbox/Research/websites/labnotebook/_posts/2013-06-07-structured-info-notes.md",
+		"/Users/mark/Dropbox/Research/websites/labnotebook/projects/structuredinfo/index.md",
+		"/Users/mark/Dropbox/Research/Dissertation Project/analysis/saa2012/slatkin-tests/slatkin-analysis.r",
+		"/Users/mark/src/TransmissionFramework/src/models/config/wfia-2dim-2ruleset-conf.xml",
+		"/Users/mark/Desktop/mysql-homebrew-instructions.txt",
+		"/Users/mark/Dropbox/Research/manuscripts/Paper Manuscripts/2013-comment-gabora-physics-life-reviews-with-lipo/2013-comment-gabora-physics-life-reviews-with-lipo.tex",
+		"/Users/mark/src/TransmissionFramework/docs/experiments/config-refactoring-notes.txt",
+		"/Users/mark/Dropbox/Research/Dissertation Project/src/Seriation/manuscripts/seriation-combinatorics/madsen-macros.sty",
+		"/Users/mark/Downloads/wp-settings.php",
+		"/Users/mark/Dropbox/Research/madsen-latex/madsen-macros.sty",
+		"/Users/mark/Dropbox/Research/Dissertation Project/manuscripts/power-analysis-conformism/power-analysis-conformism.tex",
+		"/Users/mark/Dropbox/Research/Dissertation Project/src/Seriation/manuscripts/seriation-combinatorics/latexmkrc",
+		"/Users/mark/Dropbox/Research/Dissertation Project/src/Seriation/README.md",
+		"/Users/mark/Dropbox/Research/Dissertation Project/src/Seriation/perl/IDSS-with-bootstrap.pl",
+		"/Users/mark/Library/Containers/com.apple.mail/Data/Library/Mail Downloads/rhxAnalyze-Combined.py",
+		"/Users/mark/Dropbox/Research/Dissertation Project/analysis/slatkin-power/bootstrap-slatkin-mc.r",
+		"/Users/mark/Dropbox/Research/Dissertation Project/presentations/colloquium-presentation/notes.txt",
+		"/Users/mark/Documents/personal/todo-aj",
+		"/Users/mark/Desktop/Paperless_ Seriation.rtf",
+		"/Users/mark/Desktop/clipo-seriation/triplet-match.pl",
+		"/Users/mark/Dropbox/Research/Dissertation Project/manuscripts/jaa-ct-issue-madsen-safi-symposium/as-submitted-sept2012/jaa-ct-issue-madsen-safi-symposium.tex",
+		"/Users/mark/Dropbox/Research/Dissertation Project/analysis/slatkin-power/power.r",
+		"/Users/mark/Dropbox/Research/Dissertation Project/analysis/saa2012/kn-richness/kn-richness-ta.r",
+		"/Users/mark/Dropbox/Research/Dissertation Project/General Exam Prep/notes-heritability-memetics-ct.txt",
+		"/Users/mark/Dropbox/Research/Dissertation Project/General Exam Prep/Notes on Evolution of Culture and Unit:Metalanguag",
+		"/Users/mark/Dropbox/Research/Notes/core-of-universal-darwinism.txt",
+		"/Users/mark/Dropbox/Research/Dissertation Project/manuscripts/saa2012-safi-symposium-paper-as-submitted/saa2012-safi-symposium-paper.tex",
+		"/Users/mark/Dropbox/Research/Dissertation Project/manuscripts/dissertation-draft/frontbackmatter/front.tex",
+		"/Users/mark/Dropbox/Research/Dissertation Project/manuscripts/dissertation-draft/setup/fonts.tex",
+		"/Users/mark/Dropbox/Research/Dissertation Project/manuscripts/dissertation-draft/setup/defines.tex",
+		"/Users/mark/Dropbox/Research/Dissertation Project/manuscripts/dissertation-draft/frontbackmatter/quote.tex",
+		"/Users/mark/Dropbox/Research/Dissertation Project/manuscripts/dissertation-draft/frontbackmatter/dedication.tex",
+		"/Users/mark/Dropbox/Research/Dissertation Project/manuscripts/dissertation-draft/content/chapter-previous-research.tex",
+		"/Users/mark/Dropbox/Research/Dissertation Project/manuscripts/dissertation-draft/chapter-drafts/chapter-draft-previous-research.tex",
+		"/Users/mark/Dropbox/Research/Dissertation Project/manuscripts/dissertation-draft/graphics/fig-iterative-pairwise-steps.tex",
+		"/Users/mark/Dropbox/Research/Dissertation Project/manuscripts/dissertation-draft/content/chapter1.tex",
+		"/Users/mark/Dropbox/Research/Dissertation Project/manuscripts/dissertation-draft/graphics/fig-simple-metapopulation-model.tex",
+		"/Users/mark/Dropbox/Research/Dissertation Project/manuscripts/2012-proposal-final/2012-proposal-final-lucida.tex",
+		"/Users/mark/Dropbox/Research/Dissertation Project/manuscripts/2012-proposal-final/2012-proposal-final.tex",
+		"/Users/mark/Dropbox/Research/manuscripts/ClassLectures/wwu-spring2012-campbell-ct-overview/wwu-spring2012-campbell-ct-overview.tex",
+		"/Users/mark/Dropbox/Research/Dissertation Project/manuscripts/saa2012-safi-symposium-presentation/saa2012-safi-symposium.tex",
+		"/Users/mark/Dropbox/Research/Dissertation Project/manuscripts/Archive-Incomplete-MS/2010-mbnti-archy/madsen2010-mbnti-archy-proposal.tex",
+		"/Users/mark/Dropbox/Research/madsen-latex/madsen-packages.sty",
+		"/Users/mark/Dropbox/Research/Dissertation Project/manuscripts/2012-proposal-final/2012-proposal-final-fig.tex",
+		"/Users/mark/Dropbox/Research/Dissertation Project/manuscripts/dec2011-proposal/dec2011-proposal.tex",
+		"/Users/mark/Library/Application Support/Firefox/Profiles/8u3g299h.default/itsalltext/localhost.21261b1g1v.txt",
+		"/Users/mark/Dropbox/Research/templates/svjour3-template.tex",
+		"/Users/mark/Dropbox/Research/templates/revtex-outline.tex",
+		"/Users/mark/Dropbox/Research/templates/research-paper-template-xelatex.tex",
+		"/Users/mark/Dropbox/Research/templates/presentation-template.tex",
+		"/Users/mark/Dropbox/Research/templates/outline-xelatex.tex",
+		"/Users/mark/Dropbox/Research/templates/instiki-template.txt",
+		"/Users/mark/Dropbox/Research/templates/aiptemplate.tex",
+		"/Users/mark/Dropbox/Research/Writings/ClassLectures/ct-lecture-wwu-spring2012-campbell/ct-lecture-wwu-spring2012-campbell.tex",
+		"/Users/mark/Dropbox/Research/madsen-latex/madsen-theorem-defns.sty",
+		"/Users/mark/Dropbox/Research/Dissertation Project/manuscripts/saa2012-safi-symposium-paper-as-submitted-arxiv/saa2012-safi-symposium-paper.tex",
+		"/Users/mark/Dropbox/Research/madsen-latex/make-new-document.sh",
+		"/Users/mark/Dropbox/Research/Dissertation Project/manuscripts/saa2012-safi-symposium-paper/saa2012-safi-symposium-paper.tex",
+		"/Users/mark/Dropbox/Research/Dissertation Project/manuscripts/saa2012-safi-symposium-presentation/saa2012-safi-symposium-handouts.tex",
+		"/Users/mark/Dropbox/Research/Dissertation Project/analysis/saa2012/.Rhistory",
+		"/Users/mark/Dropbox/Research/Dissertation Project/analysis/saa2012/presentation/slides/slide-validating-wf-simulation.tex",
+		"/Users/mark/Dropbox/Research/Dissertation Project/analysis/saa2012/presentation/slides/slide-validation-ti.tex",
+		"/Users/mark/Dropbox/Research/Dissertation Project/analysis/saa2012/presentation/saa2012-safi-symposium-handouts.tex",
+		"/Users/mark/Dropbox/Research/Dissertation Project/presentations/saa2012-safi-symposium/saa2012-safi-symposium.tex",
+		"/Users/mark/Dropbox/Research/Dissertation Project/analysis/saa2012/presentation/saa2012-safi-symposium.tex",
+		"/Users/mark/Dropbox/Research/Dissertation Project/analysis/saa2012/presentation/slides/slide-validation-kn.tex",
+		"/Users/mark/Dropbox/Research/Dissertation Project/analysis/saa2012/presentation/slides/slide-expected-richness-neutral-model.tex",
+		"/Users/mark/Dropbox/Research/Dissertation Project/presentations/saa2012-safi-symposium/saa2012-safi-symposium-handouts.tex"
+	],
+	"find":
+	{
+		"height": 26.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"/Users/mark/Dropbox/Research/Dissertation Project/manuscripts/dissertation"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"madsen-macros.sty",
+			"cite",
+			"theme_text",
+			"$DEBUG",
+			"DEBUG",
+			"fig:pop-structure-models",
+			"slat100",
+			"useGlos",
+			"slatbig",
+			"slat100t",
+			"Toma",
+			"&\\\\",
+			"\"",
+			"ergodic"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": true,
+		"regex": false,
+		"replace_history":
+		[
+			"diss-macros.sty",
+			"element_text",
+			"$debug",
+			"\\\\ \\hline",
+			"``"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": false
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "madsenlipo2014-semanticaxelrod.sublime-project",
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"",
+				".Rhistory"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"~/Dropbox/Research/websites/lnraw/lnraw.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 299.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
