@@ -330,12 +330,12 @@ Variation among individuals is foundational to evolutionary processes, and is th
 
 Holding the fidelity of learning constant (say, at a 40% chance of being taught a needed prerequisite), Figure \ref{img:culture-count-lr04-by-traitspace-size} shows the effect of the design space size (i.e., number of traits possible to copy and learn).  In general, populations exhibit greater differentiation between individuals as the design space gets larger, as prerequisite learning helps individuals acquire adjacent traits, and individual innovation randomly explores more distant portions of the design space.
 
-Given the structure of the Axelrod model, with the strong tendency towards cultural uniformity given homophily, all simulated populations converged to a single cultural configuration in the absence of individual innovation.  This highlights the importance of various "innovation" and "invention" processes in the creation and maintenance of cultural differentiation and diversity [@eerkens2005cultural; @o2010innovation], and suggests that systematic change in innovation processes may be a crucial component of any multi-factor model for the evolution of behaviorial modernity.  These results also suggest that highly conservative cultural repertoires, such as those posited to precede behavioral modernity in hominin populations, may be the consequence of social learning in small technological design spaces either with or without structured teaching, but in the absence of strong and regular individual innovation.
+Given the structure of the Axelrod model, with the strong tendency towards cultural uniformity given homophily, all simulated populations converged to a single cultural configuration in the absence of individual innovation.  This highlights the importance of various "innovation" and "invention" processes in the creation and maintenance of cultural differentiation and diversity [@eerkens2005cultural; @o2010innovation], and suggests that systematic change in innovation processes may be a crucial component of any multi-factor model for the evolution of behaviorial modernity.  These results also suggest that highly conservative cultural repertoires, such as those posited to precede behavioral modernity in hominin populations, occur whenever individuals engage in social learning in small technological design spaces, in the absence of strong and regular individual innovation.  
 
 
 ## Trait Richness and Knowledge Depth ##
 
-\begin{figure}[h] 
+\begin{figure}[htbp] 
 \centering 
 \includegraphics[scale=0.4]{mean-radius-by-learning-rate-innov-12.pdf} 
 \caption{Mean depth of trait sets, by prerequisite learning rate and global innovation rate, for population size 100.} 
@@ -347,19 +347,30 @@ Cumulative evolution of technology is represented in our model by the population
 Figure \ref{img:mean-radius-cultures-100} gives the _normalized_ mean radius of cultural regions, broken out by the prerequisite learning rate along the horizontal axis, and each group of 3 boxplots displays the differing global innovation rates studied.  Radii are normalized to the depth of their design space, to facilitate comparison.  The results indicate that essentially two regimes exist:  shorter trees, which do not grow much beyond their initialized size, and larger trees.  The mean radius has an asymptote just above 0.75, achieved with the prerequisite learning rate is approximately 0.4 or higher.  Further increases do not seem to matter.  Additionally, the difference between the two global innovation rates is small--what matters most in terms of qualitative behavior is the presence of global innovation outside the teaching or learning of prerequisites themselves.  
 
 
-
 ## Population Size ##
 
 Earlier, we mentioned that population size does not seem to be a primary factor in explaining the measured diversity in cultural transmission models, except perhaps in bottleneck situations like the one Henrich analyzes in Tasmania [-@henrich2004].  Instead, population size may have an interaction effect with other factors, yielding smaller second-order effects.  We examined the effect of population size in the research reported here, repeating the entire set of simulation runs for populations of 100, 225, and 400.[^budget]  
 
-\begin{figure}[h] 
+\begin{figure}[htbp] 
 \centering 
 \includegraphics[scale=0.4]{mean-radius-by-learning-rate-pop.pdf} 
 \caption{Mean depth of trait sets, by prerequisite learning rate and population sizes of 100, 225 and 400.} 
 \label{img:mean-radius-cultures-pop} 
 \end{figure}
 
-Figure \ref{img:mean-radius-cultures-pop} displays the relationship between mean radius (or depth) of the cultural traits in each cultural sample, as in Figure \ref{img:mean-radius-cultures-100} above, but the boxplots are instead colored by population size.  There is no qualitative difference in the dynamics as population size grows, but the mean radius of trait sets does decline slightly, probably due to the slower velocity at which an innovation diffuses in the larger population.  This is the kind of second-order effect which warrants continuing to include population size in analyses of social learning models, we believe, even if it does not serve as a primary explanation or factor.  
+Figure \ref{img:mean-radius-cultures-pop} displays the relationship between mean radius (or depth) of the cultural traits in each cultural sample, as in Figure \ref{img:mean-radius-cultures-100} above, but the boxplots are instead colored by population size.  At least over a range of group or deme sizes likely to be relevant to Paleolithic archaeology, population size makes no difference to the qualitative behavior of the model.  There is, however, a very slight decrease in mean radius of trait sets with larger population size, which is likely a consequence of a larger population spreading out over the trait space given innovation.  
+
+TODO -- This is evident when we examine the fraction of the trait space occupied simulations with positive individual innovation rates, as shown in Figure \ref{img:design-space-occupied-by-popsize}.    
+
+\begin{figure}[htbp] 
+\centering 
+\includegraphics[scale=0.4]{design-space-occupied-by-popsize.pdf} 
+\caption{Fraction of the design space occupied by population size, for a large trait space of 15,624 traits, with a LOESS fit trend line (and points colored by learning rate).} 
+\label{img:design-space-occupied-by-popsize} 
+\end{figure}
+
+
+ 
 
 
 
