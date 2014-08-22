@@ -360,7 +360,7 @@ Earlier, we mentioned that population size does not seem to be a primary factor 
 
 Figure \ref{img:mean-radius-cultures-pop} displays the relationship between mean radius (or depth) of the cultural traits in each cultural sample, as in Figure \ref{img:mean-radius-cultures-100} above, but the boxplots are instead colored by population size.  At least over a range of group or deme sizes likely to be relevant to Paleolithic archaeology, population size makes no difference to the qualitative behavior of the model.  There is, however, a very slight decrease in mean radius of trait sets with larger population size, which is likely a consequence of a larger population spreading out over the trait space given innovation.  
 
-TODO -- This is evident when we examine the fraction of the trait space occupied simulations with positive individual innovation rates, as shown in Figure \ref{img:design-space-occupied-by-popsize}.    
+TODO -- This is evident when we examine the fraction of the trait space occupied simulations with positive individual innovation rates, as shown in Figure \ref{img:design-space-occupied-by-popsize}.  The three panels depict the fraction of design space occupied for each of the modeled innovation rates, including zero individual innovation.  With positive innovation, the smallest population explores...
 
 \begin{figure}[htbp] 
 \centering 

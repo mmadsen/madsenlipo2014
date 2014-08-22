@@ -48,5 +48,12 @@ s <- ggplot(rd_ts_15624, aes(x=population_size, y=mean_rd)) + geom_point(aes(col
 s + facet_grid(. ~ innovation_rate, scales="free", as.table=FALSE,labeller = label_both) + theme_bw(base_size = 12, base_family = "Helvetica")
 ggsave(filename="../paper/design-space-occupied-by-popsize.pdf")
 ggsave(filename="../paper/design-space-occupied-by-popsize.eps", plot=s)
+# \begin{figure}[htbp] 
+# \centering 
+# \includegraphics[scale=0.4]{design-space-occupied-by-popsize.pdf} 
+# \caption{Fraction of the design space occupied by population size, for a large trait space of 15,624 traits, with a LOESS fit trend line (and points colored by learning rate).} 
+# \label{img:design-space-occupied-by-popsize} 
+# \end{figure}
+
 
 
