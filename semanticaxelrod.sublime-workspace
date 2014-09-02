@@ -11,15 +11,7 @@
 			"file": "paper/madsenlipo2014-semanticaxelrod.Rmd",
 			"settings":
 			{
-				"buffer_size": 62862,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/mark/Dropbox/Research/websites/lnraw/_posts/2014-07-09-semanticaxelrod-review-revisions.md",
-			"settings":
-			{
-				"buffer_size": 5522,
+				"buffer_size": 64583,
 				"line_ending": "Unix"
 			}
 		}
@@ -67,6 +59,8 @@
 	},
 	"file_history":
 	[
+		"/Users/mark/src/crp/crp.rb",
+		"/Users/mark/Dropbox/Research/websites/lnraw/_posts/2014-07-09-semanticaxelrod-review-revisions.md",
 		"/Users/mark/Dropbox/Research/projects/structuredinformation/madsenlipo2014/paper/author.tex",
 		"/Users/mark/Dropbox/Research/projects/structuredinformation/madsenlipo2014/paper/madsenlipo2014-semanticaxelrod.Rmd",
 		"/Users/mark/Dropbox/Research/projects/structuredinformation/madsenlipo2014/paper/simulation-parameters-table.tex",
@@ -143,7 +137,7 @@
 	],
 	"find":
 	{
-		"height": 26.0
+		"height": 35.0
 	},
 	"find_in_files":
 	{
@@ -189,7 +183,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -198,15 +192,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 62862,
+						"buffer_size": 64583,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								28882,
-								28882
+								2300,
+								2300
 							]
 						],
 						"settings":
@@ -214,35 +208,7 @@
 							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 6573.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "/Users/mark/Dropbox/Research/websites/lnraw/_posts/2014-07-09-semanticaxelrod-review-revisions.md",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 5522,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3795,
-								3795
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Markdown/Markdown.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 408.0,
+						"translation.y": 180.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -315,7 +281,7 @@
 		[
 			[
 				"",
-				"~/Dropbox/Research/projects/structuredinformation/madsenlipo2014/semanticaxelrod.sublime-project"
+				"~/Dropbox/Research/websites/lnraw/lnraw.sublime-project"
 			]
 		],
 		"width": 902.0
