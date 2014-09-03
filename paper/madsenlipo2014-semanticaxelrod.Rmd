@@ -76,7 +76,7 @@ necessary for the construction of a single artifact, say a dart thrown by an atl
 
 \begin{figure}[h] 
 \centering 
-\includegraphics[]{balanced-trait-tree-3-3.png} 
+\includegraphics[]{balanced-trait-tree-3-3.eps} 
 \caption{A single trait tree, represented by a balanced tree with branching factor 3 and depth factor 3, order 40.  In our model, nodes higher in the tree represent prerequisites for nodes lower down the tree.  Each instance of the model will have several or many of these trees in the design space.} 
 \label{img:trait-tree} 
 \end{figure}  
@@ -86,7 +86,7 @@ learn about the sources of good lithic raw materials, independent of learning ho
 
 \begin{figure}[h] 
 \centering 
-\includegraphics[scale=0.6]{design-space-4-trees.pdf} 
+\includegraphics[scale=0.6]{design-space-4-trees.eps} 
 \caption{A design space composed of 4 independent trees, each tree with branching factor 3 and depth factor 3, order 40.  We also studied larger design spaces with 16 independent trees, and with larger branching and depth factors.} 
 \label{img:design-space-4} 
 \end{figure} 
@@ -181,7 +181,7 @@ across the configured number of trait trees, as follows.  For each individual, w
 
 \begin{figure}[htbp] 
 \centering 
-\includegraphics[scale=0.5]{design-init-final.pdf} 
+\includegraphics[scale=0.5]{design-init-final.eps} 
 \caption{Illustration of a design space composed of a single trait tree, along with a random initial trait chosen from the design space, and a final sample from a simulation run, showing the evolution of traits within the design space.  Also shown in the top panel are the ``prerequisites'' for a cultural trait (35), as an example.} 
 \label{img:prereq} 
 \end{figure} 
@@ -213,7 +213,7 @@ Each sample from a simulation run is composed of the distinct sets of trait tree
 
 \begin{figure}[htbp] 
 \centering 
-\includegraphics[]{equil-trait-tree.png} 
+\includegraphics[]{equil-trait-tree.eps} 
 \caption{An example set of traits at the conclusion of a simulation run, extracted from a simulation with branching factor 3 and depth factor 3, and a single trait tree as the trait space.  The remaining density of vertices, mean vertex degree, and radius of the tree are noted.  Vertex colors denote ``structural equivalence'' classes or ``orbit structure,'' as measured by adjacency patterns, and is one measure of the symmetries present in the tree.} 
 \label{img:final-tree} 
 \end{figure} 
@@ -316,7 +316,7 @@ We begin by noting that compared to the original Axelrod model, or neutral and b
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[scale=0.4]{small-trait-high-innovation-num-configs.pdf}
+	\includegraphics[scale=0.4]{small-trait-high-innovation-num-configs.eps}
 	\caption{Number of cultural configurations in simulations with the smallest trait space (160 total traits in 4 trees), and a high individual innovation rate ($10^{-4}$).}
 	\label{img:culture-count-sm-trait-high-innov}
 \end{figure}
@@ -325,7 +325,7 @@ Variation among individuals is foundational to evolutionary processes, and is th
 
 \begin{figure}[htbp] 
 	\centering
-	\includegraphics[scale=0.4]{culture-count-lr04-by-traitspace-size.pdf}
+	\includegraphics[scale=0.4]{culture-count-lr04-by-traitspace-size.eps}
 	\caption{Number of cultural configurations in simulations with an intermediate learning rate (0.4), across different sizes of trait space.}
 	\label{img:culture-count-lr04-by-traitspace-size}
 \end{figure}
@@ -339,7 +339,7 @@ Given the structure of the Axelrod model, with the strong tendency towards cultu
 
 \begin{figure}[htbp] 
 \centering 
-\includegraphics[scale=0.4]{mean-radius-by-learning-rate-innov-12.pdf} 
+\includegraphics[scale=0.4]{mean-radius-by-learning-rate-innov-12.eps} 
 \caption{Mean depth of trait sets, by prerequisite learning rate and global innovation rate, for population size 100.} 
 \label{img:mean-radius-cultures-100} 
 \end{figure} 
@@ -355,7 +355,7 @@ Earlier, we mentioned that population size does not seem to be a primary factor 
 
 \begin{figure}[htbp] 
 \centering 
-\includegraphics[scale=0.4]{mean-radius-by-learning-rate-pop.pdf} 
+\includegraphics[scale=0.4]{mean-radius-by-learning-rate-pop.eps} 
 \caption{Mean depth of trait sets, by prerequisite learning rate and population sizes of 100, 225 and 400.} 
 \label{img:mean-radius-cultures-pop} 
 \end{figure}
@@ -370,7 +370,7 @@ Finally, we examined the algebraic properties of the trait trees composing cultu
 
 \begin{figure}[h] 
 \centering 
-\includegraphics[scale=0.4]{autgroupsize-by-learning-by-innovation.pdf} 
+\includegraphics[scale=0.4]{autgroupsize-by-learning-by-innovation.eps} 
 \caption{Number of symmetries in trait tree samples, measured as the log of the order of the automorphism group of the trait graphs, broken down by prerequisite learning rate (rows) and global innovation rate (columns).} 
 \label{img:autgsize} 
 \end{figure} 
@@ -405,7 +405,7 @@ We believe that models of the class studied here are a promising platform for st
 The authors wish to thank Briggs Buchanan and Mark Collard for the invitation to 
 participate in the symposium "Current Research in Evolutionary Archaeology," at the 79th 
 Annual Meeting of the Society for American Archaeology in Austin, TX.  A summary of 
-this research was presented in that session, and Alex Mesoudi provided valuable comments on an early post-conference draft.  Kenneth Aoki and an anonymous reviewer provided feedback prior to publication, and although we did not take all of their suggestions, the comments led to a number of improvements.  Madsen wishes to thank 
+this research was presented in that session, and Alex Mesoudi provided valuable comments on an early post-conference draft.  Kenichi Aoki and an anonymous reviewer provided feedback prior to publication, and although we did not take all of their suggestions, the comments led to a number of improvements.  Madsen wishes to thank 
 $\textrm{Fr\'ed\'eric}$ Chapoton of the Institut
 Camille Jordan for answering a question about the maximal automorphism
 group of trees.
