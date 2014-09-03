@@ -82,7 +82,11 @@ u + geom_boxplot(notch=FALSE) + theme_tufte(base_size=16)
 ggsave("../paper/mean-radius-by-learning-rate-innov-12.pdf",dpi=300)
 
 
-
+# Figure "img:autgsize"
+# original figure given by:
+v <- ggplot(data=saa12full, aes(x=log(autgroupsize))) + xlab("Number of Symmetries in Culture Samples log |Aut(g)|") + ylab("Probability Density") + labs() + geom_density(fill="darkgrey")
+v + facet_grid(learning_rate ~ innovation_rate, as.table=FALSE) + theme_tufte(base_size=16)
+ggsave("../paper/autgroupsize-by-learning-by-innovation.pdf",dpi=300)
 
 
 

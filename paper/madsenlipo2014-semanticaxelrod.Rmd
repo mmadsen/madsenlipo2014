@@ -360,7 +360,7 @@ Earlier, we mentioned that population size does not seem to be a primary factor 
 \label{img:mean-radius-cultures-pop} 
 \end{figure}
 
-Figure \ref{img:mean-radius-cultures-pop} displays the relationship between mean radius (or depth) of the cultural traits in each cultural sample, as in Figure \ref{img:mean-radius-cultures-100} above, but the boxplots are instead colored by population size.  At least over a range of group or deme sizes likely to be relevant to Paleolithic archaeology, population size makes no difference to the qualitative behavior of the model.  There is, however, a very slight decrease in mean radius of trait sets with larger population size, which is likely a consequence of a larger population spreading out over the trait space given innovation and a larger space to sample from given random choice of cultural models to copy.  
+Figure \ref{img:mean-radius-cultures-pop} displays the relationship between mean radius (or depth) of the cultural traits in each cultural sample, as in Figure \ref{img:mean-radius-cultures-100} above, but the boxplots are instead colored by population size.  At least over a range of group or deme sizes likely to be relevant to Paleolithic archaeology, population size makes no difference to the qualitative behavior of the model.  There is, however, a very slight decrease in mean radius of trait sets with larger population size, which is likely a consequence of a larger population spreading out over the trait space.  
 
 
 
@@ -371,7 +371,7 @@ Finally, we examined the algebraic properties of the trait trees composing cultu
 \begin{figure}[h] 
 \centering 
 \includegraphics[scale=0.4]{autgroupsize-by-learning-by-innovation.pdf} 
-\caption{Number of symmetries in trait tree samples, measured as the log of the order of the automorphism group of the trait graphs, broken down by prerequisite learning rate and global innovation rate.} 
+\caption{Number of symmetries in trait tree samples, measured as the log of the order of the automorphism group of the trait graphs, broken down by prerequisite learning rate (rows) and global innovation rate (columns).} 
 \label{img:autgsize} 
 \end{figure} 
 
@@ -405,12 +405,10 @@ We believe that models of the class studied here are a promising platform for st
 The authors wish to thank Briggs Buchanan and Mark Collard for the invitation to 
 participate in the symposium "Current Research in Evolutionary Archaeology," at the 79th 
 Annual Meeting of the Society for American Archaeology in Austin, TX.  A summary of 
-this research was presented in that session, and Alex Mesoudi provided valuable comments on an early post-conference draft.  Madsen wishes to thank 
+this research was presented in that session, and Alex Mesoudi provided valuable comments on an early post-conference draft.  Kenneth Aoki and an anonymous reviewer provided feedback prior to publication, and although we did not take all of their suggestions, the comments led to a number of improvements.  Madsen wishes to thank 
 $\textrm{Fr\'ed\'eric}$ Chapoton of the Institut
 Camille Jordan for answering a question about the maximal automorphism
-group of trees, and Ben MacArthur and
-$\textrm{Rub\'en J. S\'anchez-Garc\'ia}$ for sharing their geometric
-decomposition code.
+group of trees.
 
 # Appendices
 
