@@ -639,6 +639,22 @@ terms in Axelrod, Ising, or Potts models
 \citep{castellano2009statistical}, we will refer to this as the ``global
 innovation rate'' in this chapter.
 
+One of the editors noted that this model of innovation may not be as
+realistic as an alternative, where random innovations would be
+``discoverable'' only with the correct prerequisites in place. We
+believe that innovation in the face of skill or knowledge prerequisites
+is continuous between these two models. Occasionally one will discover a
+new piece of knowledge or develop a skill, having learned surrounding
+and related knowledge. In other situations, individuals may learn
+sequences and sets of information or skills by trial and error and
+``tinkering.'' The ``size'' of innovations that can be learned purely by
+individual trial and error should thus vary between these extremes,
+biased towards the ``small'' end of the range. Our selection of an
+innovation model where individuals discover a trait and its
+prerequisites thus potentially overestimates the effect of individual
+learning, but it made certain graph operations easier, and can be
+relaxed in future models.
+
 Each simulation run lasts $10^7$ steps, which yields between $10^4$ and
 $10^5$ copying events per individual, depending upon population
 size.\footnote{100,000 was chosen as a compromise for running large
@@ -649,12 +665,21 @@ size.\footnote{100,000 was chosen as a compromise for running large
   convergence may never occur even though the process is well-mixed.
   However, the processes have reached a quasi-stable equilibrium,
   verified by examining samples at different times for secular trends in
-  median and mean values, which were not found.} Samples are taken
-beginning at 6 million steps, and sampling at an interval of 1 million
-steps, and record the trait trees seen in the population. An example of
-such a sampled tree is shown in Panel C of Figure \ref{img:prereq}. For
-reference, the full algorithm for each copying step is given in the
-Appendix as Algorithm \ref{alg:tree-prereq-axelrod}.
+  median and mean values, which were not found.} Since we do not
+explicitly model the interaction between cultural transmission and
+biological reproduction here, we can interpret the model as representing
+either fine-grained learning within individuals over the course of their
+lifetimes, or long-term cultural evolution within a fixed size
+population where we are not modeling fitness. We felt this
+simplification was appropriate in a pilot study exploring structured
+information models, but a more detailed study would include dynamics on
+two time scales: developmental learning and evolutionary dynamics given
+birth and death. Samples are taken beginning at 6 million steps, and
+sampling at an interval of 1 million steps, and record the trait trees
+seen in the population. An example of such a sampled tree is shown in
+Panel C of Figure \ref{img:prereq}. For reference, the full algorithm
+for each copying step is given in the Appendix as Algorithm
+\ref{alg:tree-prereq-axelrod}.
 
 \section{Measuring Cultural Diversity and the Results of Structured
 Learning}\label{measuring-cultural-diversity-and-the-results-of-structured-learning}

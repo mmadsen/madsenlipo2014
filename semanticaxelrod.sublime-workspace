@@ -11,7 +11,7 @@
 			"file": "paper/madsenlipo2014-semanticaxelrod.Rmd",
 			"settings":
 			{
-				"buffer_size": 64583,
+				"buffer_size": 63954,
 				"line_ending": "Unix"
 			}
 		}
@@ -57,12 +57,20 @@
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
+	"expanded_folders":
+	[
+		"/Users/mark/Dropbox/Research/projects/structuredinformation/madsenlipo2014"
+	],
 	"file_history":
 	[
+		"/Users/mark/Dropbox/Research/projects/structuredinformation/madsenlipo2014/paper/madsenlipo-arxiv-from-springer-final/madsenlipo2014-semanticaxelrod.tex",
+		"/Users/mark/Dropbox/Research/projects/structuredinformation/madsenlipo2014/paper/madsenlipo-springer-final-submission/madsenlipo2014-semanticaxelrod.tex",
+		"/Users/mark/Dropbox/Research/projects/structuredinformation/madsenlipo2014/paper/madsenlipo2014-semanticaxelrod.tex",
+		"/Users/mark/Dropbox/Research/projects/structuredinformation/madsenlipo2014/paper/springer-volume-final-submission/madsenlipo2014-semanticaxelrod.tex",
+		"/Users/mark/Dropbox/Research/projects/structuredinformation/madsenlipo2014/paper/madsenlipo2014-semanticaxelrod.Rmd",
+		"/Users/mark/Dropbox/Research/projects/structuredinformation/madsenlipo2014/paper/author.tex",
 		"/Users/mark/src/crp/crp.rb",
 		"/Users/mark/Dropbox/Research/websites/lnraw/_posts/2014-07-09-semanticaxelrod-review-revisions.md",
-		"/Users/mark/Dropbox/Research/projects/structuredinformation/madsenlipo2014/paper/author.tex",
-		"/Users/mark/Dropbox/Research/projects/structuredinformation/madsenlipo2014/paper/madsenlipo2014-semanticaxelrod.Rmd",
 		"/Users/mark/Dropbox/Research/projects/structuredinformation/madsenlipo2014/paper/simulation-parameters-table.tex",
 		"/Users/mark/Dropbox/Research/projects/structuredinformation/madsenlipo2014/paper/algorithms-appendix.tex",
 		"/Users/mark/Dropbox/Research/projects/structuredinformation/madsenlipo2014/paper/design-space-table.tex",
@@ -151,6 +159,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			".eps",
+			".eps-eps-converted-to.pdf",
 			"figure",
 			",$",
 			"*  ,",
@@ -192,15 +202,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 64583,
+						"buffer_size": 63954,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2300,
-								2300
+								55367,
+								52003
 							]
 						],
 						"settings":
@@ -208,7 +218,7 @@
 							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 180.0,
+						"translation.y": 12838.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -294,15 +304,16 @@
 		],
 		"width": 0.0
 	},
+	"selected_group": 0,
 	"settings":
 	{
 	},
 	"show_minimap": false,
 	"show_open_files": false,
 	"show_tabs": true,
-	"side_bar_visible": true,
+	"side_bar_visible": false,
 	"side_bar_width": 296.0,
-	"status_bar_visible": true,
+	"status_bar_visible": false,
 	"template_settings":
 	{
 	}
